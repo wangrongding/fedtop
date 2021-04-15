@@ -1,10 +1,10 @@
 {
   "name": "nutrient",
   "version": "1.0.0",
-  "description": "ROngding's blog",
+  "description": "Rongding's blog",
   "main": "index.js",
-  "repository": "http://recoluan.gitlab.io",
-  "author": "ROngding",
+  "repository": "https://github.com/wangrongding/wangrongding.github.io",
+  "author": "Rongding",
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
