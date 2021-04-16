@@ -14,9 +14,9 @@ module.exports = {
   // 最后更新时间
   lastUpdated: 'Last Updated', // string | boolean
   // 作者
-  author: 'reco_luan',
+  author: '汪荣顶',
   // 备案号
   record: '京ICP备17067634号-1',
   // 项目开始时间
-  startYear: '2017'
+  startYear: '2016'
 }
