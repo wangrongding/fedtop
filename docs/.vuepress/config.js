@@ -2,7 +2,7 @@ const themeConfig = require("./config/theme/");
 
 module.exports = {
     base: "/",
-    title: "开帆入天镜",
+    title: "汪荣顶的个人博客",
     description: "Enjoy when you can, and endure when you must.",
     dest: "public",
     head: [
