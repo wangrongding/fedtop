@@ -1,0 +1,14 @@
+{
+	"vetur.format.defaultFormatterOptions": {
+		"prettyhtml": {
+			"tabWidth": 4,
+			"singleQuote": false
+		},
+		"prettier": {
+			"tabWidth": 4,
+			"singleQuote": true
+		}
+	},
+	"editor.copyWithSyntaxHighlighting": false,
+	"editor.formatOnSave": false
+}

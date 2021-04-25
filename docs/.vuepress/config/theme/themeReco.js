@@ -20,4 +20,9 @@ module.exports = {
     recordLink: "http://www.baidu.com",
     // 项目开始时间
     startYear: "2017",
+    socialLinks: [
+        // 信息栏展示社交信息
+        { icon: "reco-github", link: "https://github.com/recoluan" },
+        { icon: "reco-npm", link: "https://www.npmjs.com/~reco_luan" },
+    ],
 };
