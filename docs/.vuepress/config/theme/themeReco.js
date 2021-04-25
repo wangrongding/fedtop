@@ -12,7 +12,8 @@ module.exports = {
         },
     },
     // 最后更新时间
-    lastUpdated: "Last Updated", // string | boolean
+    lastUpdated: false, // string | boolean
+    // lastUpdated: "Last Updated", // string | boolean
     // 作者
     author: "汪荣顶",
     // 备案号
