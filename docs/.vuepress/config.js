@@ -1,9 +1,11 @@
 const themeConfig = require("./config/theme/");
 
 module.exports = {
+    themeConfig,
+    theme: "reco",
     base: "/",
     title: "汪荣顶的个人博客",
-    description: "Enjoy when you can, and endure when you must.",
+    description: "Hey,you are the only one worthwhile!",
     dest: "public",
     head: [
         ["link", { rel: "icon", href: "/favicon.ico" }],
@@ -15,8 +17,6 @@ module.exports = {
             },
         ],
     ],
-    theme: "reco",
-    themeConfig,
     markdown: {
         lineNumbers: true,
     },

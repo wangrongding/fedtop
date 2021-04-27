@@ -10,5 +10,9 @@
 		}
 	},
 	"editor.copyWithSyntaxHighlighting": false,
-	"editor.formatOnSave": false
+	"editor.formatOnSave": false,
+	"[markdown]": {
+		"editor.quickSuggestions": true
+	},
+	"files.eol": "\r\n"
 }

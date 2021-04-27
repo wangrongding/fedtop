@@ -18,7 +18,7 @@ module.exports = {
     author: "汪荣顶",
     // 备案号
     record: "赣ICP备19003256号-2",
-    recordLink: "http://www.baidu.com",
+    recordLink: "https://beian.miit.gov.cn",
     // 项目开始时间
     startYear: "2017",
     socialLinks: [

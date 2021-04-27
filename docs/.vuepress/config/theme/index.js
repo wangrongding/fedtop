@@ -5,21 +5,22 @@ const sidebar = require("../sidebar/");
 module.exports = Object.assign({}, themeReco, {
     nav,
     sidebar,
-    // logo: '/head.png',
+    logo: "/head.png",
     // 搜索设置
     search: true,
     searchMaxSuggestions: 10,
     // 自动形成侧边导航
     sidebar: "auto",
-    themeConfig: {
-        /**
-         * support for
-         * 'default'
-         * 'funky'
-         * 'okaidia'
-         * 'solarizedlight'
-         * 'tomorrow'
-         */
-        codeTheme: "tomorrow", // default 'tomorrow'
-    },
+    themeConfig: {},
+    /**
+     * support for
+     * 'default'
+     * 'funky'
+     * 'okaidia'
+     * 'solarizedlight'
+     * 'tomorrow'
+     */
+    codeTheme: "tomorrow", // default 'tomorrow'
+    type: "blog",
+    authorAvatar: "/avatar.jpg",
 });

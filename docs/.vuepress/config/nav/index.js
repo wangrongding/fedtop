@@ -13,7 +13,7 @@ module.exports = [
             {
                 text: "greasyfork",
                 link: "https://greasyfork.org/zh-CN/scripts?set=356154",
-                icon: "reco-greasyfork",
+                icon: "reco-other",
             },
             {
                 text: "CSDN",
