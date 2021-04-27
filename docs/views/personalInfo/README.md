@@ -17,13 +17,13 @@ sidebar: false
 
 ---
 
-1. [vuepress-theme-reco](https://www.npmjs.com/package/vuepress-theme-reco)<br>
-   一款简介的 vuepress 博客主题
-2. [reco-fetch](https://www.npmjs.com/package/reco-fetch)<br>
-   针对 fetch 的应用型封装
+1. 多人音视频会议 [github address](https://github.com/wangrongding/sparrow-meeting)<br>
+   一个基于WebRTC的多人音视频协同app,可支持分享屏幕等
+2. sparrowJs [github address](https://github.com/wangrongding/sparrowJs)<br>
+   封装的一些常用工具函数
 
 个人博客：[**汪荣顶**](www.fedtop.com)
 
 ---
 
-### 如果有话对我讲，那就请[联系我](https://mp.weixin.qq.com/s/mXFqeUTegdvPliXknAAG_A)
+### 如果有话对我讲，那就请[qq 联系我](http://wpa.qq.com/msgrd?v=3&uin=729319240&site=qq&menu=yes)
