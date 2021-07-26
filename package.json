@@ -9,7 +9,9 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"dev": "vuepress dev docs",
-		"build": "vuepress build docs"
+		"build": "vuepress build docs",
+		"ad": "git add .",
+		"push": "git add . && git commit && git push && curl http://47.95.239.198:8080/job/giteeBlog/build?token=giteeBlog"
 	},
 	"dependencies": {
 		"@vuepress/plugin-medium-zoom": "1.0.0-alpha.0",
