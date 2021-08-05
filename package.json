@@ -11,8 +11,8 @@
 		"dev": "vuepress dev docs",
 		"build": "vuepress build docs",
 		"ad": "git add .",
-		"git": "git add . && git commit && git push && curl http://47.95.239.198:8080/job/giteeBlog/build?token=giteeBlog",
-		"gitee": "git add . && git commit && git push gitee && curl http://47.95.239.198:8080/job/giteeBlog/build?token=giteeBlog",
+		"git": "git add . && git commit && git push && yarn remote-build",
+		"gitee": "git add . && git commit && git push gitee && yarn remote-build",
 		"remote-build": "curl http://47.95.239.198:8080/job/giteeBlog/build?token=giteeBlog"
 	},
 	"dependencies": {
