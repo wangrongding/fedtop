@@ -16,6 +16,7 @@
 		"remote-build": "curl http://47.95.239.198:8080/job/giteeBlog/build?token=giteeBlog"
 	},
 	"dependencies": {
+		"@vuepress-reco/vuepress-plugin-bulletin-popover": "^1.5.7",
 		"@vuepress/plugin-medium-zoom": "1.0.0-alpha.0",
 		"@vuepress/plugin-pwa": "1.0.0-alpha.3",
 		"vuepress": "1.0.3",
