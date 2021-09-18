@@ -15,7 +15,7 @@ module.exports = {
     lastUpdated: false, // string | boolean
     // lastUpdated: "Last Updated", // string | boolean
     // 作者
-    author: "汪荣顶",
+    author: "荣顶",
     // 备案号
     record: "赣ICP备19003256号-2",
     recordLink: "https://beian.miit.gov.cn",

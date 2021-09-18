@@ -5,7 +5,7 @@ const sidebar = require("../sidebar/");
 module.exports = Object.assign({}, themeReco, {
     nav,
     sidebar,
-    logo: "/head.png",
+    logo: "/avatar.jpg",
     // 搜索设置
     search: true,
     searchMaxSuggestions: 10,
