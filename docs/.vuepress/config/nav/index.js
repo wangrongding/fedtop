@@ -6,6 +6,16 @@ module.exports = [
         icon: "reco-message",
         items: [
             {
+                text: "掘金",
+                link: "https://juejin.cn/user/2858385963749223",
+                icon: "reco-juejin",
+            },
+            {
+                text: "知乎",
+                link: "https://www.zhihu.com/people/rongding",
+                icon: "reco-zhihu",
+            },
+            {
                 text: "GitHub",
                 link: "https://github.com/wangrongding",
                 icon: "reco-github",
@@ -21,11 +31,6 @@ module.exports = [
                 icon: "reco-csdn",
             },
             {
-                text: "掘金",
-                link: "https://juejin.cn/user/2858385963749223",
-                icon: "reco-juejin",
-            },
-            {
                 text: "微博",
                 link: "https://weibo.com/wangrongding",
                 icon: "reco-weibo",
@@ -35,11 +40,7 @@ module.exports = [
                 link: "https://www.npmjs.com/~wangrongding",
                 icon: "reco-npm",
             },
-            {
-                text: "知乎",
-                link: "https://www.zhihu.com/people/rongding",
-                icon: "reco-zhihu",
-            },
+
             /* {
                 text: "博客圆",
                 link: "https://www.cnblogs.com/luanhewei/",

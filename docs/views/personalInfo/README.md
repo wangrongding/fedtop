@@ -7,6 +7,65 @@ isComment: false
 sidebar: false
 ---
 
+---
+
+#### 目前在捣鼓的一些东西
+
+-   多人音视频会议 [github address](https://github.com/wangrongding/sparrow-meeting)
+
+-   sparrowJs sparrowJs [github address](https://github.com/wangrongding/sparrowJs)
+
+-   一些自用的油猴脚本 [github address](https://github.com/wangrongding/ding-script.git)
+
+-   ding-trans(终端翻译程序) [github address](https://github.com/wangrongding/ding-script.git)
+
+---
+
+#### 我的业余生活
+
+-   LOL
+-   敲代码
+-   音乐
+-   篮球
+
+---
+
+#### 待写的文章列表
+
+先发 4 篇掘力星计划
+
+-   chrome95 的新特性
+-   phaser 入门教程
+-   vsCode 插件从 0-1
+-   基于 TensorFlow.js 的机器学习在前端领域的应用
+-   聚合的 Chrome 图床插件
+-   微前端从 0-1
+-   删不掉的元素与 Mutation Observer
+-   提升效率的 js 工具函数
+-   Hyper.js
+-   分享我的 VsCode 扩展
+-   面向未来-机器学习与神经网络在前端方向的应用(附案例)
+-   EXFI 的相关应用
+-   用 ASCII 码画图
+-   web 安全
+-   基于 WebRTC 实现的截屏录屏软件
+-   WebRTC 的入门教程
+-   基于 phaser 实现的一个小游戏示例
+-   Nuxt.Js 入门教程
+-   油猴脚本的编写
+-   前端期刊板块
+-   读书分享板块
+-   图片压缩的实现方法
+-   图片裁剪
+-   站在巨人的肩旁上,我简单的实现一个压缩工具
+-   lerna
+
+---
+
+### 如果有话对我讲，那就请[qq 联系我](http://wpa.qq.com/msgrd?v=3&uin=729319240&site=qq&menu=yes)
+
+---
+
 ## 简介
 
 <!--
@@ -69,60 +128,3 @@ Here are some ideas to get you started:
         <img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=wangrongding&layout=compact&show_icons=truee&include_all_commits=true&theme=onedark&card_width=230" alt="Rongding's github stats"/>
     </a>
 </div>
-
----
-
-#### 目前在捣鼓的一些东西
-
--   多人音视频会议 [github address](https://github.com/wangrongding/sparrow-meeting)
-
--   sparrowJs sparrowJs [github address](https://github.com/wangrongding/sparrowJs)
-
--   一些自用的油猴脚本 [github address](https://github.com/wangrongding/ding-script.git)
-
--   ding-trans(终端翻译程序) [github address](https://github.com/wangrongding/ding-script.git)
-
----
-
-#### 我的业余生活
-
--   LOL
--   敲代码
--   音乐
--   篮球
-
----
-
-#### 待写的文章列表
-
-先发 4 篇掘力星计划
-
--   chrome95 的新特性
--   phaser 入门教程
--   vsCode 插件从 0-1
--   基于 TensorFlow.js 的机器学习在前端领域的应用
--   聚合的 Chrome 图床插件
--   微前端从 0-1
--   删不掉的元素与 Mutation Observer
--   提升效率的 js 工具函数
--   Hyper.js
--   分享我的 VsCode 扩展
--   面向未来-机器学习与神经网络在前端方向的应用(附案例)
--   EXFI 的相关应用
--   用 ASCII 码画图
--   web 安全
--   基于 WebRTC 实现的截屏录屏软件
--   WebRTC 的入门教程
--   基于 phaser 实现的一个小游戏示例
--   Nuxt.Js 入门教程
--   油猴脚本的编写
--   前端期刊板块
--   读书分享板块
--   图片压缩的实现方法
--   图片裁剪
--   站在巨人的肩旁上,我简单的实现一个压缩工具
--   lerna
-
----
-
-### 如果有话对我讲，那就请[qq 联系我](http://wpa.qq.com/msgrd?v=3&uin=729319240&site=qq&menu=yes)
