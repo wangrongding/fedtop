@@ -9,11 +9,7 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"dev": "vuepress dev docs",
-		"build": "vuepress build docs",
-		"ad": "git add .",
-		"git": "git add . && git commit && git push && yarn remote-build",
-		"gitee": "git add . && git commit && git push gitee && yarn remote-build",
-		"remote-build": "curl http://47.95.239.198:8080/job/giteeBlog/build?token=giteeBlog"
+		"build": "vuepress build docs"
 	},
 	"dependencies": {
 		"@vuepress-reco/vuepress-plugin-bulletin-popover": "^1.5.7",
