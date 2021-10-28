@@ -1,23 +1,15 @@
 # wangrongding.github.io
 
-汪荣顶的个人博客
+## 荣顶的个人博客
 
-### wangrongding's blog [website](https://www.fedtop.com)
+👉 [blog website](https://www.fedtop.com)
 
-<!--
-**wangrongding/wangrongding** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## 目录结构
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+-   articleList 正在写的文章列表
+-   articleSended 已经发表的文章列表
+-   articleList 翻译的的文章列表
+-   docs 归档目录
 
 ### Hi there! I'm Rongding~ 👋
 
@@ -61,6 +53,6 @@ Here are some ideas to get you started:
         <img align="left" src="https://github-readme-stats.vercel.app/api?username=wangrongding&show_icons=truee&include_all_commits=true&theme=onedark&hide=prs" alt="Rongding's github stats"/>
     </a>
     <a href="https://github.com/wangrongding">
-        <img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=wangrongding&layout=compact&show_icons=truee&include_all_commits=true&theme=onedark&card_width=230" alt="Rongding's github stats"/>
+        <img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=wangrongding&layout=compact&show_icons=truee&include_all_commits=true&theme=onedark&card_width=200" alt="Rongding's github stats"/>
     </a>
 </div>
