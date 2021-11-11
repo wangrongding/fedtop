@@ -1,64 +1,64 @@
 ---
 title: 个人信息
 tags:
-    - 个人信息
+  - 个人信息
 date: 2018-06-10
 isComment: false
 sidebar: false
 ---
 
----
+### 扫码添加
+
+## <img src="https://gitee.com/wangrongding/image-house/raw/master/2021-9-9/1631165421779-%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20210818170639.jpg" width="300px">
+
+回复 **[加群]**，进群与大佬们一起共同进步!  
+回复 **[书籍]**，获取大量前端相关 pdf 书籍。  
+朋友圈不定期举行送书活动。一起加油，冲！
 
 #### 目前在捣鼓的一些东西
 
--   多人音视频会议 [github address](https://github.com/wangrongding/sparrow-meeting)
-
--   sparrowJs sparrowJs [github address](https://github.com/wangrongding/sparrowJs)
-
--   一些自用的油猴脚本 [github address](https://github.com/wangrongding/ding-script.git)
-
--   ding-trans(终端翻译程序) [github address](https://github.com/wangrongding/ding-script.git)
+- 多人音视频
+- 基于 tensorFlow.js 的机器学习
+- 微前端项目的落地实现
 
 ---
 
 #### 我的业余生活
 
--   LOL
--   敲代码
--   音乐
--   篮球
+- LOL
+- 敲代码
+- 音乐
+- 篮球
 
 ---
 
 #### 待写的文章列表
 
-先发 4 篇掘力星计划
-
--   chrome95 的新特性
--   phaser 入门教程
--   vsCode 插件从 0-1
--   基于 TensorFlow.js 的机器学习在前端领域的应用
--   聚合的 Chrome 图床插件
--   微前端从 0-1
--   删不掉的元素与 Mutation Observer
--   提升效率的 js 工具函数
--   Hyper.js
--   分享我的 VsCode 扩展
--   面向未来-机器学习与神经网络在前端方向的应用(附案例)
--   EXFI 的相关应用
--   用 ASCII 码画图
--   web 安全
--   基于 WebRTC 实现的截屏录屏软件
--   WebRTC 的入门教程
--   基于 phaser 实现的一个小游戏示例
--   Nuxt.Js 入门教程
--   油猴脚本的编写
--   前端期刊板块
--   读书分享板块
--   图片压缩的实现方法
--   图片裁剪
--   站在巨人的肩旁上,我简单的实现一个压缩工具
--   lerna
+- chrome95 的新特性
+- phaser 入门教程
+- vsCode 插件从 0-1
+- 基于 TensorFlow.js 的机器学习在前端领域的应用
+- 聚合的 Chrome 图床插件
+- 微前端从 0-1
+- 删不掉的元素与 Mutation Observer
+- 提升效率的 js 工具函数
+- Hyper.js
+- 分享我的 VsCode 扩展
+- 面向未来-机器学习与神经网络在前端方向的应用(附案例)
+- EXFI 的相关应用
+- 用 ASCII 码画图
+- web 安全
+- 基于 WebRTC 实现的截屏录屏软件
+- WebRTC 的入门教程
+- 基于 phaser 实现的一个小游戏示例
+- Nuxt.Js 入门教程
+- 油猴脚本的编写
+- 前端期刊板块
+- 读书分享板块
+- 图片压缩的实现方法
+- 图片裁剪
+- 站在巨人的肩旁上,我简单的实现一个压缩工具
+- lerna
 
 ---
 
@@ -102,8 +102,8 @@ Here are some ideas to get you started:
 [![](https://img.shields.io/badge/-CSDN-FF3C00?style=flat-square)](https://blog.csdn.net/weixin_42038245)
 [![](https://img.shields.io/badge/-知乎-fff?style=flat-square&logo=Zhihu&labelColor=ffffff&color=fff)](https://www.zhihu.com/people/rongding)
 
--   😄Read more about my [Blog](http://www.fedtop.com/)
--   👯Follow me on [掘金](https://juejin.cn/user/2858385963749223) , [CSDN](https://blog.csdn.net/weixin_42038245) , [Twitter](https://twitter.com/Sparrow_wrd) or [weibo](https://weibo.com/wangrongding)
+- 😄Read more about my [Blog](http://www.fedtop.com/)
+- 👯Follow me on [掘金](https://juejin.cn/user/2858385963749223) , [CSDN](https://blog.csdn.net/weixin_42038245) , [Twitter](https://twitter.com/Sparrow_wrd) or [weibo](https://weibo.com/wangrongding)
 
 ![](https://img.shields.io/badge/-Nodejs-43853d?style=flat-square&logo=Node.js&logoColor=white)
 ![](https://img.shields.io/badge/-WebRTC-008000?style=flat-square&logo=WebRTC&labelColor=90EE90&color=fff)
