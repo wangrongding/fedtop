@@ -7,12 +7,34 @@
     <title>Document</title>
   </head>
   <body>
-    <relative-time
-      datetime="2021-05-18T09:30:35Z"
-      class="no-wrap"
-      title="2021年5月18日 GMT+8 下午5:30"
-      >on 18 May</relative-time
-    >
+    <button id="btn">啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</button>
+    <div style="height: 10000px;">aa</div>
+    <script>
+      function diga() {
+        console.log(123);
+      }
+      //防抖
+      function debounce(fn, delay) {
+        let temp = null;
+        return function() {
+          clearTimeout(temp);
+          temp = setTimeout(() => {
+            fn();
+          }, delay);
+        };
+      }
+      //节流
+      function throttle(fn, delay) {
+        let record = Date.now();
+        return () => {
+          if (Date.now() - record > delay) {
+            fn();
+            record = Date.now();
+          }
+        };
+      }
+      window.onscroll = throttle(diga, 500);
+    </script>
+    <!-- <button id="btn" onclick="debounce(diga,200)">aaaaa</button> -->
   </body>
-  <!-- <script>alert(1)</script> -->
 </html>

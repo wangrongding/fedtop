@@ -37,6 +37,9 @@
 
 ![](https://gitee.com/wangrongding/image-house/raw/master/images/202110311758330.gif)
 
+stars 列表
+![](https://gitee.com/wangrongding/image-house/raw/master/images/202112182042675.png)
+
 ## 装饰我们的 github
 
 利用 gist 配合 wakatime
