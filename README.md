@@ -6,9 +6,9 @@
 
 ## 目录结构
 
--   articleList 正在写的文章列表
 -   articleSended 已经发表的文章列表
--   articleList 翻译的的文章列表
+-   articleTransList 翻译的的文章列表
+-   articleWriting 正在写的文章列表
 -   docs 归档目录
 
 ### Hi there! I'm Rongding~ 👋
