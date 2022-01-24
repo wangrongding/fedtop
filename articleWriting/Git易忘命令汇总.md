@@ -33,3 +33,7 @@ git clone remoteUrl [foldername]
 
 git config --global credential.helper osxkeychain  
 再次拉取代码会提示输入账号密码。
+
+## 设置默认 push
+
+git push --set-upstream origin master
