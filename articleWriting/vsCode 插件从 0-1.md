@@ -42,15 +42,41 @@ yo code
 
 这里只对与扩展有关的字段，对于 name 之类的字段，我们平时的开发中就已经很了解他们了。
 
+### name
+
+插件的名称必须用全小写无空格的字母组成。
+
 ### displayName
+
+插件市场所显示的插件名称。
 
 ### description
 
+简单地描述一下你的插件是做什么的。
+
+### version
+
+version：通过提高版本号的方式就可以使用拓展发布工具来更新已经发布到 VS Code 应用商店的拓展版本
+
+### main
+
+你的插件入口
+
+### license
+
+参考 npm's documentation。如果你在插件根目录已经提供了 LICENSE 文件。那么 license 的值应该是"SEE LICENSE IN <filename>"。
+
+### scripts
+
+等同于 npm 的 scripts，不过有 VS Code 额外字段如 vscode:prepublish 或 vscode:uninstall.
+
 ### icon
 
-拓展的 icon 图
+icon 的文件路径，最小 128x128 像素 (视网膜屏幕则需 256x256)。
 
 ### engines
+
+一个至少包含 vscode 字段的对象，其值必须兼容 VS Code 版本。不可以是\*。例如：^0.10.5 表明最小兼容 0.10.5 版本的 VS Code。
 
 ### categories
 
@@ -58,11 +84,19 @@ yo code
 
 ### contributes
 
-### version
+描述插件发布内容的对象。
 
-version：通过提高版本号的方式就可以使用拓展发布工具来更新已经发布到 VS Code 应用商店的拓展版本
+### qna(string)
+
+控制市场中的 Q & A 链接。 设置成 marketplace 时，自动使用市场默认的 Q & A 网址。或者提供一个 URL 转跳到你的 Q & A 地址。设置为 false 时禁用。
+
+### extensionDependencies
+
+插件依赖，由插件 ID 组成的数组。当主要插件安装完成后，其他插件会相应安装。插件 ID 的格式为 ${publisher}.${name}。比如：vscode.csharp。
 
 ### activationEvents
+
+激活事件数组。
 
 **activationEvents**：扩展的激活方式，支持数组
 

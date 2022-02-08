@@ -79,3 +79,8 @@ stars 列表
 [《Chrome 腾飞之路》之 Chrome 95❗ 从中我们能学到什么 ❓](https://juejin.cn/post/7017428624072507406)
 
 </details>
+
+## 贴 github 代码链接，高亮区域
+
+#L36-L46
+https ://github.com/vuejs/vue-next/blob/4f17be7b1ce4872ded085a36b95c1897d8c1f299/packages/compiler-sfc/src/templateTransformAssetUrl.ts#L36-L46
