@@ -122,7 +122,7 @@ icon 的文件路径，最小 128x128 像素 (视网膜屏幕则需 256x256)。
 首先全局安装打包工具`vsce`
 
 ```sh
-npm install vsce -g
+npm i vsce -g
 ```
 
 打包命令
