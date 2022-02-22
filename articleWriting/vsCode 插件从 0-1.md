@@ -157,7 +157,20 @@ vsce package
 
 ## 发布
 
+### 创建一个发布者账号
+
 登录 [插件市场](https://marketplace.visualstudio.com/VSCode),这里我直接选择通过 github 账号登录
+
+\*\*\* 不知为何，我在 Chrome 浏览器中始终登录不上,只能在 Edge 浏览器中登录。
+
+### 创建发布者
+
+需要注意的是
+vsce create-publisher 命令已被弃用,必须从[这个链接中创建发布者](https://aka.ms/vscode-create-publisher)
+
+### 生成 token
+
+创建完毕后, 你需要生产一个 token
 
 ![](https://gitee.com/wangrongding/image-house/raw/master/images/202202070225731.jpg)
 ![](https://gitee.com/wangrongding/image-house/raw/master/images/202202070226617.jpg)
@@ -166,9 +179,6 @@ vsce package
 ![](https://gitee.com/wangrongding/image-house/raw/master/images/202202070241391.png)
 ![](https://gitee.com/wangrongding/image-house/raw/master/images/202202070230076.png)
 
-需要注意的是
-vsce create-publisher 命令已被弃用,必须从这个链接中创建发布者
-https://aka.ms/vscode-create-publisher
-创建完毕后,通过 vsce publish 即可发布
-
 ![](https://gitee.com/wangrongding/image-house/raw/master/images/202202070257156.png)
+
+当上述的行为都完成后,通过 `vsce publish` 命令即可发布(中间需要输入,之前你创建的那个 token)
