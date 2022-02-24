@@ -29,7 +29,7 @@ npm repo [包名]
 npm bugs package-name
 ```
 
-## 本地测试自己开发的包
+## 本地开发的 npm 包如何调试
 
 ```sh
 npm install . -g
@@ -59,15 +59,22 @@ npm install ../Path/xxPackageName
 
 ## npm 发布包
 
+首先，你得有一个你的 npm 账号，可以去官网注册，也可以用命令创建一个 👇
+
+```sh
+npm adduser
+```
+
 发布自己开发的工具包，只需简单的三步！  
 **注意:使用淘宝源会报错，要改回默认源**
 
-推荐使用 nrm 或者 yrm 来快速切换镜像源,个人推荐使用 yrm,为什么呢?看下图  
-![](https://raw.githubusercontent.com/wangrongding/image-house/master/images202202241454077.png)
+推荐使用 nrm 或者 yrm 来快速切换镜像源,个人推荐使用 yrm,为什么呢?看下图
+
+![nrm](https://raw.githubusercontent.com/wangrongding/image-house/master/images202202241454077.png)
 
 yrm 会同时将你的 npm 和 yarn 一起切换,并且 ls 后会有\*号标注当前正在使用的源,记得 nrm 以前也有的,现在不知道怎么了...
 
-![](https://raw.githubusercontent.com/wangrongding/image-house/master/images202202241455991.png)
+![yrm](https://raw.githubusercontent.com/wangrongding/image-house/master/images202202241455991.png)
 
 当然你可以手动 npm 切换为默认源
 
@@ -215,5 +222,3 @@ npm token list
 ![](https://raw.githubusercontent.com/wangrongding/image-house/master/images202202241525019.png)
 
 ## npmrc 文件
-
-## 本地开发的 npm 包如何调试
