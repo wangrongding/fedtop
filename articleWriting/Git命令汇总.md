@@ -1,5 +1,12 @@
 # git 易忘命令汇总
 
+## 更改 git gui 的编码
+
+```sh
+git config --global gui.encoding utf-8
+
+```
+
 ## 修改文件名
 
 ```sh

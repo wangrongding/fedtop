@@ -1,5 +1,13 @@
 # 前端必须知道的 npm 知识
 
+> 在键帽与字符上横跳，于代码和程序中穿梭。一起面向快乐编程！
+
+大家好，我是荣顶，马上金三银四啦 ~ 这次给大家带来一篇 npm 命令相关的文章。目的在于查缺补漏。
+
+npm 作为 node 包管理器，内置了非常多的命令供我们日常开发使用，记住以下列出的命令将会给日常开发带来非常大的便利性。
+
+好了，话不多说，看代码 👇  
+
 ## 给喜欢的包加星(类似 github 的 star)
 
 首先你要有一个 npm 的账号，没有的在[👉npm 官网](https://www.npmjs.com/signup)注册一个就行了。
@@ -12,59 +20,81 @@ npm star [package-name]
 
 ## 查看某个包的文档
 
+每次我们想查看某个包的文档，总习惯去搜索引擎搜索，其实一行命令就能解决的事情,不要再去百度搜索啦~
+
 ```sh
+# 此命令会尝试猜测包文档 URL 的可能位置，一般没有自定义的话，就会打开包的github地址。
 npm docs [package-name]
+# or
+npm home [package-name]
 ```
 
-一行命令就能解决的事情,不要再去打开百度搜索啦~
+尝试以下命令，可以快速打开 lodash 的官方文档 👇
 
 ```sh
-npm home [包名]
-# 例如👇
+npm docs lodash
+# or
 npm home lodash
-...
 ```
+
+`npm docs`或者`npm home`命令在不接参数时，会在当前项目中，通过 `package.json` 文件中的`homepage`配置，来打开对应的地址。
+
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/images202202272332350.jpg)  
+如上图所示，其原理就是：当你要查看的项目中的 `package.json` 文件中，设置了`homepage`属性，通过`npm docs/home`就能打开对应的主页，没有设置`homepage`属性时，npm 会继续寻找其中的`repository`属性，这时候打开的就是项目在 github 中的托管地址 url 拼接“#readme” (例如： https://github.com/用户名/仓库名#readme)，如果你`repository`属性也没设置，那么就会打开 npm 官网中包的所在地址，（例如：https://www.npmjs.com/package/npm-limit）
+
+当然，你也可以在`npm docs/home`后不接参数，这样就会直接打开当前项目的主页。
 
 ## 查看某个包的代码仓库
 
 想看某个包的源码?还要跑到 github 去搜索?nonono,也是一行代码。
 
 ```sh
-npm repo [包名]
+# 此命令尝试猜测包的存储库 URL 的可能位置
+npm repo [package-name]
 ```
 
-## 快速提 issues
+👆 它是根据项目中的 `package.json` 文件中，设置的`repository`属性，来打开对应的 url。
+
+## 快速给一个包提 issues
 
 ```sh
 npm bugs [package-name]
 ```
 
+👆 它是根据项目中的 `package.json` 文件中，设置的`bugs`属性，来打开对应的 url。  
+
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/images202202280006612.png)
+
 ## 本地开发的 npm 包如何调试
+
+我们可以像往常一样将本地开发的 npm 包安装到全局或指定目录。
 
 ```sh
 npm install . -g
 ```
 
-做一个软链指向当前需要调试的项目(全局)
+```sh
+# 在某个项目中安装本地包
+npm install ../Path/xxPackageName
+```
+
+也可以做一个软链指向当前需要调试的项目(全局)
 
 ```sh
 npm link
 ```
 
-将调试包链接到当前项目中
+将调试包链接到当前项目中（先做一个软链指向当前需要调试的项目）
 
 ```sh
-# 将调试包链接到当前项目中
-npm link [package-name]
 
-# 取消链接
-npm unlink [package-name]
-```
+# 先在本地开发的 npm 包中执行👇
+npm link
+# 然后切换到你要安装本地调试包的项目中，执行👇，即可将本地包安装到项目依赖中
+npm link <package-name>
 
-在某个项目中安装本地包
-
-```sh
-npm install ../Path/xxPackageName
+# 项目中取消安装本地的调试包👇
+npm unlink <package-name>
 ```
 
 ## npm 发布包
