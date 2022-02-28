@@ -1,8 +1,8 @@
-# 2022 年了,你总不能还只会 `npm i` 吧?
+# 2022 年了,你总不能还只会 npm i 吧?
 
 > 在键帽与字符上横跳，于代码和程序中穿梭。一起面向快乐编程！
 
-大家好，我是荣顶，马上金三银四啦 ~ 这次给大家带来一篇 npm 命令相关的文章。目的在于查缺补漏。
+大家好，我是荣顶，马上金三银四啦 ~ 这次给大家带来一篇 npm 命令相关的文章。目的在于查缺补漏，提升效率。
 
 npm 作为 node 包管理器，内置了非常多的命令供我们日常开发使用，记住以下列出的命令将会给日常开发带来非常大的便利性。
 
@@ -21,16 +21,14 @@ npm star [package-name]
 ```sh
 npm unstar [package-name]
 ```
-
-![](https://raw.githubusercontent.com/wangrongding/image-house/master/images202202281808637.png)
-
+![](https://gitee.com/wangrongding/image-house/raw/master/images/202202282235232.png)
 查看收藏列表
 
 ```sh
 npm stars
 ```
 
-![](https://raw.githubusercontent.com/wangrongding/image-house/master/images202202281624969.png)
+![](https://gitee.com/wangrongding/image-house/raw/master/images/202202282235617.png)
 
 这些操作都会报错在你的账号下，所以很方便。不用担心本机操作后其他地方看不到。你只需要有一个 npm 账户就可以了，还没有的话，可以看本文第二节 👇 ，注册一个并登录吧。
 
@@ -42,11 +40,11 @@ npm stars
 
 推荐使用 nrm 或者 yrm 来快速切换镜像源,个人推荐使用 yrm,为什么呢?看下图
 
-![nrm](https://raw.githubusercontent.com/wangrongding/image-house/master/images202202241454077.png)
+![nrm](https://gitee.com/wangrongding/image-house/raw/master/images/202202282235211.png)
 
 yrm 会同时将你的 npm 和 yarn 一起切换,并且 ls 后会有\*号标注当前正在使用的源,记得 nrm 以前也有的,现在不知道怎么了...
 
-![yrm](https://raw.githubusercontent.com/wangrongding/image-house/master/images202202241455991.png)
+![yrm](https://gitee.com/wangrongding/image-house/raw/master/images/202202282236681.png)
 
 当然你可以手动 npm 切换为默认源
 
@@ -56,7 +54,7 @@ npm config set registry https://registry.npmjs.org
 
 然后执行命令`npm login`,依次填写用户名、密码、邮箱即可。如果你在 npmjs 站点还设置了其他保护，就还需要输入一些验证码之类的等等...
 
-![](https://raw.githubusercontent.com/wangrongding/image-house/master/images202202241516225.png)
+![](https://gitee.com/wangrongding/image-house/raw/master/images/202202282236386.png)
 
 ```sh
 npm adduser
@@ -65,7 +63,7 @@ npm login
 # login是adduser的一个别名
 ```
 
-![](https://raw.githubusercontent.com/wangrongding/image-house/master/images202202281610211.png)
+![](https://gitee.com/wangrongding/image-house/raw/master/images/202202282236014.png)
 
 你可以通过以下命令查看当前 npm 的登陆人
 
@@ -83,8 +81,8 @@ npm docs [package-name]
 # or
 npm home [package-name]
 ```
+![](https://gitee.com/wangrongding/image-house/raw/master/images/202202282237159.gif)
 
-![](https://raw.githubusercontent.com/wangrongding/image-house/master/images202202281655234.gif)
 尝试以下命令，可以快速打开 lodash 的官方文档 👇
 
 ```sh
@@ -95,7 +93,8 @@ npm home lodash
 
 `npm docs`或者`npm home`命令在不接参数时，会在当前项目中，通过 `package.json` 文件中的`homepage`配置，来打开对应的地址。
 
-![](https://raw.githubusercontent.com/wangrongding/image-house/master/images202202272332350.jpg)  
+![](https://gitee.com/wangrongding/image-house/raw/master/images/202202282237387.png)
+
 如上图所示，其原理就是：当你要查看的项目中的 `package.json` 文件中，设置了`homepage`属性，通过`npm docs/home`就能打开对应的主页，没有设置`homepage`属性时，npm 会继续寻找其中的`repository`属性，这时候打开的就是项目在 github 中的托管地址 url 拼接“#readme” (例如： https://github.com/用户名/仓库名#readme)，如果你`repository`属性也没设置，那么就会打开 npm 官网中包的所在地址，（例如：https://www.npmjs.com/package/npm-limit）
 
 当然，你也可以在`npm docs/home`后不接参数，这样就会直接打开当前项目的主页。
@@ -119,7 +118,7 @@ npm bugs [package-name]
 
 👆 它是根据项目中的 `package.json` 文件中，设置的`bugs`属性，来打开对应的 url。
 
-![](https://raw.githubusercontent.com/wangrongding/image-house/master/images202202280006612.png)
+![](https://gitee.com/wangrongding/image-house/raw/master/images/202202282238281.png)
 
 ## 查看某个包的详细信息
 
@@ -133,7 +132,7 @@ npm info [package-name]
 npm show [package-name]
 ```
 
-![](https://raw.githubusercontent.com/wangrongding/image-house/master/images202202281750075.png)
+![](https://gitee.com/wangrongding/image-house/raw/master/images/202202282238803.png)
 
 ## 查看某个包的所有历史版本
 
@@ -141,7 +140,7 @@ npm show [package-name]
 npm v [package-name] versions
 ```
 
-![](https://raw.githubusercontent.com/wangrongding/image-house/master/images202202281748905.png)
+![](https://gitee.com/wangrongding/image-house/raw/master/images/202202282238034.png)
 
 ## 本地开发的 npm 包如何调试
 
@@ -254,7 +253,7 @@ npm outdated
 npm outdated -g --depth=0
 ```
 
-![](https://raw.githubusercontent.com/wangrongding/image-house/master/images202202241439826.png)
+![](https://gitee.com/wangrongding/image-house/raw/master/images/202202282238717.png)
 
 列出 node_modules 中的所有包
 
@@ -274,7 +273,7 @@ yarn audit
 
 执行后会列出有问题的包
 
-![](https://raw.githubusercontent.com/wangrongding/image-house/master/images202202241510917.png)
+![](https://gitee.com/wangrongding/image-house/raw/master/images/202202282238163.png)
 
 | hahh     | hah                     |
 | -------- | ----------------------- |
@@ -289,7 +288,7 @@ yarn audit
 npm token list
 ```
 
-![](https://raw.githubusercontent.com/wangrongding/image-house/master/images202202241525019.png)
+![](https://gitee.com/wangrongding/image-house/raw/master/images/202202282239310.png)
 
 检测一下当前镜像源的延迟
 
@@ -297,7 +296,7 @@ npm token list
 npm ping
 ```
 
-![](https://raw.githubusercontent.com/wangrongding/image-house/master/images202202281719051.png)
+![](https://gitee.com/wangrongding/image-house/raw/master/images/202202282239181.png)
 
 检测当前 node 和 npm 存在的问题 👇
 
@@ -305,4 +304,4 @@ npm ping
 npm doctor
 ```
 
-![](https://raw.githubusercontent.com/wangrongding/image-house/master/images202202281722997.png)
+![](https://gitee.com/wangrongding/image-house/raw/master/images/202202282239827.png)
