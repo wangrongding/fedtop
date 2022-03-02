@@ -81,6 +81,7 @@ npm docs [package-name]
 # or
 npm home [package-name]
 ```
+
 ![](https://gitee.com/wangrongding/image-house/raw/master/images/202202282237159.gif)
 
 尝试以下命令，可以快速打开 lodash 的官方文档 👇
@@ -275,7 +276,7 @@ yarn audit
 
 ![](https://gitee.com/wangrongding/image-house/raw/master/images/202202282238163.png)
 
-| hahh     | hah                     |
+| 风险等级 | 说明                    |
 | -------- | ----------------------- |
 | Critical | 需要立即解决的!         |
 | High     | 需要尽快解决!           |
