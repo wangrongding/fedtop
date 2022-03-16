@@ -2,7 +2,7 @@
 
 ## git 输出美化
 
-Git Status 美化
+### Git Status 美化
 
 ```sh
 git status -sb
@@ -12,7 +12,7 @@ git status -sb
 git config --global alias.dog "status -sb"
 ```
 
-git log 美化
+### git log 美化
 
 ```sh
 git log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
@@ -22,22 +22,23 @@ git log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C
 git config --global alias.dog "log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 ```
 
-git 命令自动纠错
+### git 命令自动纠错
 
 ```sh
 git config --global help.autocorrect 1
 ```
 
-Git 命令输出里加上颜色
+### Git 命令输出里加上颜色
 
 ```sh
 git config --global color.ui 1
 ```
 
-git 设置别名
+### git 设置别名
+
 https://www.cnblogs.com/taylorblog/p/3934518.html
 
-git 允许空提交
+### git 允许空提交
 
 ```sh
 $ git commit -m "Big-ass commit" --allow-empty
