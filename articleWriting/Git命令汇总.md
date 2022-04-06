@@ -14,6 +14,8 @@ git config --global alias.dog "status -sb"
 
 ### git log 美化
 
+https://git-scm.com/docs/pretty-formats
+
 ```sh
 git log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 ```
