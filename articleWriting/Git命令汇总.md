@@ -1,5 +1,25 @@
 # git 易忘命令汇总
 
+## git 忽略代码块
+
+```sh
+# 忽略行代码
+git config --global filter.inlineIgnore.clean "sed '/\/\/ #inlineIgnore$/'d"
+git config --global filter.inlineIgnore.smudge cat
+# 忽略代码块
+git config --global filter.blockIgnore.clean "sed '/\/\/ blockIgnore_begin/,/\/\/ blockIgnore_end$/d'"
+git config --global filter.blockIgnore.smudge cat
+```
+
+在项目根目录的.gitattributes 文件中添加以下
+
+```sh
+# .gitattributes文件
+*.ts filter=blockIgnore
+# 或者
+*.ts filter=inlineIgnore
+```
+
 ## git 输出美化
 
 ### Git Status 美化
@@ -21,7 +41,7 @@ git log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C
 ```
 
 ```sh
-git config --global alias.dog "log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+git config --global alias.logs "log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue(%cs) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 ```
 
 ### git 命令自动纠错
