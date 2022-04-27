@@ -374,6 +374,12 @@ $ git push [remote] --all
 ## 撤销
 
 ```sh
+
+# 这样就能成功的撤回你刚刚的commit操作。
+# HEAD^的意思是上一个版本，也可以写成HEAD~1
+# 如果你进行了2次commit，想都撤回，可以使用HEAD~2
+git reset --soft HEAD^
+
 # 恢复暂存区的指定文件到工作区
 $ git checkout [file]
 
