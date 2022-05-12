@@ -1,7 +1,9 @@
-const { defaultTheme } = require("vuepress");
-import navBar from "./config/navBar";
+import { defaultTheme } from "vuepress";
+import { searchPlugin } from "@vuepress/plugin-search";
+import navbar from "./config/navBar";
 import head from "./config/head";
 module.exports = {
+  open: true, //服务器启动后打开浏览器
   base: "/", //部署站点的基础路径。
   lang: "zh-CN", //站点的语言。
   title: "荣顶 - 编程博客", //站点的标题。
@@ -9,15 +11,22 @@ module.exports = {
   dest: "dist", //指定 vuepress build 命令的输出目录。
   head, // html head 标签
   theme: defaultTheme({
-    navBar, // 导航栏配置。
+    logo: "https://assets.fedtop.com/picbed/logo.jpg", //Logo
+    logoDark: "https://assets.fedtop.com/picbed/darklogo.jpg", //暗黑Logo
     subSidebar: "auto",
+    navbar: navbar, // 导航栏配置。
     repo: "https://github.com/wangrongding", //项目仓库的 URL。
     docsRepo: "https://github.com/wangrongding/fedtop",
     docsBranch: "fedtop",
     docsDir: "docs",
     editLinkPattern: ":repo/edit/:branch/:path",
     editLinkText: "编辑此页",
-    logo: "https://assets.fedtop.com/picbed/logo.jpg", //Logo
-    logoDark: "https://assets.fedtop.com/picbed/darklogo.jpg", //暗黑Logo
+    lastUpdatedText: "最后一次更新于",
+    contributors: false,
   }),
+  plugins: [
+    searchPlugin({
+      // 配置项
+    }),
+  ],
 };
