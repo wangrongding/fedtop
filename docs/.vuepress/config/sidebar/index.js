@@ -1,2 +1,1 @@
-module.exports = Object.assign(
-  {})
+module.exports = Object.assign({});
