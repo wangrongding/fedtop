@@ -1,18 +1,13 @@
 {
-	"vetur.format.defaultFormatterOptions": {
-		"prettyhtml": {
-			"tabWidth": 4,
-			"singleQuote": false
-		},
-		"prettier": {
-			"tabWidth": 4,
-			"singleQuote": true
-		}
-	},
-	"editor.copyWithSyntaxHighlighting": false,
-	"editor.formatOnSave": false,
-	"[markdown]": {
-		"editor.quickSuggestions": true
-	},
-	"files.eol": "\r\n"
+  "editor.copyWithSyntaxHighlighting": false,
+  "editor.formatOnSave": false,
+  "[markdown]": {
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "strings": "on",
+      "other": "on"
+    }
+  },
+  "files.eol": "\n",
+  "cSpell.words": ["reco", "Rongding", "vuepress"]
 }

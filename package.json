@@ -8,16 +8,17 @@
 	"license": "MIT",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
+		"format": "prettier --write docs",
 		"dev": "vuepress dev docs",
 		"build": "vuepress build docs"
 	},
 	"dependencies": {
-		"@vuepress-reco/vuepress-plugin-bulletin-popover": "^1.5.7",
-		"@vuepress/plugin-medium-zoom": "1.0.0-alpha.0",
-		"@vuepress/plugin-pwa": "1.0.0-alpha.3",
-		"vuepress": "1.0.3",
+		"@vuepress-reco/vuepress-plugin-bulletin-popover": "^1.6.13",
+		"@vuepress/plugin-medium-zoom": "^1.9.7",
+		"@vuepress/plugin-pwa": "^1.9.7",
+		"vuepress": "^1.9.7",
 		"vuepress-plugin-flowchart": "1.4.3",
-		"vuepress-theme-reco": "^1.6.6"
+		"vuepress-theme-reco": "^1.6.13"
 	},
 	"gitHooks": {},
 	"lint-staged": {
@@ -26,6 +27,7 @@
 		]
 	},
 	"devDependencies": {
-		"eslint": "^7.25.0"
+		"eslint": "^7.25.0",
+		"prettier": "^2.6.2"
 	}
 }

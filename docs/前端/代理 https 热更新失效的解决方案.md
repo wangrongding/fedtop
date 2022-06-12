@@ -1,0 +1,34 @@
+---
+title: 代理 https 热更新失效的解决方案
+date: 2020-08-01
+tags:
+  - webpack
+categories:
+  - 前端
+---
+
+我们一般的开发步骤都是，使用 vue-cli3 开启本地服务，然后使用 whistle 代理到正式的网址。然后就会出现热更新失效。报错`/sockjs-node/info?t=`
+
+## 一、首次尝试
+
+查看 webpack 文档，发现有一个 https 的选项
+
+![](https://tcs.teambition.net/storage/31206b8e14ae589296d24f0e050d247cfd97?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYxOTk3ODM2NCwiaWF0IjoxNjE5MzczNTY0LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMjA2YjhlMTRhZTU4OTI5NmQyNGYwZTA1MGQyNDdjZmQ5NyJ9.6WZyL8iNbKdhgJKOilzXWe45OSjJMgeo5HzSvqRo8GQ)
+
+配置为`true` 后发现开始还有用，后面就没用了。报证书非法的问题。
+
+![](https://tcs.teambition.net/storage/31202190c5f6ba7ce4b43e6c23e2041119b7?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYxOTk3ODM2NCwiaWF0IjoxNjE5MzczNTY0LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMjAyMTkwYzVmNmJhN2NlNGI0M2U2YzIzZTIwNDExMTliNyJ9.D2_thgsYKTRGmLAQb8LRmLPU4fXGF9UFUOB4kqoXC_s)
+
+## 二、最终方案
+
+经 google，发现了一个新方案。使用 devServer.public 属性。
+
+![](https://tcs.teambition.net/storage/3120f8aea1452e5fe1a2546c7e59f050a789?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYxOTk3ODM2NCwiaWF0IjoxNjE5MzczNTY0LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzMxMjBmOGFlYTE0NTJlNWZlMWEyNTQ2YzdlNTlmMDUwYTc4OSJ9.OqrWce56HbRvNYUXPSfO0K30n9GjOHBC_6iMI--60BM)
+
+经测试有效。
+
+相关链接如下：
+
+vue-cli3 热更新失效问题
+
+项目运行时一直发 http://localhost:8080/sockjs-node/info?t=1462183700002 请求
