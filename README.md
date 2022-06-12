@@ -48,7 +48,7 @@
 ### 图像/画布
 
 - [每一个用到 canvas 的小伙伴都应该了解的 fabric.js](docs/0-%E5%89%8D%E7%AB%AF/%E6%AF%8F%E4%B8%80%E4%B8%AA%E7%94%A8%E5%88%B0canvas%E7%9A%84%E5%B0%8F%E4%BC%99%E4%BC%B4%E9%83%BD%E5%BA%94%E8%AF%A5%E4%BA%86%E8%A7%A3%E7%9A%84fabric.js.md)
-- [通过文本与图片的隐写来隐藏信息(非常有意思!)](<docs/0-%E5%89%8D%E7%AB%AF/%E9%80%9A%E8%BF%87%E6%96%87%E6%9C%AC%E4%B8%8E%E5%9B%BE%E7%89%87%E7%9A%84%E9%9A%90%E5%86%99%E6%9D%A5%E9%9A%90%E8%97%8F%E4%BF%A1%E6%81%AF(%E9%9D%9E%E5%B8%B8%E6%9C%89%E6%84%8F%E6%80%9D!).md>)
+- [通过文本与图片的隐写来隐藏信息（非常有意思）.md](docs/0-%E5%89%8D%E7%AB%AF/%E9%80%9A%E8%BF%87%E6%96%87%E6%9C%AC%E4%B8%8E%E5%9B%BE%E7%89%87%E7%9A%84%E9%9A%90%E5%86%99%E6%9D%A5%E9%9A%90%E8%97%8F%E4%BF%A1%E6%81%AF%EF%BC%88%E9%9D%9E%E5%B8%B8%E6%9C%89%E6%84%8F%E6%80%9D%EF%BC%89.md)
 - [我用 10000 张图片合成我们美好的瞬间](docs/0-%E5%89%8D%E7%AB%AF/%E6%88%91%E7%94%A8%2010000%20%E5%BC%A0%E5%9B%BE%E7%89%87%E5%90%88%E6%88%90%E6%88%91%E4%BB%AC%E7%BE%8E%E5%A5%BD%E7%9A%84%E7%9E%AC%E9%97%B4.md)
 - [Javascript 将 html 转成 pdf,下载（html2canvas 和 jsPDF）](docs/0-%E5%89%8D%E7%AB%AF/Javascript%E5%B0%86html%E8%BD%AC%E6%88%90pdf,%E4%B8%8B%E8%BD%BD%EF%BC%88html2canvas%20%E5%92%8C%20jsPDF%EF%BC%89.md)
 
