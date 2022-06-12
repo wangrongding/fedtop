@@ -33,7 +33,6 @@
 - [Vue 中 key 值的作用](docs/0-%E5%89%8D%E7%AB%AF/Vue%E4%B8%ADkey%E5%80%BC%E7%9A%84%E4%BD%9C%E7%94%A8.md)
 - [Vuex 精简文档](docs/0-%E5%89%8D%E7%AB%AF/Vuex%E7%B2%BE%E7%AE%80%E6%96%87%E6%A1%A3.md)
 - [如何引用外部 cdn 资源](docs/0-%E5%89%8D%E7%AB%AF/%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8%E5%A4%96%E9%83%A8cdn%E8%B5%84%E6%BA%90.md)
--
 
 ### 小程序
 
@@ -45,7 +44,6 @@
 - [小程序中当有异步操作或者耗时同步操作时，不能保证 app.js 中的 onLaunch 与 page.js 中 onLoad 先后执行顺序的解决方案](docs/0-%E5%89%8D%E7%AB%AF/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E5%BD%93%E6%9C%89%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C%E6%88%96%E8%80%85%E8%80%97%E6%97%B6%E5%90%8C%E6%AD%A5%E6%93%8D%E4%BD%9C%E6%97%B6%EF%BC%8C%E4%B8%8D%E8%83%BD%E4%BF%9D%E8%AF%81app.js%E4%B8%AD%E7%9A%84onLaunch%E4%B8%8Epage.js%E4%B8%ADonLoad%E5%85%88%E5%90%8E%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.md)
 - [小程序中非常好用的富文本插件 wxParse](docs/0-%E5%89%8D%E7%AB%AF/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E9%9D%9E%E5%B8%B8%E5%A5%BD%E7%94%A8%E7%9A%84%E5%AF%8C%E6%96%87%E6%9C%AC%E6%8F%92%E4%BB%B6wxParse.md)
 - [小程序中如何用 canvas 画出圆角的矩形](docs/0-%E5%89%8D%E7%AB%AF/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E5%A6%82%E4%BD%95%E7%94%A8canvas%E7%94%BB%E5%87%BA%E5%9C%86%E8%A7%92%E7%9A%84%E7%9F%A9%E5%BD%A2.md)
--
 
 ### 图像/画布
 
@@ -53,7 +51,6 @@
 - [通过文本与图片的隐写来隐藏信息(非常有意思!)](<docs/0-%E5%89%8D%E7%AB%AF/%E9%80%9A%E8%BF%87%E6%96%87%E6%9C%AC%E4%B8%8E%E5%9B%BE%E7%89%87%E7%9A%84%E9%9A%90%E5%86%99%E6%9D%A5%E9%9A%90%E8%97%8F%E4%BF%A1%E6%81%AF(%E9%9D%9E%E5%B8%B8%E6%9C%89%E6%84%8F%E6%80%9D!).md>)
 - [我用 10000 张图片合成我们美好的瞬间](docs/0-%E5%89%8D%E7%AB%AF/%E6%88%91%E7%94%A8%2010000%20%E5%BC%A0%E5%9B%BE%E7%89%87%E5%90%88%E6%88%90%E6%88%91%E4%BB%AC%E7%BE%8E%E5%A5%BD%E7%9A%84%E7%9E%AC%E9%97%B4.md)
 - [Javascript 将 html 转成 pdf,下载（html2canvas 和 jsPDF）](docs/0-%E5%89%8D%E7%AB%AF/Javascript%E5%B0%86html%E8%BD%AC%E6%88%90pdf,%E4%B8%8B%E8%BD%BD%EF%BC%88html2canvas%20%E5%92%8C%20jsPDF%EF%BC%89.md)
--
 
 ### Webpack
 
@@ -104,8 +101,10 @@
 - [gitlab-CI 持续集成以及 runner 的配置简版](docs/9-%E5%85%B6%E4%BB%96/gitlab-CI%20%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E4%BB%A5%E5%8F%8Arunner%E7%9A%84%E9%85%8D%E7%BD%AE%E7%AE%80%E7%89%88.md)
 - [linux 命令备忘录(持续更新...)](<docs/9-%E5%85%B6%E4%BB%96/linux%E5%91%BD%E4%BB%A4%E5%A4%87%E5%BF%98%E5%BD%95(%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0...).md>)
 - [markdown 语法](docs/9-%E5%85%B6%E4%BB%96/markdown%E8%AF%AD%E6%B3%95.md)
--
 
 ### 正在写的
 
 (这里是待完成的文章...)[https://github.com/wangrongding/fedtop/tree/main/z%E6%96%87%E7%AB%A0%E5%9C%A8docs%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%AD%2C%E8%BF%99%E9%87%8C%E9%9D%A2%E6%98%AF%E6%B2%A1%E5%86%99%E5%AE%8C%E7%9A%84]
+
+如果你也非常热爱前端相关技术！欢迎加入千人前端技术交流群~ 🦄  
+![](https://assets.fedtop.com/picbed/1655029924164.jpg)
