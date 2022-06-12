@@ -11,9 +11,9 @@
 *.html eol=lf
 *.md eol=lf
 # ============================================================
-*.js linguist-language=markdown
-*.css linguist-language=markdown
-*.html linguist-language=markdown
+*.js linguist-language=javascript
+*.css linguist-language=javascript
+*.html linguist-language=javascript
 # ============================================================
 *.ts filter=blockignore
 *.js filter=blockignore
