@@ -3,7 +3,7 @@ title: 在 VsCode 中优雅的刷 LeetCode
 tags:
   - 其他
 categories:
-  - other
+  - 其他
 date: 2022-02-05
 ---
 

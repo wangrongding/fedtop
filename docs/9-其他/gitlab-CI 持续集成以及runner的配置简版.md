@@ -3,7 +3,7 @@ title: gitlab-CI 持续集成以及runner的配置简版
 tags:
   - 其他
 categories:
-  - other
+  - 其他
 date: 2018-12-12
 ---
 

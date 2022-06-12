@@ -3,7 +3,7 @@ title: solution awesome (持续更新中...)
 tags:
   - 其他
 categories:
-  - other
+  - 其他
 date: 2021-07-27
 ---
 

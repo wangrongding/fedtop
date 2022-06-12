@@ -3,7 +3,7 @@ title: GitLab Pages/Vuepress生成项目文档和博客
 tags:
   - 其他
 categories:
-  - other
+  - 其他
 date: 2018-09-09
 ---
 

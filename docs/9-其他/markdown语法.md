@@ -4,7 +4,7 @@ date: 2018-02-01
 tags:
   - 其他
 categories:
-  - other
+  - 其他
 ---
 
 > markdown 语法
