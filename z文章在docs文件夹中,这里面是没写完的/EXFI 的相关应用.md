@@ -9,6 +9,7 @@ https://github.com/wangfpp/clearExif
 
 读取 exif 数据  
 http://code.ciaoca.com/javascript/exif-js/demo/
+https://github.com/exif-js/exif-js
 
 百度地图拾取坐标系统  
 http://api.map.baidu.com/lbsapi/getpoint/index.html  
