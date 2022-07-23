@@ -1,5 +1,13 @@
 # git 易忘命令汇总
 
+## gitk 中文乱码
+
+```sh
+git config --global gui.encoding utf-8
+```
+
+![](https://assets.fedtop.com/picbed/20220706183831.png)
+
 ## git 忽略代码块
 
 ```sh
@@ -422,5 +430,4 @@ $ git archive
 
 </details>
 
-https://backlog.com/git-tutorial/cn/intro/intro1_1.html
-https://github.com/justjavac/free-programming-books-zh_CN
+https://backlog.com/git-tutorial/cn/intro/intro1_1.html https://github.com/justjavac/free-programming-books-zh_CN

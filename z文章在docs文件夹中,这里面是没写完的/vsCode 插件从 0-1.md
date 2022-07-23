@@ -20,21 +20,22 @@ yo code
 
 选择一个你想要开发的插件类型
 
-![](https://gitee.com/wangrongding/image-house/raw/master/images/202202031439542.png)
+![](https://assets.fedtop.com/picbed/20220707142355.png)
 
 我这里选择了基于 Ts 开发的插件，选择完毕后依次填写相关信息即可。
 
-![](https://gitee.com/wangrongding/image-house/raw/master/images/202202031454975.png)
+![](https://assets.fedtop.com/picbed/20220707142408.png)
 
 项目生成完毕后，通过 vscode 打开，会提示你安装一个`TypeScript + Webpack Problem Matchers`扩展，它是一个 Typescript 问题匹配器
 
 你不装也 ok 的，这里我们选择安装它~
 
-![](https://gitee.com/wangrongding/image-house/raw/master/images/202202031534499.jpg)
+![](https://assets.fedtop.com/picbed/20220707142421.png)
 
 ## 测试插件
 
-只需要在命令面板中输入 Hello World 便可以激活这个模板拓展，弹出一个 Hello World 的消息弹窗。
+- 只需要在命令面板中输入 Hello World 便可以激活这个模板拓展，弹出一个 Hello World 的消息弹窗。
+- 直接摁 F5 调试
 
 ## 开始编写插件
 
@@ -134,24 +135,15 @@ vsce package
 需要注意的:  
 ![](https://gitee.com/wangrongding/image-house/raw/master/images/202202070110836.png)
 
-必须修改 readme 文件
-![](https://gitee.com/wangrongding/image-house/raw/master/images/202202070135878.png)
-尽量不要用:activationEvents:'\*'
-可替换为:activationEvents:'onStartupFinished'
-必须添加 repository
-添加 license 文件
-![](https://gitee.com/wangrongding/image-house/raw/master/images/202202070142997.png)
+必须修改 readme 文件 ![](https://gitee.com/wangrongding/image-house/raw/master/images/202202070135878.png) 尽量不要用:activationEvents:'\*' 可替换为:activationEvents:'onStartupFinished' 必须添加 repository 添加 license 文件 ![](https://gitee.com/wangrongding/image-house/raw/master/images/202202070142997.png)
 
-上述问题都 ok 后,就会在当前的目录下生成一个 `.vsix` 文件
-![](https://gitee.com/wangrongding/image-house/raw/master/images/202202070142997.png)
+上述问题都 ok 后,就会在当前的目录下生成一个 `.vsix` 文件 ![](https://gitee.com/wangrongding/image-house/raw/master/images/202202070142997.png)
 
 ## 安装调试
 
-如图所示，选择从 `VSIX` 安装后,选择生成的.vsix 文件进行安装
-![](https://gitee.com/wangrongding/image-house/raw/master/images/202202031410687.jpg)
+如图所示，选择从 `VSIX` 安装后,选择生成的.vsix 文件进行安装 ![](https://gitee.com/wangrongding/image-house/raw/master/images/202202031410687.jpg)
 
-也可以通过 vscode 命令面板(摁 F1),选择生成的.vsix 文件进行安装
-![](https://gitee.com/wangrongding/image-house/raw/master/images/202202032045885.png)
+也可以通过 vscode 命令面板(摁 F1),选择生成的.vsix 文件进行安装 ![](https://gitee.com/wangrongding/image-house/raw/master/images/202202032045885.png)
 
 当然，如果你不想用`VSIX`也可以，对于只在本地安装自己做的扩展的时候，你只需要把扩展文件复制到`C:\Users\用户名\.vscode\extensions`目录中即可
 
@@ -165,19 +157,15 @@ vsce package
 
 ### 创建发布者
 
-需要注意的是
-vsce create-publisher 命令已被弃用,必须从[这个链接中创建发布者](https://aka.ms/vscode-create-publisher)
+需要注意的是 vsce create-publisher 命令已被弃用,必须从[这个链接中创建发布者](https://aka.ms/vscode-create-publisher)
 
 ### 生成 token
 
 创建完毕后, 你需要生产一个 token
 
-![](https://gitee.com/wangrongding/image-house/raw/master/images/202202070225731.jpg)
-![](https://gitee.com/wangrongding/image-house/raw/master/images/202202070226617.jpg)
-![](https://gitee.com/wangrongding/image-house/raw/master/images/202202070226483.png)
+![](https://gitee.com/wangrongding/image-house/raw/master/images/202202070225731.jpg) ![](https://gitee.com/wangrongding/image-house/raw/master/images/202202070226617.jpg) ![](https://gitee.com/wangrongding/image-house/raw/master/images/202202070226483.png)
 
-![](https://gitee.com/wangrongding/image-house/raw/master/images/202202070241391.png)
-![](https://gitee.com/wangrongding/image-house/raw/master/images/202202070230076.png)
+![](https://gitee.com/wangrongding/image-house/raw/master/images/202202070241391.png) ![](https://gitee.com/wangrongding/image-house/raw/master/images/202202070230076.png)
 
 ![](https://gitee.com/wangrongding/image-house/raw/master/images/202202070257156.png)
 
