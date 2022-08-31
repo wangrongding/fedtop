@@ -1,31 +1,49 @@
 # docker
 
+## docker desktop 安装
+
+https://www.docker.com/
+
+
+## 一个 简单的 docker 入门示例
+
+### 克隆一个存储库
+
+The Getting Started project is a simple GitHub repository which contains everything you need to build an image and run it as a container.
+
+入门项目是一个简单的 GitHub 仓库，它包含了你构建镜像并作为容器运行所需的一切。
+
+Clone the repository by running Git in a container.
+
+通过在容器中运行 Git 来克隆存储库。
+
 ```sh
-PS C:\Users\wangr> docker run --name repo alpine/git clone https://github.com/docker/getting-started.git
-Unable to find image 'alpine/git:latest' locally
-latest: Pulling from alpine/git
-2408cc74d12b: Pull complete
-1ff41652313e: Pull complete
-e99112876459: Pull complete
-Digest: sha256:23dcd3edfd1d9c7cbb14f7823d07a4934716cfa4d4dbc402d37ee011c440a685
-Status: Downloaded newer image for alpine/git:latest
-Cloning into 'getting-started'...
-PS C:\Users\wangr> docker cp repo:/git/getting-started/ .docker run --name repo alpine/git clone https://github.com/docker/getting-started.git
-unknown flag: --name
-See 'docker cp --help'.
-PS C:\Users\wangr> docker cp repo:/git/getting-started/ .
+docker run --name repo alpine/git clone https://github.com/docker/getting-started.git
+
+docker cp repo:/git/getting-started/ .
 ```
 
-## build the image
+### 打包成镜像
+
+A Docker image is a private file system just for your container. It provides all the files and code your container needs.
+
+Docker 镜像是一个专属于你的容器的私有文件系统。它提供了你的容器需要的所有文件和代码。
 
 ```sh
-PS C:\Users\wangr> cd getting-started
-PS C:\Users\wangr\getting-started> docker build -t docker101tutorial .
+cd getting-started
+
+docker build -t docker101tutorial .
 ```
+
+
+> Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them  
+> 使用 "docker scan "对图像进行 Snyk 测试，以发现漏洞并学习如何修复它们。
 
 ![](https://assets.fedtop.com/picbed/20220706022513.png)
 
-## Run your first container
+### 运行你的第一个容器
+
+Start a container based on the image you built in the previous step. Running a container launches your application with private resources, securely isolated from the rest of your machine.
 
 基于上一步中构建的映像启动容器。运行容器将使用私有资源启动应用程序，该私有资源与机器的其他部分安全隔离。
 
@@ -35,16 +53,21 @@ docker run -d -p 80:80 --name docker-tutorial docker101tutorial
 
 ![](https://assets.fedtop.com/picbed/20220706022445.png)
 
-## 保存并分享您的图像
+### 保存并分享你的镜像
+
+Save and share your image on Docker Hub to enable other users to easily download and run the image on any destination machine.
+
+在 Docker Hub 上保存和分享你的镜像，使其他用户能够轻松下载并在任何目标机器上运行该镜像。
 
 ```sh
-PS> docker tag docker101tutorial wangrongding/docker101tutorial
-PS> docker push wangrongding/docker101tutorial
+docker tag docker101tutorial wangrongding/docker101tutorial
+
+docker push wangrongding/docker101tutorial
 ```
 
 ![](https://assets.fedtop.com/picbed/20220706022810.png)
 
-## 常用命令
+## docker 常用命令
 
 ### 管理镜像命令—image
 
