@@ -201,3 +201,13 @@ nl file1 > file2
 - control + U：删除光标前所有字符
 - control + K：删除光标后所有字符
 - control + W：删除光标前一个单词（根据空格识别单词分隔）
+
+### xcode-select
+
+```sh
+xcode-select --install
+```
+
+安装不了的，去这个链接，手动安装
+
+https://developer.apple.com/download/more/?=command%20line%20tools

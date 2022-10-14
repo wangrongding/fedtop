@@ -1,5 +1,9 @@
 # git 易忘命令汇总
 
+## git 合并不同历史的仓库，并保留双方 commit logs
+
+- https://blog.csdn.net/jiaming917/article/details/88914228
+
 ## gitk 中文乱码
 
 ```sh
