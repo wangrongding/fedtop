@@ -1,5 +1,0 @@
-```sh
-|-- articleWriting
-|-- docs
-|-- public
-```
