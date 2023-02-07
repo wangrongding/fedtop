@@ -4,7 +4,6 @@
 
 https://www.docker.com/
 
-
 ## 一个 简单的 docker 入门示例
 
 ### 克隆一个存储库
@@ -34,7 +33,6 @@ cd getting-started
 
 docker build -t docker101tutorial .
 ```
-
 
 > Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them  
 > 使用 "docker scan "对图像进行 Snyk 测试，以发现漏洞并学习如何修复它们。
@@ -218,4 +216,12 @@ docker stats --help
 
 ```sh
 docker rename <container_id> <new_container_name>
+```
+
+### 其他命令
+
+```sh
+# 避免出现Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?错误
+# 开机自启动
+systemctl enable docker
 ```

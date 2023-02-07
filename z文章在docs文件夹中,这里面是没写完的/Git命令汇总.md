@@ -44,6 +44,25 @@ git status -sb
 git config --global alias.dog "status -sb"
 ```
 
+### git 命令行文件路径显示中文
+
+```sh
+# 全局
+git config --global core.quotepath false
+# 当前仓库
+git config core.quotepath false
+
+# or 试试git --no-pager log
+# 如果可以显示的话，把pager设置为more
+git config --global core.pager more
+```
+
+![](https://assets.fedtop.com/picbed/202211241024501.png)
+
+这样设置后，如果你的终端是 utf-8 编码的那么就可以直接显示中文了。
+
+![](https://assets.fedtop.com/picbed/202211241024385.png)
+
 ### git log 美化
 
 https://git-scm.com/docs/pretty-formats

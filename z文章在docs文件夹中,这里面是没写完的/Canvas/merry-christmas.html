@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>christmas笔试，原生实现</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #982c2b;
+        display: grid;
+        place-content: center;
+        height: 100vh;
+        width: 100vw;
+        /* border: #a0a0a0; */
+      }
+      .main {
+        background-color: white;
+        border-radius: 15px;
+        padding: 20px;
+        width: 500px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <canvas id="output" width="500px" height="100px">
+        <!-- 不兼容 canvas 的时候显示下文 -->
+        当前浏览器不支持canvas元素，请升级或更换浏览器！
+      </canvas>
+    </div>
+
+    <!-- christmas笔试，这里我通过 canvas 画布原生实现 -->
+    <script>
+      const canvas = document.getElementById('output');
+      const ctx = canvas.getContext('2d');
+      const width = canvas.width;
+      const height = canvas.height;
+      // 家族圣诞值阶梯
+      const familyChristmasValueStage = [0, 1000000, 2000000, 3600000, 5000000];
+      // 家族圣诞值阶梯对应的圣诞树位置
+      let stagePositions = [];
+      // 家族当前圣诞值
+      let currentValue = 0;
+      // 距离下一阶段还差多少圣诞值
+      let nextStageValue = 1000000;
+
+      // // 初始画布
+      // function init(initValue) {
+      //   // 绘制头部说明文本
+      //   ctx.font = '16px Arial';
+      //   ctx.fillStyle = '#458a5b';
+      //   ctx.textAlign = 'left';
+      //   ctx.textBaseline = 'middle';
+      //   // 绘制头部说明文本
+      //   const headerText = `家族圣诞值：${currentValue}  ${nextStageValue === '已满' ? '（家族圣诞值已满🌸）' : `（距离下一阶段还差${nextStageValue}圣诞值）`}`;
+      //   ctx.fillText(headerText, 0, 10);
+      //   // 绘制圣诞值圆角进度条
+      //   ctx.fillStyle = '#ccc';
+      //   ctx.fillRect(0, 40, width, 15);
+      //   ctx.fill();
+      //   // 绘制圣诞值每个阶段的刻度
+      //   drawStage(ctx);
+      //   // 绘制当前圣诞值进度条;
+      //   drawProgress(ctx, initValue || currentValue);
+      // }
+      // init();
+
+      // // 绘制圣诞值每个阶段的刻度
+      // function drawStage(ctx) {
+      //   ctx.clearRect(0, 60, width, 100);
+      //   stagePositions = [];
+      //   familyChristmasValueStage.forEach((item, index) => {
+      //     // 计算每个阶段的宽度
+      //     const stageWidth = (width / familyChristmasValueStage[familyChristmasValueStage.length - 1]) * familyChristmasValueStage[index];
+      //     // 第一个阶段不绘制刻度
+      //     if (index === 0) return;
+      //     const isLastOne = index === familyChristmasValueStage.length - 1;
+      //     // 绘制刻度（圣诞树）
+      //     ctx.fillStyle = item > currentValue ? '#a0a0a0' : '#458a5b';
+      //     drawTree(ctx, stageWidth - 20, 60, 20, 25);
+      //     stagePositions.push(stageWidth);
+      //     // 绘制刻度（刻度值）
+      //     ctx.fillStyle = item > currentValue ? '#a0a0a0' : '#458a5b';
+      //     ctx.textAlign = isLastOne ? 'right' : 'center';
+      //     ctx.fillText(`${item / 10000}W`, stageWidth - (isLastOne ? 0 : 10), 80);
+      //   });
+      // }
+
+      // // 绘制圣诞树
+      // function drawTree(ctx, x, y, w, h) {
+      //   ctx.beginPath();
+      //   ctx.moveTo(x, y);
+      //   ctx.lineTo(x + w / 2, y - h);
+      //   ctx.lineTo(x + w, y);
+      //   ctx.lineTo(x, y);
+      //   ctx.closePath();
+      //   ctx.fill();
+      // }
+
+      // // 绘制当前圣诞值进度条
+      // function drawProgress(ctx, currentValue) {
+      //   let progress = 0;
+      //   const timer = setInterval(() => {
+      //     progress += 5;
+      //     ctx.fillStyle = '#fbe67a';
+      //     ctx.fillRect(0, 40, progress, 15);
+      //     drawStage(ctx);
+      //     if (progress >= currentValue / 10000) {
+      //       clearInterval(timer);
+      //     }
+      //   }, 10);
+      // }
+
+      // // 重新绘制文本和进度条
+      // function reDraw(progress) {
+      //   ctx.clearRect(0, 0, width, height);
+      //   init(progress);
+      // }
+      // // 监听 canvas 每个阶段的点击事件
+      // canvas.addEventListener('click', (e) => {
+      //   const x = e.offsetX;
+      //   const y = e.offsetY;
+      //   // 判断点击的位置是否在圣诞树上
+      //   if (y < 40 || y > 85) return;
+      //   // 判断点击的位置是哪个圣诞树
+      //   // 点击的是中间的阶段，重新绘制进度条
+      //   stagePositions.forEach((item, index) => {
+      //     if (x < item && x > item - 20) {
+      //       currentValue = item * 10000;
+      //       nextStageValue = familyChristmasValueStage[index + 2] - currentValue || '已满';
+      //       reDraw(currentValue);
+      //     }
+      //   });
+      // });
+
+      // Checking whether straight lines with empty length have proper line caps
+      ctx.lineWidth = 30;
+      ctx.beginPath();
+      ctx.moveTo(200, 50);
+      ctx.lineTo(220, 50);
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.lineCap = 'round';
+      ctx.beginPath();
+      ctx.moveTo(50, 50);
+      ctx.lineTo(50, 50);
+      ctx.stroke();
+      ctx.lineCap = 'square';
+      ctx.beginPath();
+      ctx.moveTo(100, 50);
+      ctx.lineTo(100, 50);
+      ctx.stroke();
+
+      // 画一条 LineCap 为 round，包含线帽总长度为 10 的线段
+      
+    </script>
+  </body>
+</html>

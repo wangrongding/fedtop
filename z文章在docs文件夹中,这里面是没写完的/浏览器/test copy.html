@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- logo -->
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 style="margin: 100px">别改我...</h1>
+    <script>
+      const h1 = document.querySelector('h1')
+
+      const options = {
+        childList: true,
+        attributes: true,
+        subtree: true,
+        attributesOldValue: true,
+        characterData: true,
+        characterDataOldValue: true,
+      }
+
+      const reset = (expression = () => {}) => {
+        setTimeout(() => {
+          observer.disconnect()
+          // 执行恢复方法
+          expression()
+          observer.observe(h1, options)
+        }, 0)
+      }
+
+      const callback = (records) => {
+        const record = records[0]
+        if (record.type === 'attributes' && record.attributeName === 'style') {
+          reset(() => {
+            h1.setAttribute('style', 'margin:100px;')
+          })
+        } else if (record.type === 'characterData') {
+          reset(() => {
+            h1.textContent = '别改我...'
+          })
+        }
+      }
+
+      const observer = new MutationObserver(callback)
+      observer.observe(h1, options)
+    </script>
+  </body>
+</html>

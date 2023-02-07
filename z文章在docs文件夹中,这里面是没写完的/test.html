@@ -7,34 +7,15 @@
     <title>Document</title>
   </head>
   <body>
-    <button id="btn">啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</button>
-    <div style="height: 10000px;">aa</div>
+    <video src="" controls autoplay loop></video>
     <script>
-      function diga() {
-        console.log(123);
-      }
-      //防抖
-      function debounce(fn, delay) {
-        let temp = null;
-        return function() {
-          clearTimeout(temp);
-          temp = setTimeout(() => {
-            fn();
-          }, delay);
-        };
-      }
-      //节流
-      function throttle(fn, delay) {
-        let record = Date.now();
-        return () => {
-          if (Date.now() - record > delay) {
-            fn();
-            record = Date.now();
-          }
-        };
-      }
-      window.onscroll = throttle(diga, 500);
+      const videoBox = document.querySelector('video')
+
+      window.setTimeout(() => {
+        videoBox.src =
+          'https://pri-cdn-oss.chuangkit.com/materials/materials_video_vcg/VCG42N1402571979?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKIDPddQzg7JH1XoumPp1z5wYxwimeIivLaa%26q-sign-time%3D1675647816%3B1675694616%26q-key-time%3D1675647816%3B1675694616%26q-header-list%3Dhost%26q-url-param-list%3D%26q-signature%3D6035fed5e2fb39ebee764e53220ff2f14e3d9680'
+        videoBox.play()
+      }, 3000)
     </script>
-    <!-- <button id="btn" onclick="debounce(diga,200)">aaaaa</button> -->
   </body>
 </html>

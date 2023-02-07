@@ -3,7 +3,7 @@
  * 全文字体 font-family: ptima-Regular;
  * 英文换行 word-break: break-all;
  */
-#nice {
+ #nice {
   counter-reset: counterh1 counterh2 counterh3;
 }
 
@@ -36,12 +36,12 @@
 #nice h1 .prefix {
   display: inline-block;
   border-bottom: 4px solid rgb(168, 64, 64);
-  background: url("https://gitee.com/wangrongding/image-house/raw/master/images/202112170022395.png")
+  background: url("https://assets.fedtop.com/picbed/202301052053312.png")
     no-repeat;
   background-size: 100%;
   width: 70px;
   height: 35px;
-  margin-bottom: -8px;
+  margin-bottom: -9.5px;
 }
 
 /* 一级标题后缀 */
@@ -64,12 +64,12 @@
 #nice h2 .prefix {
   display: inline-block;
   border-bottom: 3px solid rgb(168, 64, 64);
-  background: url("https://gitee.com/wangrongding/image-house/raw/master/images/202112181807479.png")
+  background: url("https://assets.fedtop.com/picbed/202301052053088.png")
     no-repeat;
   background-size: 100%;
   width: 30px;
   height: 30px;
-  margin-bottom: -9px;
+  margin-bottom: -10px;
 }
 
 /* 二级标题后缀 */
@@ -92,12 +92,12 @@
 #nice h3 .prefix {
   display: inline-block;
   border-bottom: 2px solid rgb(168, 64, 64);
-  background: url("https://gitee.com/wangrongding/image-house/raw/master/images/202112181716763.png")
+  background: url("https://assets.fedtop.com/picbed/202301052054265.png")
     no-repeat;
   background-size: 100%;
   width: 24px;
   height: 24px;
-  margin-bottom: -8px;
+  margin-bottom: -8.5px;
 }
 
 /* 三级标题后缀 */
@@ -289,7 +289,6 @@
 #nice .block-equation svg {
 }
 
-/* 行内公式
- */
+/* 行内公式 */
 #nice .inline-equation svg {
 }

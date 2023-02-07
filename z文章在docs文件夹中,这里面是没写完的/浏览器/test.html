@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- logo -->
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="target-node" style="margin: auto; text-align: center; width: 500px; height: 500px; position: relative; background-color: coral">
+      <h1 style="text-align: center">删改下面的水印👇</h1>
+      <div class="watermark">水印，来移除我</div>
+    </div>
+    <script>
+const options = {
+  childList: true,
+  attributes: true,
+  subtree: true,
+  attributesOldValue: true,
+  characterData: true,
+  characterDataOldValue: true,
+}
+
+const targetNode = document.querySelector('.target-node')
+const childrenDom = `<div class="watermark">Watermark, Change me!</div>`
+targetNode.innerHTML = childrenDom
+
+function reset(expression = () => {}) {
+  setTimeout(() => {
+    observer.disconnect()
+    expression()
+    observer.observe(targetNode, options)
+  }, 0)
+}
+
+function callback(records) {
+  const record = records[0]
+  console.log('🚀🚀🚀 / record', record)
+  reset(() => {
+    targetNode.innerHTML = childrenDom
+  })
+}
+
+const observer = new MutationObserver(callback)
+observer.observe(h1, options)
+    </script>
+  </body>
+</html>
