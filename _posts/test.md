@@ -1,13 +1,13 @@
 ---
 title: 《chrome 腾飞之路》 之 chrome 95 新特性
-excerpt: "testtesttesttesttesttesttesttest."
-coverImage: "https://assets.fedtop.com/picbed/20220612204754.png"
-date: "2023-01-28T05:35:07.322Z"
+excerpt: 'testtesttesttesttesttesttesttest.'
+coverImage: 'https://assets.fedtop.com/picbed/20220612204754.png'
+date: '2023-01-28T05:35:07.322Z'
 author:
   name: 荣顶
-  picture: "/assets/blog/authors/tim.jpeg"
+  picture: '/assets/blog/authors/tim.jpeg'
 ogImage:
-  url: "/assets/blog/hello-world/cover.jpg"
+  url: '/assets/blog/hello-world/cover.jpg'
 tags: test-post
 ---
 
@@ -49,17 +49,17 @@ Google 坐拥了全球第一大操作系统 Android 以及全球第一大浏览�
   该全局方法可用于报告错误控制台或全球事件处理程序，模拟一个未捕获的 JavaScript 异常。 [详情](https://developer.mozilla.org/en-US/docs/Web/API/reportError)
 
   ```js
-  var newError = new Error("Some error message", "someFile.js", 11);
-  self.reportError(newError);
+  var newError = new Error('Some error message', 'someFile.js', 11)
+  self.reportError(newError)
 
   window.onerror = function (message, source, lineno, colno, error) {
-    console.log("message:" + error.message + ", lineno: " + lineno);
-    return true;
-  };
+    console.log('message:' + error.message + ', lineno: ' + lineno)
+    return true
+  }
 
-  self.addEventListener("error", (error) => {
-    console.log(error.filename);
-  });
+  self.addEventListener('error', (error) => {
+    console.log(error.filename)
+  })
 
   // Output
   // > "message:Some error message, lineno: 11"

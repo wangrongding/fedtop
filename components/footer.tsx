@@ -1,27 +1,21 @@
-import Container from "./container";
-import { EXAMPLE_PATH } from "../lib/constants";
+import Container from './container'
+import { EXAMPLE_PATH } from '../lib/constants'
 
 const Footer = () => {
   return (
-    <footer className="bg-neutral-50 border-t border-neutral-200">
+    <footer className='border-t border-neutral-200 bg-neutral-50'>
       <Container>
-        <div className="py-4 flex flex-col lg:flex-row items-center justify-center">
-          <a
-            href={"https://github.com/wangrongding"}
-            className="mx-3 font-bold hover:underline"
-          >
+        <div className='flex flex-col items-center justify-center py-4 lg:flex-row'>
+          <a href={'https://github.com/wangrongding'} className='mx-3 font-bold hover:underline'>
             赣ICP备19003256号-2
           </a>
-          <a
-            href={"https://github.com/wangrongding"}
-            className="mx-3 font-bold hover:underline"
-          >
+          <a href={'https://github.com/wangrongding'} className='mx-3 font-bold hover:underline'>
             ©荣顶 2018 - {new Date().getFullYear()}
           </a>
         </div>
       </Container>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
