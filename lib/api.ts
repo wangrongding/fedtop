@@ -12,7 +12,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
   const realSlug = slug.replace(/\.md$/, '')
   const fullPath = join(postsDirectory, `${realSlug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
-  const { data, content } = matter(fileContents)
+  const { data, content, excerpt } = matter(fileContents, { excerpt_separator: '<!-- more -->' })
 
   type Items = {
     [key: string]: string
@@ -27,6 +27,9 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
     }
     if (field === 'content') {
       items[field] = content
+    }
+    if (field === 'excerpt') {
+      items[field] = excerpt
     }
 
     if (typeof data[field] !== 'undefined') {
