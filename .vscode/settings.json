@@ -11,12 +11,12 @@
   "files.eol": "\n",
   "cSpell.words": ["ohmyzsh", "pnpm", "reco", "Rongding", "tunlp", "vuepress"],
   "workbench.colorCustomizations": {
-    // "editorBracketMatch.border": "#00ff66",
+    "editorBracketMatch.border": "#00ff66",
     //设置用户选中代码段的颜色
-    // "editor.selectionBackground": "#00ff59",
+    "editor.selectionBackground": "#00ff5950",
     //搜索匹配的背景色
     "editor.findMatchBackground": "#ff9900",
-    "editor.findMatchHighlightBackground": "#fbff00",
+    "editor.findMatchHighlightBackground": "#ff990090",
     "editor.findRangeHighlightBackground": "#ff9900"
   }
 }
