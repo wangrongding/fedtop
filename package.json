@@ -6,7 +6,8 @@
     "start": "next start",
     "typecheck": "tsc",
     "format": "prettier --write .",
-    "lint": "eslint \"./**/*{.vue,.js,.ts,.jsx,.tsx}\" --fix",
+    "lint": "next lint",
+    "eslint": "eslint \"./**/*{.vue,.js,.ts,.jsx,.tsx}\" --fix",
     "lintAll": "eslint . --ext .vue,.js,.ts,.jsx,.tsx src/ --fix",
     "stylelint": "stylelint \"**/*.*\" --fix",
     "stylelint-check": "stylelint-config-prettier-check",
@@ -15,6 +16,9 @@
   "lint-staged": {
     "*.{vue,js,ts,jsx,tsx,css,sass,scss,md}": [
       "prettier --write"
+    ],
+    "*.{js,ts,jsx,tsx,css,sass,scss}": [
+      "next lint"
     ]
   },
   "dependencies": {
@@ -33,6 +37,9 @@
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "autoprefixer": "^10.4.7",
+    "chalk": "^5.2.0",
+    "eslint": "8.35.0",
+    "eslint-config-next": "13.2.3",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.1",
     "postcss": "^8.4.14",
