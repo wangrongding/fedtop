@@ -17,7 +17,7 @@
     "*.{vue,js,ts,jsx,tsx,css,sass,scss,md}": [
       "prettier --write"
     ],
-    "*.{js,ts,jsx,tsx,css,sass,scss}": [
+    "*.{tsx}": [
       "next lint"
     ]
   },

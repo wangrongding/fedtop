@@ -1,5 +1,12 @@
 // next.config.js
-module.exports = {
+
+/**
+ * @type {import('next').NextConfig}
+ */
+const nextConfig = {
+  // env: {
+  //   customKey: 'my-value',
+  // },
   images: {
     remotePatterns: [
       {
@@ -11,3 +18,5 @@ module.exports = {
     ],
   },
 }
+
+module.exports = nextConfig
