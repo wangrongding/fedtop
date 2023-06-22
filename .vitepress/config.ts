@@ -35,7 +35,8 @@ export default async function () {
         { text: '🏡 Home', link: '/' },
         { text: '📃 Archives', link: '/page/archives' },
         { text: '🔖 Tags', link: '/page/tags' },
-        { text: '🔥 RSS', link: 'https://clark-cui.top/feed.xml' },
+        // TODO: RSS
+        // { text: '🔥 RSS', link: 'https://fedtop.com/feed.xml' },
         {
           text: 'Follow me',
           items: [
