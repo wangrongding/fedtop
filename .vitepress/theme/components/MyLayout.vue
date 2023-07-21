@@ -8,7 +8,8 @@
       <div>
         <button @click="back">返回</button>
       </div>
-      <Comments />
+      <!-- TODO 评论系统 -->
+      <!-- <Comments /> -->
     </template>
     <!-- Home slot-->
     <template #home-hero-before><HomeHero /></template>
