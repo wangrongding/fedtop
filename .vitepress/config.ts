@@ -77,6 +77,8 @@ export default async function () {
         hmr: true,
       },
       plugins: [],
+      // 热更新时，清空控制台
+      clearScreen: true,
     },
   })
 }
