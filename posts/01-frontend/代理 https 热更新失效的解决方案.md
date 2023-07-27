@@ -31,4 +31,4 @@ categories:
 
 vue-cli3 热更新失效问题
 
-项目运行时一直发 http://localhost:8080/sockjs-node/info?t=1462183700002 请求
+项目运行时一直发 `http://localhost:8080/sockjs-node/info?t=1462183700002` 请求

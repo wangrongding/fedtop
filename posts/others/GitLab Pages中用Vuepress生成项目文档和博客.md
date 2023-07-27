@@ -107,7 +107,7 @@ module.exports = {
 }
 ```
 
-郑重推荐 **vuepress-theme-reco** ，查看 [展示](www.fedtop.com/) 既没有脱离默认主题的简洁，又增加了分类、分页、标签等功能。
+郑重推荐 **vuepress-theme-reco** ，查看 [展示](https://www.fedtop.com) 既没有脱离默认主题的简洁，又增加了分类、分页、标签等功能。
 
 ```bash
 # 安装
