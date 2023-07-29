@@ -37,4 +37,11 @@ next-env.d.ts
 
 
 # ====
-temp
+backend-demo
+backend-temp
+backend-posts
+backend-lib
+backend-components
+backend-pages
+temp-backend
+

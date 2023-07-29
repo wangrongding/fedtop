@@ -7,6 +7,7 @@ const nextConfig = {
   // env: {
   //   customKey: 'my-value',
   // },
+  reactStrictMode: true, // 严格模式
   images: {
     remotePatterns: [
       {

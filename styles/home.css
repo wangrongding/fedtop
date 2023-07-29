@@ -1,0 +1,26 @@
+body {
+  font-family: Ubuntu, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.timeline > li:first-child:before {
+  top: 50%;
+}
+.timeline > li:before {
+  content: '';
+  position: absolute;
+  left: -1.05rem;
+  bottom: 0;
+  border-left: 1px solid red;
+}
+
+.timeline > li:after {
+  content: '';
+  left: -1.28rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 50%;
+  position: absolute;
+  background-color: red;
+}

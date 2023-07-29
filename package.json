@@ -14,10 +14,10 @@
     "prepare": "npx husky install"
   },
   "lint-staged": {
-    "*.{vue,js,ts,jsx,tsx,css,sass,scss,md}": [
+    "*.{js,ts,tsx,css,md}": [
       "prettier --write"
     ],
-    "*.{tsx}": [
+    "*.{ts,tsx}": [
       "next lint"
     ]
   },
