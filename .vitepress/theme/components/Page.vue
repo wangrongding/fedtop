@@ -1,11 +1,7 @@
 <template>
   <ShareCard />
   <div class="blogList my-8 flex flex-col justify-center items-center">
-    <a
-      class="blog flex flex-col md:flex-row md:justify-between md:items-center"
-      v-for="item in posts"
-      :href="withBase(item.regularPath)"
-    >
+    <a class="blog flex flex-col md:flex-row md:justify-between md:items-center" v-for="item in posts" :href="withBase(item.regularPath)">
       <div class="title">{{ item.frontMatter.title }}</div>
       <div class="min-w-[130px]">{{ transDate(item.frontMatter.date) }}</div>
     </a>
@@ -64,7 +60,7 @@ let posts = ref<Post[]>([])
 posts.value = allMap[pageCurrent.value - 1]
 
 // click pagination
-const go = i => {
+const go = (i) => {
   pageCurrent.value = i
   posts.value = allMap[pageCurrent.value - 1]
 }
@@ -142,6 +138,12 @@ button:hover::after {
   }
   .title {
     color: var(--vp-c-brand-light);
+  }
+  button {
+    color: var(--vp-c-brand-light);
+    &::after {
+      background-color: var(--vp-c-brand-light);
+    }
   }
 }
 </style>

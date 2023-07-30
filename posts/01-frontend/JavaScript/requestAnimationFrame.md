@@ -1,6 +1,6 @@
 ---
 title: 修改 requestAnimationFrame 的执行频率
-date: 2021-10-10
+date: 2019-10-10
 tags:
   - Javascript
 categories:
