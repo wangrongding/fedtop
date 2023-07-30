@@ -8,6 +8,11 @@
     "build": "vitepress build",
     "preview": "vitepress preview"
   },
+  "lint-staged": {
+    "*.{js,ts,tsx,css,scss,vue,md}": [
+      "prettier --write"
+    ]
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -20,6 +25,7 @@
     "globby": "11.0.4",
     "gray-matter": "^4.0.3",
     "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
     "markdown-it": "^13.0.1",
     "markdown-it-mathjax3": "^4.3.2",
     "postcss": "^8.4.27",
