@@ -1,0 +1,7 @@
+.dark {
+  --vp-c-bg: #2c3639;
+  --vp-c-text: white;
+  --vp-c-hover: #ffffff;
+  --vp-c-bg-alpha-with-backdrop: rgba(44, 54, 57, 0.7);
+  --vp-avator-border: #3f4e4f;
+}

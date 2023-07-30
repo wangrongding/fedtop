@@ -1,50 +1,46 @@
 {
-  "private": true,
+  "name": "fedtop",
+  "private": "true",
+  "main": "index.js",
   "scripts": {
-    "dev": "next --port 3002",
-    "build": "next build",
-    "start": "next start",
-    "typecheck": "tsc",
-    "format": "prettier --write .",
-    "lint": "next lint",
-    "eslint": "eslint \"./**/*{.vue,.js,.ts,.jsx,.tsx}\" --fix",
-    "lintAll": "eslint . --ext .vue,.js,.ts,.jsx,.tsx src/ --fix",
-    "stylelint": "stylelint \"**/*.*\" --fix",
-    "stylelint-check": "stylelint-config-prettier-check",
-    "prepare": "npx husky install"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
   },
-  "lint-staged": {
-    "*.{js,ts,tsx,css,md}": [
-      "prettier --write"
-    ],
-    "*.{ts,tsx}": [
-      "next lint"
-    ]
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
+    "autoprefixer": "^10.4.14",
+    "fast-glob": "^3.3.1",
+    "feed": "^4.2.2",
+    "fs-extra": "^11.1.1",
+    "globby": "11.0.4",
+    "gray-matter": "^4.0.3",
+    "husky": "^8.0.3",
+    "markdown-it": "^13.0.1",
+    "markdown-it-mathjax3": "^4.3.2",
+    "postcss": "^8.4.27",
+    "prettier": "^3.0.0",
+    "prettier-plugin-tailwindcss": "^0.4.1",
+    "sass": "^1.64.1",
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.4.7",
+    "vitepress": "1.0.0-beta.6"
   },
   "dependencies": {
-    "classnames": "^2.3.1",
-    "date-fns": "^2.28.0",
-    "gray-matter": "^4.0.3",
-    "next": "latest",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "remark": "^14.0.2",
-    "remark-html": "^15.0.1",
-    "typescript": "^4.7.4"
+    "dayjs": "^1.11.9",
+    "element-plus": "^2.3.8",
+    "gitalk": "^1.8.0",
+    "tiny-player": "^1.0.19",
+    "vue": "3.3.2"
   },
-  "devDependencies": {
-    "@types/node": "^18.0.3",
-    "@types/react": "^18.0.15",
-    "@types/react-dom": "^18.0.6",
-    "autoprefixer": "^10.4.7",
-    "chalk": "^5.2.0",
-    "eslint": "8.35.0",
-    "eslint-config-next": "13.2.3",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.1.1",
-    "postcss": "^8.4.14",
-    "prettier": "^2.8.3",
-    "prettier-plugin-tailwindcss": "^0.2.2",
-    "tailwindcss": "^3.1.4"
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
   }
 }

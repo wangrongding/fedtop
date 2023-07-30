@@ -1,9 +1,11 @@
 /**
  * 参考 https://prettier.io/docs/en/options.html
  */
+
 module.exports = {
-  plugins: [require('prettier-plugin-tailwindcss')], // tailwindcss class 进行排序
-  tailwindConfig: './tailwind.config.js',
+  // TODO
+  // plugins: [require('prettier-plugin-tailwindcss')], // tailwindcss class 进行排序
+  // tailwindConfig: './tailwind.config.js',
   tabWidth: 2, // 空格数
   useTabs: false, // 是否开启tab
   printWidth: 150, // 换行的宽度

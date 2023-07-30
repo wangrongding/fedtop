@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">啊啊啊</button>
+    <div style="height: 10000px">aa</div>
+    <script>
+      function diga() {
+        console.log(123)
+      }
+      //防抖
+      function debounce(fn, delay) {
+        let temp = null
+        return function () {
+          clearTimeout(temp)
+          temp = setTimeout(() => {
+            fn()
+          }, delay)
+        }
+      }
+      //节流
+      function throttle(fn, delay) {
+        let record = Date.now()
+        return () => {
+          if (Date.now() - record > delay) {
+            fn()
+            record = Date.now()
+          }
+        }
+      }
+      window.onscroll = throttle(diga, 500)
+    </script>
+    <!-- <button id="btn" onclick="debounce(diga,200)">aaaaa</button> -->
+  </body>
+</html>
