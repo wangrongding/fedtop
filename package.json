@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vitepress dev",
     "build": "vitepress build",
-    "preview": "vitepress preview"
+    "preview": "vitepress preview",
+    "format": "prettier --write ."
   },
   "lint-staged": {
     "*.{js,ts,tsx,css,scss,vue,md}": [
@@ -29,7 +30,7 @@
     "markdown-it": "^13.0.1",
     "markdown-it-mathjax3": "^4.3.2",
     "postcss": "^8.4.27",
-    "prettier": "^3.0.0",
+    "prettier": "^2.8.6",
     "prettier-plugin-tailwindcss": "^0.4.1",
     "sass": "^1.64.1",
     "tailwindcss": "^3.3.3",
