@@ -1,5 +1,5 @@
 ---
-title: 一些关于 Git 的使用心得 （持续更新）
+title: 一些实用的 Git 操作备忘与分享（持续更新）
 date: 2023-07-31
 tags:
   - Git
@@ -7,29 +7,9 @@ categories:
   - 前端
 ---
 
-# 一些关于 Git 的使用心得
+# 一些实用的 Git 操作备忘与分享
 
 对于 git 操作，用过很多工具，但最喜欢的还是命令行，因为命令行可以任何时候任何设备上进行灵活的 git 操作，下面是笔者在使用 git 过程中的一些心得。供自己备忘，也希望能帮助到大家。
-
-## git 忽略代码块
-
-```sh
-# 忽略行代码
-git config --global filter.inlineIgnore.clean "sed '/\/\/ #inlineIgnore$/'d"
-git config --global filter.inlineIgnore.smudge cat
-# 忽略代码块
-git config --global filter.blockIgnore.clean "sed '/\/\/ blockIgnore_begin/,/\/\/ blockIgnore_end$/d'"
-git config --global filter.blockIgnore.smudge cat
-```
-
-在项目根目录的.gitattributes 文件中添加以下
-
-```sh
-# .gitattributes文件
-*.ts filter=blockIgnore
-# 或者
-*.ts filter=inlineIgnore
-```
 
 ## git 输出美化
 
@@ -42,12 +22,16 @@ git log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C
 ```
 
 ```sh
+# 我们将上面的命令设置为一个 git 别名
+# 也可以加上根据自己需要添加其他选项 例如 --all 之类的，详细配置参数可见： https://git-scm.com/docs/pretty-formats
 git config --global alias.logs "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --date=format:'%Y-%m-%d %H:%M:%S'"
-
-git config --global alias.logs="log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit --date=format:'%Y-%m-%d %H:%M:%S'"
-
-// 也可以加上 --all
 ```
+
+然后就可以在终端使用 `git logs` 查看 log 了。
+
+效果如下，比默认的好看，且实用多了。
+
+![](https://assets.fedtop.com/picbed/202307311028731.png)
 
 ### Git Status 美化
 
@@ -82,6 +66,26 @@ git config --global core.pager more
 
 ```sh
 git config --global color.ui 1
+```
+
+## git 忽略代码块
+
+```sh
+# 忽略行代码
+git config --global filter.inlineIgnore.clean "sed '/\/\/ #inlineIgnore$/'d"
+git config --global filter.inlineIgnore.smudge cat
+# 忽略代码块
+git config --global filter.blockIgnore.clean "sed '/\/\/ blockIgnore_begin/,/\/\/ blockIgnore_end$/d'"
+git config --global filter.blockIgnore.smudge cat
+```
+
+在项目根目录的.gitattributes 文件中添加以下
+
+```sh
+# .gitattributes文件
+*.ts filter=blockIgnore
+# 或者
+*.ts filter=inlineIgnore
 ```
 
 ## 修改 commit 相关信息
@@ -182,10 +186,10 @@ git config --global credential.helper osxkeychain
 
 git push --set-upstream origin master
 
-<details  style='user-select:none;'>
-<summary>Git 常用命令</summary>
+## Git 常用命令
 
-# Git 常用命令
+<details  style='user-select:none;'>
+<summary>点我展开</summary>
 
 ## 仓库
 
@@ -491,4 +495,7 @@ $ git archive
 
 </details>
 
-https://backlog.com/git-tutorial/cn/intro/intro1_1.html https://github.com/justjavac/free-programming-books-zh_CN
+## 相关学习资料
+
+- https://backlog.com/git-tutorial/cn/intro/intro1_1.html
+- https://github.com/justjavac/free-programming-books-zh_CN

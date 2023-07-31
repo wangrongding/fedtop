@@ -48,10 +48,7 @@ export default async function () {
       // 侧边栏
       // sidebar: [{ text: '大类', items: [{ text: '快速开始', link: '/page/001-快速开始' }] }],
       // 社交网站
-      socialLinks: [
-        { icon: 'twitter', link: 'https://twitter.com/qingshuihe1' },
-        { icon: 'github', link: 'https://github.com/wangrongding' },
-      ],
+      socialLinks: [{ icon: 'github', link: 'https://github.com/wangrongding/fedtop' }],
       // 页脚
       footer: {
         message: 'Released under the MIT License.',
