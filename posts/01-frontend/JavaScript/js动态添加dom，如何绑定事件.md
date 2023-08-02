@@ -22,61 +22,59 @@ categories:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>添加div并绑定点击事件</title>
     <style>
-        div.btn{
-            width: 200px;
-            height: 50px;
-            line-height: 50px;
-            text-align: center;
-            border: solid 1px #000;
-            cursor: pointer;
-        }
-        div.innerDiv{
-            width: 50px;
-            height: 50px;
-            background-color: black;
-            margin: 10px;
-            cursor: pointer;
-        }
+      div.btn {
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        border: solid 1px #000;
+        cursor: pointer;
+      }
+      div.innerDiv {
+        width: 50px;
+        height: 50px;
+        background-color: black;
+        margin: 10px;
+        cursor: pointer;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="aa">
-        <div class="btn">添加div并绑定点击事件</div>
-        <div class="outerDiv"></div>
+      <div class="btn">添加div并绑定点击事件</div>
+      <div class="outerDiv"></div>
     </div>
     <script>
-        function getClass(classname) {
-            return document.getElementsByClassName(classname);
+      function getClass(classname) {
+        return document.getElementsByClassName(classname)
+      }
+      getClass('btn')[0].onclick = function () {
+        addDom()
+      }
+      //    将点击事件封装为函数
+      function funA() {
+        for (var i = 0; i < getClass('innerDiv').length; i++) {
+          getClass('innerDiv')[i].onclick = function () {
+            alert(this.innerText)
+          }
         }
-        getClass('btn')[0].onclick=function () {
-            addDom();
+      }
+      //    将添加dom封装为函数
+      function addDom() {
+        var oldHtml = ''
+        for (var j = 0; j < 6; j++) {
+          oldHtml += '<div class="innerDiv">' + j + '</div>'
         }
-        //    将点击事件封装为函数
-        function funA() {
-            for(var i=0;i<getClass('innerDiv').length;i++){
-                getClass('innerDiv')[i].onclick=function () {
-                    alert(this.innerText);
-                }
-            }
-        }
-        //    将添加dom封装为函数
-        function addDom() {
-            var oldHtml='';
-            for(var j=0;j<6;j++){
-                oldHtml+='<div class="innerDiv">'+j+'</div>'
-            }
-            getClass('outerDiv')[0].innerHTML=oldHtml;
-            funA();
-        }
-        //    如果将函数A放在这里就不会起作用的
-        //    funA();
+        getClass('outerDiv')[0].innerHTML = oldHtml
+        funA()
+      }
+      //    如果将函数A放在这里就不会起作用的
+      //    funA();
     </script>
-</body>
+  </body>
 </html>
 ```
-
-

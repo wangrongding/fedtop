@@ -45,8 +45,8 @@ async function generateRSS() {
   const posts: any[] = (
     await Promise.all(
       files
-        .filter(i => !i.includes('index'))
-        .map(async i => {
+        .filter((i) => !i.includes('index'))
+        .map(async (i) => {
           const raw = await fs.readFile(i, 'utf-8')
           const { data, content } = matter(raw)
           const html = markdown.render(content).replace('src="/', `src="${DOMAIN}/`)
@@ -58,7 +58,7 @@ async function generateRSS() {
             author: [AUTHOR],
             link: `${DOMAIN}/${i.replace('.md', '.html')}`,
           }
-        })
+        }),
     )
   ).filter(Boolean)
 
@@ -68,7 +68,7 @@ async function generateRSS() {
 
 async function writeFeed(name: string, items: Item[]) {
   const feed = new Feed(OPTIONS)
-  items.forEach(item => feed.addItem(item))
+  items.forEach((item) => feed.addItem(item))
 
   await fs.ensureDir(dirname(`./.vitepress/dist/${name}`))
   await fs.writeFile(`./.vitepress/dist/${name}.xml`, feed.rss2(), 'utf-8')

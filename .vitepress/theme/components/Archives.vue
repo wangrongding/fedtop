@@ -48,9 +48,7 @@ const data = computed(() => useYearSort(theme.value.posts))
   gap: 20px;
   margin: 10px 10px;
   color: var(--vp-c-text-2);
-  transition:
-    border 0.3s ease,
-    color 0.3s ease;
+  transition: border 0.3s ease, color 0.3s ease;
 }
 .article:hover {
   text-decoration: none;

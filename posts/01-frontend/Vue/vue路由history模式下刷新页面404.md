@@ -29,5 +29,3 @@ vue 的路由是由 js 来控制的，但是，当你刷新浏览器的时候，
 
 1. 先将路由仿真：也就是将 `/routerA` 变为 `/routerA.html` ，冰袋跳转时谢丹参数，`this.$router.push({path: /routerA.html${this.$router.query.p}})`，所以刷新时，会向服务端请求 `routerA.html` ，并且携带参数 p；
 2. 这时在 `www.aaa.com` 下真的存放一个 `routerA.html` ，在文件里面获取参数 p，然后跳转 `window.location.href='www.aaa.com/go.html?p=123'`。
-
-

@@ -208,7 +208,7 @@ let tom: Person = {
 
 只读属性
 
-> 有时候我们希望对象中的一些字段只能在创建的时候被赋值，那么可以用 readonly 定义只读属性
+> 有时候我们希望对象中的一些字段只能在创建的时候被赋值，那么可以用 readonly 定义只读属性  
 > 简单例子
 
 ```typescript
@@ -279,7 +279,7 @@ let fibonacci: NumberArray = [1, 2, 3, 4]
 
 #### 类数组的表示
 
-类数组不是数组，不能用数组表示，但是可以参照接口表示法来写
+类数组不是数组，不能用数组表示，但是可以参照接口表示法来写  
 比如函数参数 arguments。但事实上常用的类数组都有自己的接口定义，如 IArguments, NodeList, HTMLCollection 等
 
 ```ts
@@ -354,7 +354,7 @@ function buildName(firstName?: string, lastName: string = 'Clark'): string {
 
 ```ts
 function myPush(array: Array<unknown>, ...rest: Array<unknown>) {
-  rest.forEach(item => {
+  rest.forEach((item) => {
     array.push(item)
   })
 }
@@ -363,7 +363,7 @@ myPush([], 1, 2, 3)
 
 #### 重载
 
-重载允许一个函数接受不同数量或类型的参数时，作出不同的处理
+重载允许一个函数接受不同数量或类型的参数时，作出不同的处理  
 比如，我们需要实现一个函数 reverse，输入数字 123 的时候，输出反转的数字 321，输入字符串 'hello' 的时候，输出反转的字符串 'olleh'
 
 ```ts
@@ -376,7 +376,7 @@ function reverse(x: number | string): number | string | void {
 }
 ```
 
-然而这样有一个缺点，就是不能够精确的表达，输入为数字的时候，输出也应该为数字，输入为字符串的时候，输出也应该为字符串
+然而这样有一个缺点，就是不能够精确的表达，输入为数字的时候，输出也应该为数字，输入为字符串的时候，输出也应该为字符串  
 这时，我们可以使用重载定义多个 reverse 的函数类型：
 
 ```ts

@@ -4,7 +4,7 @@
       <span>Hi there! I'm Rongding~ 👋</span>
     </h1>
     <p class="description">A passionate web developer based in Beijing.</p>
-    <h2 class="blog-title text-center font-bold text-xl mt-4">在键帽与字符上横跳，于代码和程序中穿梭。</h2>
+    <h2 class="blog-title mt-4 text-center text-xl font-bold">在键帽与字符上横跳，于代码和程序中穿梭。</h2>
   </div>
 </template>
 

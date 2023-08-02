@@ -86,7 +86,7 @@ React.memo 可以把一个组件变成 pure component，pure component 只有在
 当然，也可以在 AllPrimes 组件里，导出的时候去使用 React.memo
 
 ```tsx
-export default React.memo(AllPrimes);
+export default React.memo(AllPrimes)
 ```
 
 我们来举另外一个例子
@@ -96,15 +96,15 @@ Boxes 是一个 pure component,只有 boxes 变化的时候，才会 re-render;
 ```tsx
 function Boxes({ boxes }) {
   return (
-    <div className="boxes-wrapper">
+    <div className='boxes-wrapper'>
       {boxes.map((boxStyles, index) => (
-        <div key={index} className="box" style={boxStyles} />
+        <div key={index} className='box' style={boxStyles} />
       ))}
     </div>
-  );
+  )
 }
 
-export default React.memo(Boxes);
+export default React.memo(Boxes)
 ```
 
 App 组件里引用了 Boxes,并声明常量 boxes 传入 Boxes 组件里
@@ -137,11 +137,11 @@ function App() {
 ```tsx
 const boxes = React.useMemo(() => {
   return [
-    { flex: boxWidth, background: "hsl(345deg 100% 50%)" },
-    { flex: 3, background: "hsl(260deg 100% 40%)" },
-    { flex: 1, background: "hsl(50deg 100% 60%)" },
-  ];
-}, [boxWidth]);
+    { flex: boxWidth, background: 'hsl(345deg 100% 50%)' },
+    { flex: 3, background: 'hsl(260deg 100% 40%)' },
+    { flex: 1, background: 'hsl(50deg 100% 60%)' },
+  ]
+}, [boxWidth])
 ```
 
 ### UseCallback
@@ -154,25 +154,25 @@ MegaBoost 是一个 pure component,接受一个 callback 回调函数，只有�
 
 ```tsx
 function MegaBoost({ handleClick }) {
-  console.log("Render MegaBoost");
+  console.log('Render MegaBoost')
 
   return (
-    <button className="mega-boost-button" onClick={handleClick}>
+    <button className='mega-boost-button' onClick={handleClick}>
       MEGA BOOST!
     </button>
-  );
+  )
 }
 
-export default React.memo(MegaBoost);
+export default React.memo(MegaBoost)
 ```
 
 App 组件里引用了 MegaBoost
 
 ```tsx
 function App() {
-  const [count, setCount] = React.useState(0);
+  const [count, setCount] = React.useState(0)
   function handleMegaBoost() {
-    setCount((currentValue) => currentValue + 1234);
+    setCount((currentValue) => currentValue + 1234)
   }
 
   return (
@@ -180,17 +180,17 @@ function App() {
       Count: {count}
       <button
         onClick={() => {
-          setCount(count + 1);
+          setCount(count + 1)
         }}
       >
         Click me!
       </button>
       <MegaBoost handleClick={handleMegaBoost} />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
 ```
 
 App 里声明了一个状态 count，一个函数 handleMegaBoost 并传入 MegaBoost 组件。
@@ -202,17 +202,17 @@ App 里声明了一个状态 count，一个函数 handleMegaBoost 并传入 Mega
 ```tsx
 const handleMegaBoost = React.useMemo(() => {
   return function () {
-    setCount((currentValue) => currentValue + 1234);
-  };
-}, []);
+    setCount((currentValue) => currentValue + 1234)
+  }
+}, [])
 ```
 
 但是，一般我们更倾向于使用 useCallback
 
 ```tsx
 const handleMegaBoost = React.useCallback(() => {
-  setCount((currentValue) => currentValue + 1234);
-}, []);
+  setCount((currentValue) => currentValue + 1234)
+}, [])
 ```
 
 ### 总结

@@ -32,7 +32,7 @@ const app = new Vue({
     <div class="app">
       <counter></counter>
     </div>
-  `
+  `,
 })
 ```
 
@@ -315,24 +315,24 @@ export default {
 ```js
 const store = new Vuex.Store({
   state: {
-    count: 0
+    count: 0,
   },
   mutations: {
-    increment (state) {
+    increment(state) {
       state.count++
-    }
+    },
   },
   actions: {
-    increment (context) {
+    increment(context) {
       context.commit('increment')
     },
     // 异步操作
-    incrementAsync ({ commit }) {
+    incrementAsync({ commit }) {
       setTimeout(() => {
         commit('increment')
       }, 1000)
-    }
-  }
+    },
+  },
 })
 ```
 
@@ -341,13 +341,13 @@ const store = new Vuex.Store({
 ```js
 // 以载荷形式分发
 store.dispatch('incrementAsync', {
-  amount: 10
+  amount: 10,
 })
 
 // 以对象形式分发
 store.dispatch({
   type: 'incrementAsync',
-  amount: 10
+  amount: 10,
 })
 ```
 
@@ -442,5 +442,3 @@ actions: {
 ## Module
 
 **未完待续**
-
-

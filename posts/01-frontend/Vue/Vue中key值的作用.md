@@ -30,5 +30,3 @@ categories:
 
 1. 给使用 `v-if` 和 `v-else` 的地方加上 `key`
 2. 将  `v-if` 和 `v-else`  换成 `v-show`
-
-

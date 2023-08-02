@@ -1,7 +1,7 @@
 <template>
   <footer>
     Powered by
-    <a href="https://github.com/wangrongding" target="_blank" title="作者"> 荣顶</a>
+    <a href="https://github.com/wangrongding" target="_blank" title="作者">荣顶</a>
     | Copyright © 2018-{{ date }} | MIT License
   </footer>
 </template>

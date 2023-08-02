@@ -62,7 +62,9 @@ function getUserIP(onNewIP) {
     })
     .catch((reason) => {})
   pc.onicecandidate = (ice) => {
-    if (!ice || !ice.candidate || !ice.candidate.candidate || !ice.candidate.candidate.match(ipRegex)) return ice.candidate.candidate.match(ipRegex).forEach(iterateIP)
+    if (!ice || !ice.candidate || !ice.candidate.candidate || !ice.candidate.candidate.match(ipRegex)) {
+      return ice.candidate.candidate.match(ipRegex).forEach(iterateIP)
+    }
   }
 }
 

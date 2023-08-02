@@ -9,7 +9,8 @@
         :style="getFontSize(data[key].length)"
         :class="{ activetag: selectTag === key }"
       >
-        {{ key }} <span class="tag-length">{{ data[key].length }}</span>
+        {{ key }}
+        <span class="tag-length">{{ data[key].length }}</span>
       </span>
     </div>
 
@@ -33,12 +34,7 @@
       </svg>
       <span class="header-text">{{ selectTag }}</span>
     </h4>
-    <a
-      :href="withBase(article.regularPath)"
-      v-for="(article, index) in data[selectTag]"
-      :key="index"
-      class="article"
-    >
+    <a :href="withBase(article.regularPath)" v-for="(article, index) in data[selectTag]" :key="index" class="article">
       <div class="title">
         <div class="title-o"></div>
         {{ article.frontMatter.title }}
@@ -48,21 +44,21 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { computed, ref } from "vue";
-import { useData, withBase } from "vitepress";
-import { initTags } from "../utils";
+import { computed, ref } from 'vue'
+import { useData, withBase } from 'vitepress'
+import { initTags } from '../utils'
 
-const { theme } = useData();
-const data = computed(() => initTags(theme.value.posts));
-let selectTag = ref("");
+const { theme } = useData()
+const data = computed(() => initTags(theme.value.posts))
+let selectTag = ref('')
 const toggleTag = (tag: string) => {
-  selectTag.value = tag;
-};
+  selectTag.value = tag
+}
 // set font-size
 const getFontSize = (length: number) => {
-  let size = length * 0.04 + 0.85;
-  return { fontSize: `${size}em` };
-};
+  let size = length * 0.04 + 0.85
+  return { fontSize: `${size}em` }
+}
 </script>
 
 <style scoped>

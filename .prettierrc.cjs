@@ -22,8 +22,8 @@ module.exports = {
   vueIndentScriptAndStyle: false, // vue中script与style里的第一条语句是否空格
   singleAttributePerLine: false, // 每行强制单个属性
   endOfLine: 'lf', // 换行符
-  proseWrap: 'never', // 当超出print width时就折行 always|never|preserve .md文件?
-  embeddedLanguageFormatting: 'auto',
+  proseWrap: 'never', // （ Markdown ） 文本换行。当超出print width时就折行 always|never|preserve
+  embeddedLanguageFormatting: 'auto', // 是否格式化内嵌的代码
 }
 
 // 文件中忽略格式化的方式

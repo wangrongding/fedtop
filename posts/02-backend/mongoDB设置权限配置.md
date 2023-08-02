@@ -67,5 +67,3 @@ db.auth("username2","123456")
 ```bash
 mongodb://username2:123456@host:port/dbName'
 ```
-
-

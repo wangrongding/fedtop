@@ -22,7 +22,7 @@ const headers = shallowRef<any>([])
 const showIndent = ref(false)
 onContentUpdated(() => {
   headers.value = getHeaders(frontmatter.value.outline ?? theme.value.outline)
-  showIndent.value = headers.value.some(header => {
+  showIndent.value = headers.value.some((header) => {
     return header.level === 2
   })
 })

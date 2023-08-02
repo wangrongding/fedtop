@@ -120,7 +120,7 @@ BlazePose 返回的关键点更多， 有 33 个关键点，除了 17 个 COCO �
 然后我们可以定义一个初始化的函数，在这里面，把一些初始化操作都完成，比如：打开摄像头，获取媒体流，并且将媒体流赋值给 video 标签...
 
 ```html
-<video id="video" autoplay playsinline class="w-[360px] h-[270px] object-fill"></video>
+<video id="video" autoplay playsinline class="h-[270px] w-[360px] object-fill"></video>
 <canvas id="output" width="360" height="270"></canvas>
 ```
 
@@ -236,13 +236,7 @@ function drawPoint(x: number, y: number, r: number, color: string, ctx: CanvasRe
   ctx.fill()
 }
 // 画线段
-function drawSegment(
-  [ax, ay]: number[],
-  [bx, by]: number[],
-  color: string,
-  scale: number,
-  ctx: CanvasRenderingContext2D
-) {
+function drawSegment([ax, ay]: number[], [bx, by]: number[], color: string, scale: number, ctx: CanvasRenderingContext2D) {
   ctx.beginPath()
   ctx.moveTo(ax * scale, ay * scale)
   ctx.lineTo(bx * scale, by * scale)
@@ -284,7 +278,7 @@ const getVideo = () => {
 // 传输视频流
 const transfer = () => {
   const stream = getVideo()
-  stream.getTracks().forEach(track => {
+  stream.getTracks().forEach((track) => {
     peerConnection.addTrack(track, stream)
   })
 }

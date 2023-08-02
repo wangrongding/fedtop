@@ -116,5 +116,3 @@ test3_2()
 
 console.log(a) // I'm a in test3（本来没有全局变量a，当test3运行时，定义了一个全局变量a，所以这里会输出）
 ```
-
-

@@ -1,7 +1,7 @@
 <template>
   <ShareCard />
-  <div class="blogList my-8 flex flex-col justify-center items-center">
-    <a class="blog flex flex-col md:flex-row md:justify-between md:items-center" v-for="item in posts" :href="withBase(item.regularPath)">
+  <div class="blogList my-8 flex flex-col items-center justify-center">
+    <a class="blog flex flex-col md:flex-row md:items-center md:justify-between" v-for="item in posts" :href="withBase(item.regularPath)">
       <div class="title">{{ item.frontMatter.title }}</div>
       <div class="min-w-[130px]">{{ transDate(item.frontMatter.date) }}</div>
     </a>

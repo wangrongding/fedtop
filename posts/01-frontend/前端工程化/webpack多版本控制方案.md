@@ -51,5 +51,3 @@ if (process.env.MOCK === 'true') {
 ```bash
 npm run dev:mock
 ```
-
-

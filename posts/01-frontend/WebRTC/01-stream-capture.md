@@ -193,7 +193,7 @@ function takePhoto() {
 async function getDevices() {
   const devices = await navigator.mediaDevices.enumerateDevices()
   console.log('🚀🚀🚀 / devices', devices)
-  let videoDevices = devices.filter(device => device.kind === 'videoinput')
+  let videoDevices = devices.filter((device) => device.kind === 'videoinput')
 }
 ```
 
@@ -245,11 +245,11 @@ function switchCamera(val: number) {
 
   navigator.mediaDevices
     .getUserMedia(constraints)
-    .then(stream => {
+    .then((stream) => {
       ElMessage.success('切换成功')
       playLocalStream(stream)
     })
-    .catch(err => {
+    .catch((err) => {
       ElMessage.error('你的设备不支持切换前后摄像头')
     })
 }
@@ -344,9 +344,9 @@ function getSupportedMimeTypes() {
   types.forEach((type: string) => {
     const mimeType = `${media}/${type}`
     codecs.forEach((codec: string) =>
-      [`${mimeType};codecs=${codec}`, `${mimeType};codecs=${codec.toUpperCase()}`].forEach(variation => {
+      [`${mimeType};codecs=${codec}`, `${mimeType};codecs=${codec.toUpperCase()}`].forEach((variation) => {
         if (isSupported(variation)) supported.push(variation)
-      })
+      }),
     )
     if (isSupported(mimeType)) supported.push(mimeType)
   })
@@ -382,7 +382,7 @@ function startRecord() {
   const mediaRecorder = new MediaRecorder(localStream, options)
   mediaRecorder.start()
 
-  mediaRecorder.ondataavailable = e => {
+  mediaRecorder.ondataavailable = (e) => {
     // 将录制的数据合并成一个 Blob 对象
     // const blob = new Blob([e.data], { type: e.data.type })
 

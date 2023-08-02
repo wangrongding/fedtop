@@ -151,5 +151,3 @@ sshpass -p 密码 scp 源路径/源文件 用户名(root)@服务器IP:目标路�
 scp root@192.168.0.226:/data/ftp/http/files/ ./public/*
 scp 用户名(root)@服务器IP:目标路径 源路径/源文件
 ```
-
-

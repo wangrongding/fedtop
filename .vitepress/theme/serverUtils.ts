@@ -5,7 +5,7 @@ import fs from 'fs-extra'
 export async function getPosts() {
   let paths = await getPostMDFilePaths()
   let posts = await Promise.all(
-    paths.map(async item => {
+    paths.map(async (item) => {
       const content = await fs.readFile(item, 'utf-8')
       const { data } = matter(content)
       data.date = _convertDate(data.date)
@@ -13,7 +13,7 @@ export async function getPosts() {
         frontMatter: data,
         regularPath: `/${item.replace('.md', '.html')}`,
       }
-    })
+    }),
   )
   posts.sort(_compareDate)
   return posts
@@ -32,7 +32,7 @@ async function getPostMDFilePaths() {
   let paths = await globby(['**.md'], {
     ignore: ['node_modules', 'README.md'],
   })
-  return paths.filter(item => item.includes('posts/'))
+  return paths.filter((item) => item.includes('posts/'))
 }
 
 export async function getPostLength() {

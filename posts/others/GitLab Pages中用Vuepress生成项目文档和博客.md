@@ -103,7 +103,7 @@ yarn docs:dev # 或 npm run docs:dev
 
 ```js
 module.exports = {
-  theme: 'reco'
+  theme: 'reco',
 }
 ```
 
@@ -115,5 +115,3 @@ yarn add vuepress-theme-reco # npm install vuepress-theme-reco
 ```
 
 #### 持续更新中。。。
-
-

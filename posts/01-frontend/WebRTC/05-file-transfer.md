@@ -69,23 +69,23 @@ const dataChannel = this.peerConnection.createDataChannel('fileTransfer', {
 ```typescript
 // 监听文件通道状态
 // 当文件通道状态发生变化时触发
-dataChannel.onopen = event => {
+dataChannel.onopen = (event) => {
   ElMessage.success('文件通道已打开')
   console.log('🚀🚀🚀 / event', event)
 }
 
 // 当文件通道关闭时触发
-dataChannel.onclose = event => {
+dataChannel.onclose = (event) => {
   ElMessage.warning('文件通道已关闭')
 }
 
 // 当文件通道发生错误时触发
-dataChannel.onerror = event => {
+dataChannel.onerror = (event) => {
   ElMessage.error('文件通道发生错误')
 }
 
 // 当文件通道收到消息时触发
-dataChannel.onmessage = event => {
+dataChannel.onmessage = (event) => {
   // eslint-disable-next-line no-console
   console.log('🚀🚀🚀 / event', event)
 }
@@ -113,7 +113,7 @@ socket.on('connect', () => {
 })
 
 // 断开连接时触发
-socket.on('disconnect', reason => {
+socket.on('disconnect', (reason) => {
   if (reason === 'io server disconnect') {
     // 断线是由服务器发起的，重新连接。
     socket.connect()
@@ -121,21 +121,21 @@ socket.on('disconnect', reason => {
   ElMessage.warning('您已断开连接')
 })
 // 服务端发送报错信息
-socket.on('error', data => {
+socket.on('error', (data) => {
   ElMessage.error(data)
 })
 // 当有用户加入房间时触发
-socket.on('welcome', data => {
+socket.on('welcome', (data) => {
   ElMessage.success(data.userId === userId ? '🦄成功加入房间' : `🦄${data.userId}加入房间`)
 })
 // 当有用户离开房间时触发
-socket.on('leave', data => {
+socket.on('leave', (data) => {
   ElMessage.warning(data.userId === userId ? '🦄成功离开房间' : `🦄${data.userId}离开房间`)
 })
 // 当有用户发送消息时触发
-socket.on('message', data => {})
+socket.on('message', (data) => {})
 // 创建offer,发送给远端
-socket.on('createOffer', data => {
+socket.on('createOffer', (data) => {
   // 如果已经创建过，直接发送
   if (offerSdp) {
     socket.emit('offer', {
@@ -148,11 +148,11 @@ socket.on('createOffer', data => {
   createOffer() // 创建 offer
 })
 // 收到offer,创建answer
-socket.on('offer', data => {
+socket.on('offer', (data) => {
   createAnswer(data.sdp)
 })
 // 收到answer,设置远端sdp
-socket.on('answer', data => {
+socket.on('answer', (data) => {
   addAnswer(data.sdp)
 })
 ```
@@ -163,15 +163,15 @@ socket.on('answer', data => {
 
 ```javascript
 // 用户连接
-io.on('connection', socket => {
+io.on('connection', (socket) => {
   console.log('connection~')
   // 用户加入房间
-  socket.on('join', data => {
+  socket.on('join', (data) => {
     console.log('join~', data)
     handleUserJoin(socket, data)
   })
   // 用户离开房间
-  socket.on('leave', data => {
+  socket.on('leave', (data) => {
     console.log('leave', data)
     handleUserDisconnect(socket)
   })
@@ -182,15 +182,15 @@ io.on('connection', socket => {
   })
   //=============================
   // 用户发送 offer
-  socket.on('offer', data => {
+  socket.on('offer', (data) => {
     socket.to(data.roomId).emit('offer', data)
   })
   // 用户发送 answer
-  socket.on('answer', data => {
+  socket.on('answer', (data) => {
     socket.to(data.roomId).emit('answer', data)
   })
   // 用户发送消息
-  socket.on('message', data => {
+  socket.on('message', (data) => {
     console.log('message', data)
   })
 })
@@ -218,7 +218,7 @@ function joinRoom() {
 
 ```js
 // 服务端，当用户加入房间
-socket.on('join', data => {
+socket.on('join', (data) => {
   handleUserJoin(socket, data)
 })
 
@@ -228,7 +228,7 @@ const ROOM_LIST = []
 const MAX_USER_COUNT = 2
 // 用户加入房间
 function handleUserJoin(socket, data) {
-  const filterRoom = ROOM_LIST.filter(item => item.roomId === data.roomId)[0]
+  const filterRoom = ROOM_LIST.filter((item) => item.roomId === data.roomId)[0]
   let room = { roomId: data.roomId, userList: [] }
 
   // 判断房间是否存在
@@ -250,7 +250,7 @@ function handleUserJoin(socket, data) {
   }
 
   // 判断用户是否已经在房间里
-  if (room.userList.some(item => item.userId === data.userId)) {
+  if (room.userList.some((item) => item.userId === data.userId)) {
     socket.emit('error', '用户已在房间里')
     return
   }
@@ -284,7 +284,7 @@ socket.on('joined', (room, id) => {
 // 创建 offer
 async function createOffer() {
   // 当一个新的offer ICE候选人被创建时触发事件
-  peerConnection.onicecandidate = async event => {
+  peerConnection.onicecandidate = async (event) => {
     if (event.candidate) {
       offerSdp = JSON.stringify(peerConnection.localDescription)
       // 发送 offer
@@ -318,7 +318,7 @@ async function createOffer() {
 
 ```typescript
 // 接收 offer
-socket.on('offer', data => {
+socket.on('offer', (data) => {
   // console.log('offer', data)
   socket.to(data.roomId).emit('offer', data)
 })
@@ -332,7 +332,7 @@ socket.on('offer', data => {
 // 创建 answer
 async function createAnswer(val: string) {
   const offer = JSON.parse(val)
-  peerConnection.onicecandidate = async event => {
+  peerConnection.onicecandidate = async (event) => {
     // 当一个新的 answer ICE candidate 被创建时
     if (event.candidate) {
       socket.emit('answer', {
@@ -356,7 +356,7 @@ async function createAnswer(val: string) {
 const createAnswer = async () => {
   // 解析字符串
   const offer = JSON.parse(offerSdp)
-  pc.onicecandidate = async event => {
+  pc.onicecandidate = async (event) => {
     // Event that fires off when a new answer ICE candidate is created
     if (event.candidate) {
       answerSdp = JSON.stringify(pc.localDescription)
@@ -428,7 +428,7 @@ function sendFile(file) {
     const start = offset
     const end = Math.min(offset + chunkSize, fileSize)
     fileReader.readAsArrayBuffer(file.slice(start, end))
-    fileReader.onload = e => {
+    fileReader.onload = (e) => {
       dataChannel.send(e.target.result)
       offset += chunkSize
       currentChunk += 1

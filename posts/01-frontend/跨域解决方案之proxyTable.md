@@ -43,5 +43,3 @@ proxyTable: {
 ```
 
 这个时候我们请求`/api/get/getList`就是请求`www.aaa.com/get/getList`
-
-

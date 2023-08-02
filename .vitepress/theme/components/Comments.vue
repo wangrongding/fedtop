@@ -2,33 +2,33 @@
   <div id="gitalk-container"></div>
 </template>
 <script lang="ts" setup>
-import "gitalk/dist/gitalk.css";
-import Gitalk from "gitalk";
-import { onContentUpdated, useRouter } from "vitepress";
+import 'gitalk/dist/gitalk.css'
+import Gitalk from 'gitalk'
+import { onContentUpdated, useRouter } from 'vitepress'
 
 // const { route, go } = useRouter();
 function deleteChild() {
-  const element = document.querySelector("#gitalk-container");
-  let child = element?.lastElementChild;
+  const element = document.querySelector('#gitalk-container')
+  let child = element?.lastElementChild
   while (child) {
-    element?.removeChild(child);
-    child = element?.lastElementChild;
+    element?.removeChild(child)
+    child = element?.lastElementChild
   }
 }
 onContentUpdated(() => {
   // reset gittalk element for update
-  deleteChild();
+  deleteChild()
   const gitalk = new Gitalk({
-    clientID: "a8430bf8a0464113ee24",
-    clientSecret: "df4cbf03c4ceca8a39076e6b7a0fb878e55534e2",
-    repo: "blog-comments",
-    owner: "wangrongding",
-    admin: ["wangrongding"],
+    clientID: 'a8430bf8a0464113ee24',
+    clientSecret: 'df4cbf03c4ceca8a39076e6b7a0fb878e55534e2',
+    repo: 'blog-comments',
+    owner: 'wangrongding',
+    admin: ['wangrongding'],
     id: location.pathname.substring(0, 50), // Ensure uniqueness and length less than 50
-    language: "zh-CN",
+    language: 'zh-CN',
     distractionFreeMode: true, // Facebook-like distraction free mode
-  });
-  gitalk.render("gitalk-container");
-});
+  })
+  gitalk.render('gitalk-container')
+})
 </script>
 <style scoped></style>
