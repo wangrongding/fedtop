@@ -86,7 +86,7 @@ Google 坐拥了全球第一大操作系统 Android 以及全球第一大浏览�
 
   ![](https://assets.fedtop.com/picbed/20220612204713.png)
 
-  <!-- ![](https://gitee.com/wangrongding/image-house/raw/master/images/202110091528609.png) -->
+  ![](https://assets.fedtop.com/picbed/202110091528609.png)
 
   除了这些更改之外，“属性”窗格中的属性现在也被扁平化，以获得更好的 DOM 属性调试体验，尤其是对于[Web components]
 
@@ -115,7 +115,9 @@ Google 坐拥了全球第一大操作系统 Android 以及全球第一大浏览�
 
 - **最新的 lighthouse 支持通过 npm 下载**
 
-  ![](https://assets.fedtop.com/picbed/20220612204806.png) 通过命令`lighthouse https://www.example.com --view` ![](https://gitee.com/wangrongding/image-house/raw/master/images/202110091604251.png)
+  ![](https://assets.fedtop.com/picbed/20220612204806.png)  
+  通过命令`lighthouse https://www.example.com --view`  
+  ![](https://assets.fedtop.com/picbed/202110091604251.png)
 
   这里我通过百度为例子,大家替换为自己想测试的站点即可
 
@@ -153,7 +155,8 @@ Google 坐拥了全球第一大操作系统 Android 以及全球第一大浏览�
 
 ## 最后
 
-chrome95 开始，chrome 会每隔 4 周就会更新一个版本，对于喜欢尝鲜的同学们，我推荐下载 chrome 测试版或者金丝雀版本来体验最新的特性．对于一些正在试验中的 API 我们也可以通过下面这个网站提交登记，或者体验资格 ![](https://gitee.com/wangrongding/image-house/raw/master/images/202110102110334.png)
+chrome95 开始，chrome 会每隔 4 周就会更新一个版本，对于喜欢尝鲜的同学们，我推荐下载 chrome 测试版或者金丝雀版本来体验最新的特性．对于一些正在试验中的 API 我们也可以通过下面这个网站提交登记，或者体验资格  
+![](https://assets.fedtop.com/picbed/202110102110334.png)
 
 通过填写一些信息后等待审核通过即可，非常的方便！
 
