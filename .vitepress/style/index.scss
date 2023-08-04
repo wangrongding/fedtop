@@ -117,8 +117,13 @@
   }
 }
 .dark {
-  .VPNavBarMenuLink.active {
-    color: var(--vp-c-brand-lighter);
+  .VPNavBarMenuLink {
+    &.active {
+      color: var(--vp-c-brand-lighter);
+    }
+    &:hover {
+      color: var(--vp-c-brand-lighter);
+    }
   }
 
   .DocSearch-Button {
@@ -138,6 +143,11 @@
       color: var(--vp-c-text);
       background-color: #727283;
       // background-color: #d6d6d6;
+    }
+  }
+  .copyright {
+    a {
+      color: var(--vp-c-brand-lighter);
     }
   }
 }
