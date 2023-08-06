@@ -68,6 +68,44 @@ git config --global core.pager more
 git config --global color.ui 1
 ```
 
+## 命令补全
+
+### Zsh 命令行自动补全
+
+Zsh 为 Git 提供了一个 Tab 补全库。 想要使用它，只需在你的 .zshrc 中执行 autoload -Uz compinit && compinit 即可。 相对于 Bash，Zsh 的接口更加强大：
+
+```sh
+$ git che<Tab>
+check-attr        -- 显示 gitattributes 信息
+check-ref-format  -- 检查引用名称是否符合规范
+checkout          -- 从工作区中检出分支或路径
+checkout-index    -- 从暂存区拷贝文件至工作目录
+cherry            -- 查找没有被合并至上游的提交
+cherry-pick       -- 从一些已存在的提交中应用更改
+```
+
+- https://www.git-scm.com/book/zh/v2/%E9%99%84%E5%BD%95-A%3A-%E5%9C%A8%E5%85%B6%E5%AE%83%E7%8E%AF%E5%A2%83%E4%B8%AD%E4%BD%BF%E7%94%A8-Git-Zsh-%E4%B8%AD%E7%9A%84-Git
+
+### bash-completion 命令行自动补全
+
+```sh
+# 安装 bash-completion
+brew install bash-completion
+```
+
+```sh
+# 在 ~/.bash_profile 中添加
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+```
+
+### git 命令自动纠错
+
+```sh
+git config --global help.autocorrect 1
+```
+
 ## git 忽略代码块
 
 ```sh
@@ -151,12 +189,6 @@ git config --global gui.encoding utf-8
 ```
 
 ![](https://assets.fedtop.com/picbed/20220706183831.png)
-
-## git 命令自动纠错
-
-```sh
-git config --global help.autocorrect 1
-```
 
 ### git 设置别名
 
