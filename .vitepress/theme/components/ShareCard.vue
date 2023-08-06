@@ -1,15 +1,15 @@
 <template>
   <div class="shareCard">
     <h1 class="title">
-      <span>Hi there! I'm Rongding~ 👋</span>
+      <span>👋 Hi there! I'm Rongding~</span>
     </h1>
     <p class="description">A passionate web developer based in Beijing.</p>
-    <h2 class="blog-title mt-4 text-center text-xl font-bold">在键帽与字符上横跳，于代码和程序中穿梭。</h2>
+    <h2 class="blog-title text-center text-lg font-bold">在键帽与字符上横跳，于代码和程序中穿梭。</h2>
   </div>
 </template>
 
 <script lang="ts" setup></script>
-<style scoped>
+<style scoped lang="scss">
 .shareCard {
   display: flex;
   flex-direction: column;
@@ -24,7 +24,12 @@
   font-weight: bold;
 }
 .blog-title {
-  color: var(--vp-c-brand-light);
+  color: var(--vp-c-brand-dark);
+}
+.dark {
+  .blog-title {
+    color: var(--vp-c-brand-light);
+  }
 }
 .description {
   margin: 1em 0;
