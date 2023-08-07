@@ -1,6 +1,6 @@
 ---
 layout: home
 date: 2021-06-30
-title: home
+title: 荣顶
 sidebar: false
 ---

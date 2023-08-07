@@ -1,8 +1,6 @@
 <template>
   <div class="shareCard">
-    <h1 class="title">
-      <span>👋 Hi there! I'm Rongding~</span>
-    </h1>
+    <h1 class="title">👋 Hi there! I'm Rongding~</h1>
     <p class="description">A passionate web developer based in Beijing.</p>
     <h2 class="blog-title text-center text-lg font-bold">在键帽与字符上横跳，于代码和程序中穿梭。</h2>
   </div>

@@ -11,7 +11,7 @@ export default async function () {
     head: [
       ['link', { rel: 'icon', href: '/avatar.png' }],
       ['meta', { name: 'author', content: '荣顶' }],
-      ['meta', { property: 'og:title', content: 'Home' }],
+      ['meta', { property: 'og:title', content: '荣顶' }],
       ['meta', { property: 'og:description', content: '荣顶 - 个人博客' }],
     ],
     // 主题配置
