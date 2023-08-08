@@ -6,7 +6,10 @@ Why named FedTop? FedTop is a short for Front End Developer Top, which means the
 
 本项目主要用于总结、分享本人在前端开发中的一些经验总结和开发心得。
 
-包括但不限于以下内容：
+博客地址：[FedTop](https://fedtop.com)  
+所有内容均为原创，转载请联系本人授权。
+
+博客包括但不限于以下主题：
 
 - Web 音视频，WebRTC
 - 前端性能优化
