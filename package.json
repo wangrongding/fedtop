@@ -40,7 +40,6 @@
   "dependencies": {
     "dayjs": "^1.11.9",
     "element-plus": "^2.3.8",
-    "gitalk": "^1.8.0",
     "tiny-player": "^1.0.19",
     "vue": "3.3.2"
   },

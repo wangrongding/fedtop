@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { useData, withBase } from 'vitepress'
 import { computed } from 'vue'
-import { useYearSort } from '../utils'
+import { useYearSort } from '../theme/utils'
 
 const { theme } = useData()
 const data = computed(() => useYearSort(theme.value.posts))
@@ -31,6 +31,7 @@ const data = computed(() => useYearSort(theme.value.posts))
 }
 .yearItem {
   border-bottom: 1px dashed #c7c7c7;
+  padding: 0 0 16px 0;
 }
 .yearItem:last-child {
   border: none;
@@ -43,10 +44,9 @@ const data = computed(() => useYearSort(theme.value.posts))
 
 .article {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   gap: 20px;
-  margin: 10px 10px;
+  padding: 10px;
   color: var(--vp-c-text-2);
   transition: border 0.3s ease, color 0.3s ease;
 }
@@ -62,6 +62,7 @@ const data = computed(() => useYearSort(theme.value.posts))
   .article:hover {
     text-decoration: none;
     color: var(--vp-c-brand-lighter);
+    background-color: var(--vp-c-brand-dim);
   }
 }
 </style>

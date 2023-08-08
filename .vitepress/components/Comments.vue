@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div id="gitalk-container"></div>
 </template>
 <script lang="ts" setup>
@@ -31,4 +31,4 @@ onContentUpdated(() => {
   gitalk.render('gitalk-container')
 })
 </script>
-<style scoped></style>
+<style scoped></style> -->

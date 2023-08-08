@@ -1,32 +1,6 @@
 @import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.6.0/style.min.css');
-:root {
-  --vp-home-hero-image-filter: blur(72px);
-  --vp-c-brand: #a27b5c;
-  --vp-c-brand-light: #747bff;
-  --vp-c-brand-lighter: #9499ff;
-  --vp-c-brand-lightest: #bcc0ff;
-  --vp-c-brand-dark: #a27b5c;
-  --vp-c-brand-darker: #86654b;
-  --vp-c-brand-dimm: rgba(100, 108, 255, 0.08);
-  --vp-home-hero-image-background-image: linear-gradient(-45deg, #bd34fe 50%, #49cbfe 50%);
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #49cbfe);
-
-  --vp-c-hover: #212121;
-  --vp-c-bg: #faf6f1;
-  --vp-c-bg-alpha-with-backdrop: rgba(250, 246, 241, 0.7);
-
-  --vp-c-color-b: #26ccff;
-  --vp-c-color-c: #0cb9ed;
-  --vp-c-color-d: #a15000;
-  --vp-c-color-e: #ed7c0c;
-
-  --vp-font-family-base: 'LXGW WenKai Lite', 'Inter var experimental', 'Inter var', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  --vp-font-family-mono: 'LXGW WenKai Mono Lite', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
-    monospace;
-  --vp-avator-border: #ffffff;
-}
+@import url(./variable.scss);
+@import url(./tailwind.postcss);
 
 #app {
   min-height: 100vh;
