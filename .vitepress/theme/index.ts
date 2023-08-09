@@ -1,11 +1,15 @@
 import DefaultTheme from 'vitepress/theme'
 import type { App } from 'vue'
+import { onMounted } from 'vue'
+
 import '../style/index.scss'
 import 'element-plus/dist/index.css'
 
 import Archives from '../components/Archives.vue'
 import Tags from '../components/Tags.vue'
 import MyLayout from '../components/MyLayout.vue'
+
+import dynamicBackground from './background'
 
 export default {
   extends: DefaultTheme,
@@ -17,5 +21,10 @@ export default {
 
     const elementPlus = await import('element-plus')
     app.use(elementPlus)
+  },
+  setup() {
+    onMounted(() => {
+      dynamicBackground()
+    })
   },
 }

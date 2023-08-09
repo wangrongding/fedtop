@@ -53,6 +53,7 @@ const data = computed(() => useYearSort(theme.value.posts))
 .article:hover {
   text-decoration: none;
   color: var(--vp-c-brand);
+  background-color: var(--vp-c-brand-dim);
 }
 .date {
   font-family: Georgia, sans-serif;
