@@ -174,9 +174,43 @@ git config --global --unset http.proxy
 git config --global --unset https.proxy
 ```
 
-## 配置多个 SSH 配置
+## git 子模块相关操作
 
-一般用于 Git 多个账户，配置多个 SSH 配置
+```sh
+# 删除子模块
+git submodule deinit -f -- packages/xxx
+rm -rf .git/modules/packages/xxx
+git rm -f packages/xxx
+
+# or
+git rm --cached packages/xxx
+
+# 添加子模块
+git submodule add
+```
+
+## 配置 SSH 配置
+
+配置单个 ssh
+
+某些用户在通过 SSH 连接到 Git 时可能会遇到问题，因为防火墙会阻止与默认 SSH 端口的连接。在 SSH 设置中解决此问题，以强制连接通过端口 443（默认 HTTPS 端口，应打开）。为此，请编辑 ~/.ssh/config SSH 配置文件并添加以下行：
+
+```sh
+Host github.com
+Hostname ssh.github.com
+Port 443
+User git
+```
+
+通过运行以下命令测试新配置：
+
+```sh
+ssh -T -p 443 git@ssh.github.com
+```
+
+配置多个 ssh 配置：
+
+一般用于 Git 多个账户的时候，比如公司和个人账户。
 
 - https://blog.csdn.net/wlk1229/article/details/105934900/
 - https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=mac
@@ -213,6 +247,20 @@ git config --global gui.encoding utf-8
 # 再次拉取代码会提示输入账号密码。
 git config --global credential.helper osxkeychain
 ```
+
+## rebase 相关操作
+
+当我们在一顿修改并 commit 后，向远端仓库进行 push 时
+
+![](https://assets.fedtop.com/picbed/202308311509236.png)
+
+这个时候 pull
+
+![](https://assets.fedtop.com/picbed/202308311512874.png)
+
+所以
+
+![](https://assets.fedtop.com/picbed/202308311514187.png)
 
 ## 设置默认 push
 
