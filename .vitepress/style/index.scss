@@ -71,6 +71,10 @@
   color: var(--vp-c-brand-dark);
 }
 
+.DocSearch-Button {
+  border-color: var(--vp-c-brand-dark);
+}
+
 // 文档
 .VPDoc {
   .vp-doc {
@@ -107,8 +111,9 @@
     }
   }
 
-  .DocSearch-Button {
-    border-color: var(--vp-c-brand-lighter);
+  .DocSearch-Button,
+  .search-bar {
+    border-color: var(--vp-c-brand-lighter) !important;
   }
   .VPDoc .vp-doc {
     h2 {
