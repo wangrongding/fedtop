@@ -52,7 +52,7 @@ export default async function () {
       // 页脚
       footer: {
         message: 'Released under the MIT License.',
-        copyright: 'Copyright © 2018-present <a href="https://github.com/wangrongding">Rongding</a>',
+        copyright: 'Copyright © 2018-present <a href="https://github.com/wangrongding" title="荣顶">荣顶</a>',
       },
     },
     // markdown 配置

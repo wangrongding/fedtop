@@ -40,10 +40,13 @@
 }
 
 // 首页底部copyright
-.copyright {
-  a {
-    text-decoration: underline;
-    color: var(--vp-c-brand);
+.VPFooter {
+  user-select: none;
+  .copyright {
+    a {
+      text-decoration: underline;
+      color: var(--vp-c-brand);
+    }
   }
 }
 

@@ -2,7 +2,9 @@
   <ShareCard />
   <div class="blogList my-8 flex flex-col items-center justify-center">
     <a class="blog flex flex-col md:flex-row md:items-center md:justify-between" v-for="item in posts" :href="withBase(item.regularPath)">
-      <div class="title">{{ item.frontMatter.title }}</div>
+      <div class="title text-xl font-bold md:max-w-[600px] md:overflow-hidden md:text-ellipsis md:whitespace-nowrap">
+        {{ item.frontMatter.title }}
+      </div>
       <div class="min-w-[130px]">{{ transDate(item.frontMatter.date) }}</div>
     </a>
   </div>
@@ -75,7 +77,7 @@ const transDate = (date: string) => {
 .blog {
   width: 85%;
   border-radius: 10px;
-  padding: 10px 20px;
+  padding: 14px 20px;
   margin: 10px;
   background: var(--vp-c-bg);
   max-width: 800px;
@@ -90,8 +92,6 @@ const transDate = (date: string) => {
 }
 .title {
   color: var(--vp-c-brand-dark);
-  font-size: 1.2em;
-  font-weight: bold;
 }
 
 .pagination {
