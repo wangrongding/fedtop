@@ -32,8 +32,8 @@ export default async function () {
       },
       // 页面顶部的导航栏。它包含站点标题、全局菜单链接等
       nav: [
-        { text: '🏡 Home', link: '/' },
-        { text: '📃 Archives', link: '/page/archives' },
+        { text: '🏡 首页', link: '/' },
+        { text: '📃 所有文章', link: '/page/archives' },
         { text: '🔖 Tags', link: '/page/tags' },
         // TODO: RSS
         // { text: '🔥 RSS', link: 'https://fedtop.com/feed.xml' },

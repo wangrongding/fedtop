@@ -6,6 +6,7 @@
   min-height: 100vh;
   position: relative;
   background-color: var(--vp-c-bg-alpha-with-backdrop);
+  // filter 基于当前元素会生成一个新的包含块，其位置大小和当前元素一样，然后子元素的 fixed 就会根据这个包含块进行定位，所以设置滤镜后可能会导致 fixed 元素样式出问题的现象；
   // backdrop-filter: blur(10px);
   z-index: 2;
 }
