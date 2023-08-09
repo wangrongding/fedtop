@@ -3,7 +3,7 @@
     <h1 class="tags-header">Tags</h1>
     <div class="tags">
       <span
-        @click="toggleTag(key)"
+        @click="toggleTag(key as string)"
         v-for="(item, key) in data"
         class="tag"
         :style="getFontSize(data[key].length)"

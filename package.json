@@ -19,6 +19,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/fs-extra": "^11.0.1",
+    "@types/markdown-it": "^13.0.0",
     "autoprefixer": "^10.4.14",
     "fast-glob": "^3.3.1",
     "feed": "^4.2.2",

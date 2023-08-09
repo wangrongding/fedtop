@@ -20,18 +20,10 @@ import ShareCard from './ShareCard.vue'
 import { useData, withBase } from 'vitepress'
 import dayjs from 'dayjs'
 
-interface FrontMatter {
-  title: string
-  date: string
-}
-interface Post {
-  regularPath: string
-  frontMatter: FrontMatter
-}
 const { theme } = useData()
 
 // get posts
-let postsAll = theme.value.posts || []
+let postsAll: PostInfo[] = theme.value.posts || []
 // get postLength
 let postLength = theme.value.postLength
 // get pageSize
@@ -41,12 +33,12 @@ let pagesNum = postLength % pageSize === 0 ? postLength / pageSize : postLength 
 pagesNum = parseInt(pagesNum.toString())
 //pageCurrent
 let pageCurrent = ref(1)
-// filter index Post
-postsAll = postsAll.filter((item: Post) => {
+// filter index PostInfo
+postsAll = postsAll.filter((item: PostInfo) => {
   return item.regularPath.indexOf('index') < 0
 })
 // pagination
-let allMap = {}
+let allMap: { [k: string]: PostInfo[] } = {}
 for (let i = 0; i < pagesNum; i++) {
   allMap[i] = []
 }
@@ -58,11 +50,11 @@ for (let i = 0; i < postsAll.length; i++) {
   allMap[index].push(postsAll[i])
 }
 // set posts
-let posts = ref<Post[]>([])
+let posts = ref<PostInfo[]>([])
 posts.value = allMap[pageCurrent.value - 1]
 
 // click pagination
-const go = (i) => {
+const go = (i: number) => {
   pageCurrent.value = i
   posts.value = allMap[pageCurrent.value - 1]
 }

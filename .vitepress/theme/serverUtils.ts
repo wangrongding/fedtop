@@ -9,10 +9,11 @@ export async function getPosts() {
       const content = await fs.readFile(item, 'utf-8')
       const { data } = matter(content)
       data.date = _convertDate(data.date)
-      return {
-        frontMatter: data,
+      const postInfo: PostInfo = {
+        frontMatter: data as FrontMatter,
         regularPath: `/${item.replace('.md', '.html')}`,
       }
+      return postInfo
     }),
   )
   posts.sort(_compareDate)
@@ -24,7 +25,7 @@ function _convertDate(date = new Date().toString()) {
   return json_date.split('T')[0]
 }
 
-function _compareDate(obj1, obj2) {
+function _compareDate(obj1: PostInfo, obj2: PostInfo) {
   return obj1.frontMatter.date < obj2.frontMatter.date ? 1 : -1
 }
 
