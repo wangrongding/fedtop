@@ -5,7 +5,8 @@ import { onMounted } from 'vue'
 import '../style/index.scss'
 import 'element-plus/dist/index.css'
 
-import Archives from '../components/Archives.vue'
+import Projects from '../components/Projects.vue'
+import Timeline from '../components/Timeline.vue'
 import Tags from '../components/Tags.vue'
 import MyLayout from '../components/MyLayout.vue'
 
@@ -16,7 +17,8 @@ export default {
   Layout: MyLayout, // 注入到 layout 的组件
   async enhanceApp({ app }: { app: App }) {
     // 注册全局组件
-    app.component('Archives', Archives)
+    app.component('Projects', Projects)
+    app.component('Timeline', Timeline)
     app.component('Tags', Tags)
 
     const elementPlus = await import('element-plus')

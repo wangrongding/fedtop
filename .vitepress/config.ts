@@ -14,8 +14,8 @@ export default async function () {
       ['meta', { property: 'og:title', content: '荣顶' }],
       ['meta', { property: 'og:description', content: '荣顶 - 个人博客' }],
     ],
+    // appearance: 'dark', // boolean | 'dark';
     // 主题配置
-    appearance: 'dark', // 'light' | 'dark' | 'auto'
     themeConfig: {
       // https://vitepress.dev/reference/default-theme-config
       logo: '/avatar.png',
@@ -33,15 +33,20 @@ export default async function () {
       // 页面顶部的导航栏。它包含站点标题、全局菜单链接等
       nav: [
         { text: '🏡 首页', link: '/' },
-        { text: '📃 所有文章', link: '/page/archives' },
-        { text: '🔖 Tags', link: '/page/tags' },
+        { text: '📃 路在脚下', link: '/page/timeline' },
+        { text: '🧩 我的项目', link: '/page/projects' },
+        { text: '💬 讨论区', link: '/page/forum' },
+        { text: '🏷️ Tags', link: '/page/tags' },
         // TODO: RSS
         // { text: '🔥 RSS', link: 'https://fedtop.com/feed.xml' },
         {
-          text: 'Follow me',
+          text: '👀 Follow me',
           items: [
-            { text: 'twitter', link: 'https://twitter.com/wangrongding' },
-            { text: 'github', link: 'https://github.com/wangrongding' },
+            { text: 'Github', link: 'https://github.com/wangrongding' },
+            { text: 'Twitter', link: 'https://twitter.com/wangrongding' },
+            { text: '掘金', link: 'https://juejin.cn/user/2858385963749223' },
+            // { text: '知乎', link: 'https://www.zhihu.com/people/rongding' },
+            // { text: 'BiliBili', link: 'https://juejin.cn/user/2858385963749223' },
           ],
         },
       ],
