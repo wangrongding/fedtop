@@ -11,7 +11,7 @@ function openRepo(repoName: string) {
     <div class="project-list">
       <div v-for="item in projects" class="project bg-slate-700" @click="openRepo(item.name)">
         <div class="flex w-full justify-between">
-          <h2 class="text-2xl font-bold">{{ item.name }}</h2>
+          <h2 class="title text-2xl font-bold">{{ item.name }}</h2>
           <div class="flex items-center justify-end gap-2">
             <img :src="`https://img.shields.io/github/stars/wangrongding/${item.name}`" :alt="`${item.name}`" />
             <img
@@ -51,7 +51,6 @@ function openRepo(repoName: string) {
     .project-description {
       font-size: 16px;
       font-weight: normal;
-      color: #000000;
       // 多行省略
       display: -webkit-box;
       -webkit-box-orient: vertical;
@@ -62,7 +61,13 @@ function openRepo(repoName: string) {
 }
 .dark {
   .project {
-    color: var(--vp-c-brand-light);
+    .title {
+      color: var(--vp-c-brand-light);
+    }
+    background-color: var(--vp-c-bg);
+    &:hover {
+      background-color: var(--vp-c-brand-dim);
+    }
   }
 }
 </style>
