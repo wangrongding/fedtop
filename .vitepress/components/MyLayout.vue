@@ -12,20 +12,24 @@
     </template>
     <!-- Home slot-->
     <template #home-hero-before><HomeHero /></template>
-    <template #home-features-after><Page /></template>
+    <template #home-features-after><PostList /></template>
   </Layout>
-  <!-- copywright -->
-  <CopyWright />
+  <!-- footer -->
+  <!-- <CopyWright v-if="filePath === 'index.md'" /> -->
 </template>
 <script lang="ts" setup>
 import DefaultTheme from 'vitepress/theme'
+import { useData } from 'vitepress'
 import HomeHero from './HomeHero.vue'
-import CopyWright from './CopyWright.vue'
 import Comments from './Comments.vue'
-import Page from './Page.vue'
+import PostList from './PostList.vue'
 import Category from './Category.vue'
 import Title from './Title.vue'
+import CopyWright from './CopyWright.vue'
+
 const { Layout } = DefaultTheme
+const { page } = useData()
+const filePath = page.value.filePath
 const back = () => {
   history.back()
 }

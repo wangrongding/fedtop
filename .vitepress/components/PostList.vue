@@ -1,5 +1,4 @@
 <template>
-  <ShareCard />
   <div class="blogList my-8 flex flex-col items-center justify-center">
     <a class="blog flex flex-col md:flex-row md:items-center md:justify-between" v-for="item in posts" :href="withBase(item.regularPath)">
       <div class="title text-xl font-bold md:max-w-[600px] md:overflow-hidden md:text-ellipsis md:whitespace-nowrap">
@@ -16,7 +15,6 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue'
-import ShareCard from './ShareCard.vue'
 import { useData, withBase } from 'vitepress'
 import dayjs from 'dayjs'
 
