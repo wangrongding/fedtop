@@ -13,9 +13,9 @@
     <!-- Home slot-->
     <template #home-hero-before><HomeHero /></template>
     <template #home-features-after><PostList /></template>
+    <!-- footer -->
+    <template #layout-bottom><CopyWright /></template>
   </Layout>
-  <!-- footer -->
-  <!-- <CopyWright v-if="filePath === 'index.md'" /> -->
 </template>
 <script lang="ts" setup>
 import DefaultTheme from 'vitepress/theme'

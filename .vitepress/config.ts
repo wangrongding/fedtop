@@ -55,10 +55,10 @@ export default async function () {
       // 社交网站
       socialLinks: [{ icon: 'github', link: 'https://github.com/wangrongding/fedtop' }],
       // 页脚
-      footer: {
-        message: 'Released under the MIT License.',
-        copyright: 'Copyright © 2018-present <a href="https://github.com/wangrongding" title="荣顶">荣顶</a>',
-      },
+      // footer: {
+      //   message: 'Released under the MIT License.',
+      //   copyright: 'Copyright © 2018-present <a href="https://github.com/wangrongding" title="荣顶">荣顶</a>',
+      // },
     },
     // markdown 配置
     markdown: {
