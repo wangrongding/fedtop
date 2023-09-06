@@ -35,8 +35,9 @@ export default async function () {
         { text: '🏡 首页', link: '/' },
         { text: '📃 路在脚下', link: '/page/timeline' },
         { text: '🧩 我的项目', link: '/page/projects' },
-        { text: '💬 讨论区', link: '/page/forum' },
         { text: '🏷️ Tags', link: '/page/tags' },
+        { text: '🛠️ Use', link: '/page/use' },
+        { text: '💬 讨论区', link: '/page/forum' },
         // TODO: RSS
         // { text: '🔥 RSS', link: 'https://fedtop.com/feed.xml' },
         {
