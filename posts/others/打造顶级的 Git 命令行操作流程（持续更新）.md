@@ -27,19 +27,10 @@ git config --global alias.rank 'shortlog -s -n'
 git rank
 ```
 
-## git 输出美化
-
-### git log 美化
-
-其中详细参数可见： https://git-scm.com/docs/pretty-formats
+git log 美化 , 其中详细参数可见： https://git-scm.com/docs/pretty-formats
 
 ```sh
-git log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-```
-
-```sh
-# 我们将上面的命令设置为一个 git 别名
-# 也可以加上根据自己需要添加其他选项 例如 --all 之类的，详细配置参数可见： https://git-scm.com/docs/pretty-formats
+# 可以根据自己需要在其中添加其他选项 例如 --all 之类的，详细配置参数可见： https://git-scm.com/docs/pretty-formats
 git config --global alias.logs "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --date=format:'%Y-%m-%d %H:%M:%S'"
 ```
 
@@ -48,6 +39,19 @@ git config --global alias.logs "log --graph --pretty=format:'%Cred%h%Creset -%C(
 效果如下，比默认的好看，且实用多了。
 
 ![](https://assets.fedtop.com/picbed/202307311028731.png)
+
+当然用别名做自定义命令后的好处是，你仍然可以在后面接上其他参数
+
+```sh
+# 只查看某个人的提交
+git logs --author="xxx"
+# 查看每次 commit 修改了哪些文件（这样的话在终端里使用 cmd + 鼠标左键点击文件名可以直接打开文件）
+git logs --name-only # 或 git logs --stat
+# 查看每次 commit 修改了哪些文件，以及修改了哪些代码
+git logs --patch
+```
+
+![](https://assets.fedtop.com/picbed/202309080234940.png)
 
 ### Git Status 美化
 
@@ -509,6 +513,9 @@ $ git show [commit]:[filename]
 
 # 显示当前分支的最近几次提交
 $ git reflog
+
+# 查看某个人在某个时间段的提交
+git logs --author="xxx" --since="2021-07-01" --until="2021-07-31"
 
 ```
 
