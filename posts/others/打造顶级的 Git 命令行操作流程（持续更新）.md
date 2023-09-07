@@ -53,17 +53,7 @@ git logs --patch
 
 ![](https://assets.fedtop.com/picbed/202309080234940.png)
 
-### Git Status 美化
-
-```sh
-git status -sb
-```
-
-```sh
-git config --global alias.dog "status -sb"
-```
-
-### git 命令行文件路径显示中文
+git 命令行文件路径显示中文
 
 ```sh
 # 全局
@@ -81,6 +71,14 @@ git config --global core.pager more
 这样设置后，如果你的终端是 utf-8 编码的那么就可以直接显示中文了。
 
 ![](https://assets.fedtop.com/picbed/202211241024385.png)
+
+Git Status 美化
+
+```sh
+git config --global alias.view "status -sb"
+# 设置完后，使用以下命令查看自定义的 git status
+git view
+```
 
 ### Git 命令输出里加上颜色
 
