@@ -1,5 +1,5 @@
 ---
-title: 一些实用的 Git 操作备忘与分享（持续更新）
+title: 打造顶级的 Git 命令行操作流程（持续更新）
 date: 2023-07-31
 tags:
   - Git
@@ -7,9 +7,25 @@ categories:
   - 前端
 ---
 
-# 一些实用的 Git 操作备忘与分享
-
 对于 git 操作，用过很多工具，但最喜欢的还是命令行，因为命令行可以任何时候任何设备上进行灵活的 git 操作，下面是笔者在使用 git 过程中的一些心得。供自己备忘，也希望能帮助到大家。
+
+## 自用的一些 git 自定义命令
+
+使用默认浏览器打开当前仓库的 github remote url（一般是 github 链接）
+
+```sh
+git config --global alias.home '!sh -c '\''url=$(git remote get-url origin) && open "$url"'\'''
+# 配置完后，使用以下命令即可打开当前仓库的 github remote url
+git home
+```
+
+列出当前仓库所有 Contributor，以提交次数排名
+
+```sh
+git config --global alias.rank 'shortlog -s -n'
+# 配置完后，使用以下命令即可
+git rank
+```
 
 ## git 输出美化
 
