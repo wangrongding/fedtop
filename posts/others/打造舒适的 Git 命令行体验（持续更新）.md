@@ -13,11 +13,17 @@ categories:
 
 在大陆，由于众所周知的原因，github 经常性的无法访问，需要额外配置代理，当我们只对某个端口进行代理的时候，可以快速通过以下命令设置和取消代理。
 
+因为这里需要执行多个命令，我们可以通过 `!f() { xxx; }; f` 的方式来实现，这样我们用一个 shell 函数来执行内部的多个命令。  
+后续有类似组合命令的场景，都可以这样实现。
+
 ```sh
 # 设置代理
 git config --global alias.setproxy '!f() { git config --global http.proxy http://127.0.0.1:7890 && git config --global https.proxy https://127.0.0.1:7890; }; f'
 # 取消代理
 git config --global alias.unsetproxy '!f() { git config --global --unset http.proxy && git config --global --unset https.proxy; }; f'
+# 使用
+git setproxy # 设置代理
+git unsetproxy # 取消代理
 ```
 
 使用默认浏览器打开当前仓库的 github remote url（一般是 github 链接）
