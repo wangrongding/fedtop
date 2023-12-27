@@ -1,5 +1,5 @@
 ---
-title: 打造顶级的 Git 命令行操作体验（持续更新）
+title: 打造舒适的 Git 命令行体验（持续更新）
 date: 2023-07-31
 tags:
   - Git
@@ -10,6 +10,15 @@ categories:
 对于 git 操作，用过很多工具，但最喜欢的还是命令行，因为命令行可以任何时候任何设备上进行灵活的 git 操作，下面是笔者在使用 git 过程中的一些心得。供自己备忘，也希望能帮助到大家。
 
 ## 自用的一些 git 自定义命令
+
+在大陆，由于众所周知的原因，github 经常性的无法访问，需要额外配置代理，当我们只对某个端口进行代理的时候，可以快速通过以下命令设置和取消代理。
+
+```sh
+# 设置代理
+git config --global alias.setproxy '!f() { git config --global http.proxy http://127.0.0.1:7890 && git config --global https.proxy https://127.0.0.1:7890; }; f'
+# 取消代理
+git config --global alias.unsetproxy '!f() { git config --global --unset http.proxy && git config --global --unset https.proxy; }; f'
+```
 
 使用默认浏览器打开当前仓库的 github remote url（一般是 github 链接）
 
