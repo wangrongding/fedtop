@@ -26,6 +26,10 @@ git setproxy # 设置代理
 git unsetproxy # 取消代理
 ```
 
+配合 [fig](https://fig.io/) 的提示，我们就可以非常方便的设置和取消代理了。(如下图，支持方向键选择，回车执行)
+
+![](https://assets.fedtop.com/picbed/202401081104810.png)
+
 使用默认浏览器打开当前仓库的 github remote url（一般是 github 链接）
 
 ```sh
@@ -42,6 +46,22 @@ git config --global alias.rank 'shortlog -s -n'
 git rank
 ```
 
+如图：
+
+![](https://assets.fedtop.com/picbed/202401081227997.png)
+
+列出当前仓库所有 Contributor，以初次提交时间排名
+
+```sh
+git config --global alias.rank-time '!git log --pretty=format:'\''%an %ad'\'' --date=short | sort -k2,2 -k1,1 | awk '\''!seen[$1]++ { printf "\033[34m%s \033[32m%s\033[0m\n", $1, $2 }'\'
+# 配置完后，使用以下命令即可
+git rank-time
+```
+
+如图：
+
+![](https://assets.fedtop.com/picbed/202401081224500.png)
+
 git log 美化 , 其中详细参数可见： https://git-scm.com/docs/pretty-formats
 
 ```sh
@@ -55,7 +75,7 @@ git config --global alias.logs "log --graph --pretty=format:'%Cred%h%Creset -%C(
 
 ![](https://assets.fedtop.com/picbed/202307311028731.png)
 
-当然用别名做自定义命令后的好处是，你仍然可以在后面接上其他参数
+当然用别名做自定义命令后，你仍然可以在后面接上其他参数
 
 ```sh
 # 只查看某个人的提交
