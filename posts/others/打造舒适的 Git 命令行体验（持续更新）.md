@@ -11,6 +11,10 @@ categories:
 
 ## 自用的一些 git 自定义命令
 
+为避免每次新建分支，在团队项目中推送时需要手动设置 upstream 的麻烦。
+
+![](https://assets.fedtop.com/picbed/202404111054603.png)
+
 在大陆，由于众所周知的原因，github 经常性的无法访问，需要额外配置代理，当我们只对某个端口进行代理的时候，可以快速通过以下命令设置和取消代理。
 
 因为这里需要执行多个命令，我们可以通过 `!f() { xxx; }; f` 的方式来实现，这样我们用一个 shell 函数来执行内部的多个命令。  
@@ -18,17 +22,33 @@ categories:
 
 ```sh
 # 设置代理
-git config --global alias.setproxy '!f() { git config --global http.proxy http://127.0.0.1:7890 && git config --global https.proxy https://127.0.0.1:7890; }; f'
+git config --global alias.proxy '!f() { git config --global http.proxy http://127.0.0.1:7890 && git config --global https.proxy https://127.0.0.1:7890; }; f'
 # 取消代理
-git config --global alias.unsetproxy '!f() { git config --global --unset http.proxy && git config --global --unset https.proxy; }; f'
+git config --global alias.proxyoff '!f() { git config --global --unset http.proxy && git config --global --unset https.proxy; }; f'
 # 使用
-git setproxy # 设置代理
-git unsetproxy # 取消代理
+git proxy # 设置代理
+git proxyoff # 取消代理
 ```
 
 配合 [fig](https://fig.io/) 的提示，我们就可以非常方便的设置和取消代理了。(如下图，支持方向键选择，回车执行)
 
 ![](https://assets.fedtop.com/picbed/202401081104810.png)
+
+我一般为了避免麻烦，会直接给终端设置代理，这样所有的命令行工具都可以直接使用代理，不需要单独为 git 设置代理。
+
+```sh
+# 编辑 zsh 配置文件
+code ~/.zshrc
+
+# 在 zsh 配置文件中添加以下内容
+# 为终端设置http代理
+alias proxy='export http_proxy="http://localhost:7890" && export https_proxy="http://localhost:7890" && export all_proxy="socks5://127.0.0.1:7890"'
+alias proxyoff='unset http_proxy && unset https_proxy'
+
+# 使用：
+$ proxy # 设置代理
+$ proxyoff # 取消代理
+```
 
 使用默认浏览器打开当前仓库的 github remote url（一般是 github 链接）
 
