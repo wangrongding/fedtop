@@ -4,6 +4,11 @@ export default [
     description: '🤖一个基于OpenAi ChatGPT + WeChaty 实现的微信机器人 ，可以用来帮助你自动回复微信消息，或者管理微信群/好友，检测僵尸粉等...',
   },
   {
+    name: 'WebCut',
+    description:
+      '🎬 基于 web 端的音视频编辑器。(A web-based audio and video editor.)',
+  },
+  {
     name: 'frontend-park',
     description:
       '🌸这是一个有趣的前端趣味知识公园~该项目是我平时捣鼓前端相关技术的一些案例集合。【涵盖：（Tensorflow.js-姿态识别，人脸识别），(WebRTC-音视频通话，录屏，虚拟背景，信令服务器)，（Threejs-太阳系，3D 动画），（图片处理-千图成像，图片压缩，画板），（隐写术-文本隐写加密，图片隐写加密）等等...】',
