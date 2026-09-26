@@ -41,9 +41,9 @@ test()
 // 2,3,3,4,6,7,8,9,9,10,12,13,14,15,16,18,19,20,21,22,23,24,26,27,
 ```
 
-![alt](https://assets.fedtop.com/picbed/202301222323794.png)
+![alt](https://raw.githubusercontent.com/wangrongding/image-house/master/202301222323794.png)
 
-![alt](https://assets.fedtop.com/picbed/202301222325697.png)
+![alt](https://raw.githubusercontent.com/wangrongding/image-house/master/202301222325697.png)
 
 ## setTimeout
 

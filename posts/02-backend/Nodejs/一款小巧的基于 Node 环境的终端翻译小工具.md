@@ -50,19 +50,19 @@ node 安装完毕
   npm init -y
   ```
 
-  ![](https://assets.fedtop.com/picbed/202206122119916.png)
+  ![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122119916.png)
 
 - 我编辑器使用的是 vsCode ,在编辑器中打开项目目录
 
-  ![](https://assets.fedtop.com/picbed/202206122119939.png)
+  ![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122119939.png)
 
 - 新建一个 bin 文件夹，在 bin 文件夹内新建一个 js 文件用于命令行工具的测试；
 
-  ![](https://assets.fedtop.com/picbed/202206122119725.png)
+  ![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122119725.png)
 
 - 在 packjson.js 中配置如下信息：命令是可以自定义的(`ts`,也可以是`aaa`,`bbb`)
 
-  ![](https://assets.fedtop.com/picbed/202206122120059.png)
+  ![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122120059.png)
 
 - 然后使用：
 
@@ -72,11 +72,11 @@ node 安装完毕
 
   link 完后,我们可以通过`npm ls -g`查看是否成功(有当前文件夹被映射到全局包中说明 link 成功)
 
-  ![](https://assets.fedtop.com/picbed/202206122120269.png)
+  ![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122120269.png)
 
   我们在终端中使用`ts`命令,可以看到开始创建的 js 文件中的 console.log 执行了,至此,我们的工具基本完成就已经完成一半!接下来就是写逻辑的过程了
 
-  ![](https://assets.fedtop.com/picbed/202206122120182.png)
+  ![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122120182.png)
 
 - 项目中文字高亮,单词等阅读,命令行参数的获取主要依赖 colors,say 以及 yargs
 
@@ -299,17 +299,17 @@ node 安装完毕
 - 在当前目录下终端执行 `npm adduser` （注意:使用淘宝源会报错，要改回来），输入 npmjs 的账号密码邮箱。
 - 最后执行 `npm publish` ，将代码发布在 npm 上，即发布成功~
 - 在 npm 上查看自己刚发布的代码  
-  ![](https://assets.fedtop.com/picbed/202206122121342.png)
+  ![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122121342.png)
 
 - 到这里,工具已经发布成功,我们回到自己的项目目录,在终端进行`npm unlink ts`对前面的关联进行解绑,然后输入`ts`,这时我们发现命令已经报错了,说明解绑成功,我们执行 `npm i [你的包名] -g` 待安装完成后再次输入命令`ts` 我们发现已经可以翻译了和阅读了
 
-  ![](https://assets.fedtop.com/picbed/202206122121024.png)
+  ![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122121024.png)
 
-  ![](https://assets.fedtop.com/picbed/202206122121876.png)
+  ![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122121876.png)
 
 - 同样的在 linux 或者 mac 中,只要装了 node 环境,即可通过 npm 全局安装自己的翻译小工具,不管是在 cmd 还是 powerShell 中都能很好的使用(下图为 linux 中的使用截图)
 
-  ![](https://assets.fedtop.com/picbed/202206122121509.png)
+  ![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122121509.png)
 
 - 我的项目代码已经上传至[github](https://github.com/wangrongding/ding-trans),喜欢的小伙伴可以点个 star,谢谢!(完结~撒花)
 

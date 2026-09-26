@@ -29,13 +29,13 @@ npm star [package-name]
 npm unstar [package-name]
 ```
 
-![](https://assets.fedtop.com/picbed/202206122059778.png) 查看收藏列表
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122059778.png) 查看收藏列表
 
 ```sh
 npm stars
 ```
 
-![](https://assets.fedtop.com/picbed/202206122059681.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122059681.png)
 
 这些操作都会报错在你的账号下，所以很方便。不用担心本机操作后其他地方看不到。你只需要有一个 npm 账户就可以了，还没有的话，可以看本文第二节 👇 ，注册一个并登录吧。
 
@@ -47,11 +47,11 @@ npm stars
 
 推荐使用 nrm 或者 yrm 来快速切换镜像源,个人推荐使用 yrm,为什么呢?看下图
 
-![](https://assets.fedtop.com/picbed/202206122059106.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122059106.png)
 
 yrm 会同时将你的 npm 和 yarn 一起切换,并且 ls 后会有\*号标注当前正在使用的源,记得 nrm 以前也有的,现在不知道怎么了...
 
-![](https://assets.fedtop.com/picbed/202206122059858.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122059858.png)
 
 当然你可以手动 npm 切换为默认源
 
@@ -61,7 +61,7 @@ npm config set registry https://registry.npmjs.org
 
 然后执行命令`npm login`,依次填写用户名、密码、邮箱即可。如果你在 npmjs 站点还设置了其他保护，就还需要输入一些验证码之类的等等...
 
-![](https://assets.fedtop.com/picbed/202206122100146.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122100146.png)
 
 ```sh
 npm adduser
@@ -70,7 +70,7 @@ npm login
 # login是adduser的一个别名
 ```
 
-![](https://assets.fedtop.com/picbed/202206122100429.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122100429.png)
 
 你可以通过以下命令查看当前 npm 的登陆人
 
@@ -89,7 +89,7 @@ npm docs [package-name]
 npm home [package-name]
 ```
 
-![](https://assets.fedtop.com/picbed/202206122100823.gif)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122100823.gif)
 
 尝试以下命令，可以快速打开 lodash 的官方文档 👇
 
@@ -101,7 +101,7 @@ npm home lodash
 
 `npm docs`或者`npm home`命令在不接参数时，会在当前项目中，通过 `package.json` 文件中的`homepage`配置，来打开对应的地址。
 
-![](https://assets.fedtop.com/picbed/202206122100364.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122100364.png)
 
 如上图所示，其原理就是：当你要查看的项目中的 `package.json` 文件中，设置了`homepage`属性，通过`npm docs/home`就能打开对应的主页，没有设置`homepage`属性时，npm 会继续寻找其中的`repository`属性，这时候打开的就是项目在 github 中的托管地址 url 拼接“#readme” (例如： https://github.com/用户名/仓库名#readme)，如果你`repository`属性也没设置，那么就会打开 npm 官网中包的所在地址，（例如：https://www.npmjs.com/package/npm-limit）
 
@@ -126,7 +126,7 @@ npm bugs [package-name]
 
 👆 它是根据项目中的 `package.json` 文件中，设置的`bugs`属性，来打开对应的 url。
 
-![](https://assets.fedtop.com/picbed/202206122100008.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122100008.png)
 
 ## 查看某个包的详细信息
 
@@ -140,7 +140,7 @@ npm info [package-name]
 npm show [package-name]
 ```
 
-![](https://assets.fedtop.com/picbed/202206122101929.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122101929.png)
 
 ## 查看某个包的所有历史版本
 
@@ -148,7 +148,7 @@ npm show [package-name]
 npm v [package-name] versions
 ```
 
-![](https://assets.fedtop.com/picbed/202206122101340.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122101340.png)
 
 ## 本地开发的 npm 包如何调试
 
@@ -261,7 +261,7 @@ npm outdated
 npm outdated -g --depth=0
 ```
 
-![](https://assets.fedtop.com/picbed/202206122101838.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122101838.png)
 
 列出 node_modules 中的所有包
 
@@ -281,7 +281,7 @@ yarn audit
 
 执行后会列出有问题的包
 
-![](https://assets.fedtop.com/picbed/202206122101206.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122101206.png)
 
 | 风险等级 | 说明                    |
 | -------- | ----------------------- |
@@ -296,7 +296,7 @@ yarn audit
 npm token list
 ```
 
-![](https://assets.fedtop.com/picbed/202206122101253.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122101253.png)
 
 检测一下当前镜像源的延迟
 
@@ -304,7 +304,7 @@ npm token list
 npm ping
 ```
 
-![](https://assets.fedtop.com/picbed/202206122101854.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122101854.png)
 
 检测当前 node 和 npm 存在的问题 👇
 
@@ -312,4 +312,4 @@ npm ping
 npm doctor
 ```
 
-![](https://assets.fedtop.com/picbed/202206122101002.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122101002.png)

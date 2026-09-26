@@ -9,7 +9,7 @@ categories:
 
 # 基于 WebRTC 的 P2P 文件传输
 
-![](https://assets.fedtop.com/picbed/202211302228729.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202211302228729.png)
 
 [👉🏻 本文示例源代码地址](https://github.com/wangrongding/frontend-park)  
 [👉🏻 本文示例在线体验地址](https://frontend-park.vercel.app/audio-and-video/webRTC/file-transfer)
@@ -22,7 +22,7 @@ WebRTC 是一个实时通信的技术，它提供了一套 API，可以让浏览
 
 而这次，我将介绍 WebRTC 的另一个重要功能：P2P 文件传输。
 
-![](https://assets.fedtop.com/picbed/202211302234791.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202211302234791.png)
 
 ## P2P 文件传输
 
@@ -306,11 +306,11 @@ async function createOffer() {
 
 当你在后期连接成功的时候，其实可以把 候选人信息(candidate) 打印出来可以看看，当两个设备在同一个内网中连接的时候， candidate 的地址为一个 ipv6 长格式的内网地址和一个 ipv4 的内网地址。
 
-![](https://assets.fedtop.com/picbed/202211272320557.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202211272320557.png)
 
 当两个设备不在同一个内网中连接的时候，可以看到 candidate 的地址最后为一个 ipv4 的外网地址,说明它尝试了两次连接，第一次是内网连接，第二次是外网连接。证明了前面说的三种类型的先后连接方式。
 
-![](https://assets.fedtop.com/picbed/202211272328473.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202211272328473.png)
 
 #### 信令服务端接收提案
 

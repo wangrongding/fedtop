@@ -26,10 +26,10 @@ categories:
 然后我去建了几个工单顺便上传了资料去证明，还是被拒了，当时心情是伤感的。。。
 
 要不是发现学生认证后的学生开发包除了 Copilot 还有有这么多优惠，我最后肯定不搞了 🥲🥲🥲  
-![](https://assets.fedtop.com/picbed/202208252345538.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202208252345538.png)
 
 上午来公司又试了一次，诶～成功了！唯一的区别就是我在公司没挂梯子。  
-![](https://assets.fedtop.com/picbed/202208251022868.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202208251022868.png)
 
 ## 具体操作流程
 
@@ -40,14 +40,14 @@ categories:
 
 选择一个你当前所在地的学校（正常情况下，如果你目前离你要上传的证明中所在的学校比较远是无法继续了，但是这里有个漏洞，不知道是不是因为 github 对其它国家验证的不是很严格，所以你现在要做的是选一个你当地的学校，我在北京，所以我选的清华大学 😂😂，如果你是学生，又刚好在学校所在地区不远，直接选你的学校就行了）并写好你要用 github 干什么（最好用英文）。
 
-![](https://assets.fedtop.com/picbed/202208252300563.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202208252300563.png)
 
 填写完后，点击继续  
 我在这里卡了很久，因为之前挂的梯子，当你 IP 和你选的学校距离较远就没有这个上传图片的按钮。就只能通过拍摄来上传了。
 
 IOS 拍摄会黑屏，我拍了几十次。。。。哭了，然后一直被拒。最后用的 OBS 通过虚拟摄像机录屏来拍的 🥲
 
-![](https://assets.fedtop.com/picbed/202208251126246.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202208251126246.png)
 
 在线验证报告地址 https://my.chsi.com.cn/archive/bab/index.action  
 如果你目前是在校生，那你直接到上面的地址获取你的在线验证报告，然后截图上传就行，如果你不是你可以通过这个网站来生成一个。
@@ -56,31 +56,31 @@ IOS 拍摄会黑屏，我拍了几十次。。。。哭了，然后一直被拒�
 
 生成在线验证报告的网站地址 https://frontend-park.vercel.app/other/cshi
 
-![](https://assets.fedtop.com/picbed/202208252305749.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202208252305749.png)
 
 你可以在侧边栏输入好你的信息（用英文）
 
-![](https://assets.fedtop.com/picbed/202208252318135.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202208252318135.png)
 
 头像不会上传，本地选择后，会自动替换表格里的图片。都填写完后下载图片然后去刚才那个验证页面上传图片。
 
-![](https://assets.fedtop.com/picbed/202208252329078.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202208252329078.png)
 
 提交成功后，如果审核成功了，你立刻就会收到一封邮件
 
-![](https://assets.fedtop.com/picbed/202208251043770.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202208251043770.png)
 
 收到邮件后，回到你的 GitHub 主页中，就可以看到这个时候我们的 Highlights 下多了一个 PRO 徽章。
 
-![](https://assets.fedtop.com/picbed/202208251007469.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202208251007469.png)
 
 这个时候，去这个页面(https://github.com/)点击它
 
-![](https://assets.fedtop.com/picbed/202208251013398.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202208251013398.png)
 
 然后对应选择一下，这个时候我们就可以看到，Copilot 已经激活了～～～
 
-![](https://assets.fedtop.com/picbed/202208251011822.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202208251011822.png)
 
 ## 最后
 

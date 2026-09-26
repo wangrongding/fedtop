@@ -41,7 +41,7 @@ Google 坐拥了全球第一大操作系统 Android 以及全球第一大浏览�
 ### 新增特性
 
 - **EyeDropper API** EyeDropper API 提供浏览器提供的吸管，用于构建自定义颜色选择器。为 Web 构建的创意应用程序可以受益于从屏幕上的像素中采样颜色的能力。  
-  **这个可以在屏幕的任何地方取颜色哦~ 包括浏览器外面的区域,它有什么好处呢?不知道大家用过 figma，或者蓝湖没有,诸如此类的 web 端 ui 设计应用,取色是一个很常用的功能项（包括我们平时开发页面时，不需要借用其他工具去别的窗口提取ＵＩ给出的设计图某块区域的颜色值，现在通过这个特性就能简单的实现！）** ![](https://assets.fedtop.com/picbed/20220612204542.png)
+  **这个可以在屏幕的任何地方取颜色哦~ 包括浏览器外面的区域,它有什么好处呢?不知道大家用过 figma，或者蓝湖没有,诸如此类的 web 端 ui 设计应用,取色是一个很常用的功能项（包括我们平时开发页面时，不需要借用其他工具去别的窗口提取ＵＩ给出的设计图某块区域的颜色值，现在通过这个特性就能简单的实现！）** ![](https://raw.githubusercontent.com/wangrongding/image-house/master/20220612204542.png)
 
 - **self.reportError API**  
   该全局方法可用于报告错误控制台或全球事件处理程序，模拟一个未捕获的 JavaScript 异常。 [详情](https://developer.mozilla.org/en-US/docs/Web/API/reportError)
@@ -72,31 +72,31 @@ Google 坐拥了全球第一大操作系统 Android 以及全球第一大浏览�
 
   DevTools 添加了一种更简单而灵活的方式来更新 CSS 中的长度！在“样式”窗格中，查找任何具有长度的 CSS 属性（例如 height, padding）。将鼠标悬停在单位类型上，注意单位类型带有下划线。单击它以从下拉列表中选择一个单位类型。
 
-  ![](https://assets.fedtop.com/picbed/202110091521893.gif)
+  ![](https://raw.githubusercontent.com/wangrongding/image-house/master/images/202110091521893.gif)
 
   _配合 chrome 94 支持中文的特性,控制台变的越来越方便_ 😀
 
 - **改进了 DevTools 命令菜单的 UI**
 
-  对于经常在 chrome 中查找页面资源的开发者还是挺有用(ctrl+P 调出) 改进前 ![](https://assets.fedtop.com/picbed/20220612204653.png)
+  对于经常在 chrome 中查找页面资源的开发者还是挺有用(ctrl+P 调出) 改进前 ![](https://raw.githubusercontent.com/wangrongding/image-house/master/20220612204653.png)
 
-  改进后 ![](https://assets.fedtop.com/picbed/20220612204704.png)
+  改进后 ![](https://raw.githubusercontent.com/wangrongding/image-house/master/20220612204704.png)
 
 - **在 Console、Sources 面板和 Properties 窗格中对自定义的属性进行加粗和排序**
 
-  ![](https://assets.fedtop.com/picbed/20220612204713.png)
+  ![](https://raw.githubusercontent.com/wangrongding/image-house/master/20220612204713.png)
 
-  ![](https://assets.fedtop.com/picbed/202110091528609.png)
+  ![](https://raw.githubusercontent.com/wangrongding/image-house/master/images/202110091528609.png)
 
   除了这些更改之外，“属性”窗格中的属性现在也被扁平化，以获得更好的 DOM 属性调试体验，尤其是对于[Web components]
 
   > 对于 `web component` 以后有机会我单独拎一篇文章来讲，大家可以查看[这里](https://www.webcomponents.org/introduction)
 
-  ![](https://assets.fedtop.com/picbed/20220612204726.png)
+  ![](https://raw.githubusercontent.com/wangrongding/image-house/master/20220612204726.png)
 
 - **Lighthouse 现在更新到了 8.4**
 
-  我们都知道,网站使用体验的三大核心指标 - LCP, FID, CLS ![](https://assets.fedtop.com/picbed/20220612204736.png)
+  我们都知道,网站使用体验的三大核心指标 - LCP, FID, CLS ![](https://raw.githubusercontent.com/wangrongding/image-house/master/20220612204736.png)
 
   Lighthouse 现在将检测 LCP 元素是否是惰性加载的图像，并建议删除它的 loading 属性。
 
@@ -111,17 +111,17 @@ Google 坐拥了全球第一大操作系统 Android 以及全球第一大浏览�
 
   详情可以看[这里](https://web.dev/lcp-lazy-loading/)
 
-  ![](https://assets.fedtop.com/picbed/20220612204754.png)
+  ![](https://raw.githubusercontent.com/wangrongding/image-house/master/20220612204754.png)
 
 - **最新的 lighthouse 支持通过 npm 下载**
 
-  ![](https://assets.fedtop.com/picbed/20220612204806.png)  
+  ![](https://raw.githubusercontent.com/wangrongding/image-house/master/20220612204806.png)  
   通过命令`lighthouse https://www.example.com --view`  
-  ![](https://assets.fedtop.com/picbed/202110091604251.png)
+  ![](https://raw.githubusercontent.com/wangrongding/image-house/master/images/202110091604251.png)
 
   这里我通过百度为例子,大家替换为自己想测试的站点即可
 
-  ![](https://assets.fedtop.com/picbed/202110091628536.gif)
+  ![](https://raw.githubusercontent.com/wangrongding/image-house/master/images/202110091628536.gif)
 
 ## 删除与弃用
 
@@ -156,11 +156,11 @@ Google 坐拥了全球第一大操作系统 Android 以及全球第一大浏览�
 ## 最后
 
 chrome95 开始，chrome 会每隔 4 周就会更新一个版本，对于喜欢尝鲜的同学们，我推荐下载 chrome 测试版或者金丝雀版本来体验最新的特性．对于一些正在试验中的 API 我们也可以通过下面这个网站提交登记，或者体验资格  
-![](https://assets.fedtop.com/picbed/202110102110334.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/images/202110102110334.png)
 
 通过填写一些信息后等待审核通过即可，非常的方便！
 
-![](https://assets.fedtop.com/picbed/20220612204854.png) ![](https://assets.fedtop.com/picbed/20220612204904.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/20220612204854.png) ![](https://raw.githubusercontent.com/wangrongding/image-house/master/20220612204904.png)
 
 以上就是我对即将推出的 chrome95 的主要新增特性的分享~希望对你有所帮助 ~ 😉
 
@@ -168,4 +168,4 @@ chrome95 开始，chrome 会每隔 4 周就会更新一个版本，对于喜欢�
 >
 > 如果你也非常热爱前端相关技术！欢迎进入我的小密圈 ~ 🦄 **扫描下方图片~**
 >
-> ![](https://assets.fedtop.com/picbed/1630989821971-rongding.gif)
+> ![](https://raw.githubusercontent.com/wangrongding/image-house/master/2021-9-7/1630989821971-rongding.gif)

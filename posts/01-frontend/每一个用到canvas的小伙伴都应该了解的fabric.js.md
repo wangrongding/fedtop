@@ -16,7 +16,7 @@ categories:
 
 <!-- more -->
 
-![](https://assets.fedtop.com/picbed/202206122055401.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122055401.png)
 
     为了方便,下面我将通过 vue项目 为大家讲解如何使用 Fabric
 
@@ -78,7 +78,7 @@ canvas.add(rect)
 可以看到界面中填充了一个可以通过鼠标放大缩小且可以旋转的绿色矩形  
 通过对象的形式配置元素样式,非常的方便!
 
-![](https://assets.fedtop.com/picbed/202206122055563.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122055563.png)
 
 - 圆形和三角形
 
@@ -102,7 +102,7 @@ let triangle = new fabric.Triangle({
 canvas.add(circle, triangle)
 ```
 
-![](https://assets.fedtop.com/picbed/202206122056400.gif)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122056400.gif)
 
 我们可以通过以下属性设置,决定是否可以对相关元素进行交互
 
@@ -135,7 +135,7 @@ let image = new fabric.Image(img, {
 canvas.add(image)
 ```
 
-![](https://assets.fedtop.com/picbed/202206122056179.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122056179.png)
 
 ### 2.3 通过自定义的路径绘制
 
@@ -157,13 +157,13 @@ customPath.set({
 canvas.add(customPath)
 ```
 
-![](https://assets.fedtop.com/picbed/202206122056642.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122056642.png)
 
 ```javascript
 let customPath = new fabric.Path('M 0 0 L 300 100 L 170 100 L 70 300 L 20 200 C136.19,2.98,128.98,0,121.32,0 z')
 ```
 
-![](https://assets.fedtop.com/picbed/202206122056016.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122056016.png)
 
 可以看到通过路径绘制,我们可以制作非常复杂的图形(但是一般用不到,我们一般用它来解析 SVG 后拿到 path 复原图形)
 
@@ -196,7 +196,7 @@ rect.animate('left', 100, {
 canvas.add(rect)
 ```
 
-![](https://assets.fedtop.com/picbed/202206122056366.gif)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122056366.gif)
 
 #### 2.42 相对动画(第二个参数通过+=,-=等来决定动画的最终效果)
 
@@ -207,7 +207,7 @@ rect.animate('left', '+=100', {
 })
 ```
 
-![](https://assets.fedtop.com/picbed/202206122057830.gif)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122057830.gif)
 
 ```javaScript
 rect.set({ angle: 45 });
@@ -217,7 +217,7 @@ duration: 2000,
 });
 ```
 
-![](https://assets.fedtop.com/picbed/202206122057619.gif)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122057619.gif)
 
 #### 2.43 定义动画的动效函数
 
@@ -232,7 +232,7 @@ rect.animate('left', 100, {
 })
 ```
 
-![](https://assets.fedtop.com/picbed/202206122057157.gif)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122057157.gif)
 
 ### 2.5 图像滤镜
 
@@ -275,7 +275,7 @@ fabric.Image.fromURL(require('./aaa.jpeg'), (img) => {
 })
 ```
 
-![](https://assets.fedtop.com/picbed/202206122057263.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122057263.png)
 
 #### 2.52 叠加滤镜
 
@@ -300,7 +300,7 @@ fabric.Image.fromURL(require('./aaa.jpeg'), (img) => {
 })
 ```
 
-![](https://assets.fedtop.com/picbed/202206122058939.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122058939.png)
 
 可以看到多个滤镜的效果叠加显示了,当然 Fabric 还支持自定义滤镜,在本篇文章点赞过 500 后我将更新 fabric 高级篇,感谢大家的支持~
 
@@ -366,7 +366,7 @@ circle.setGradient("fill", {
 });
 ```
 
-![](https://assets.fedtop.com/picbed/202206122058399.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122058399.png)
 
 ### 2.8 文本
 
@@ -403,7 +403,7 @@ let text = new fabric.Text('大家好~这里是前埔寨\n我是荣顶~\n一个�
 canvas.add(text)
 ```
 
-![](https://assets.fedtop.com/picbed/202206122058729.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122058729.png)
 
 ### 2.9 事件
 
@@ -440,7 +440,7 @@ canvas.on('mouse:up', function (options) {
 })
 ```
 
-![](https://assets.fedtop.com/picbed/202206122058651.gif)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122058651.gif)
 
 Fabric 允许将侦听器直接附加到 canvas 画布中的对象上。
 
@@ -468,7 +468,7 @@ canvas.freeDrawingBrush.color = 'blue'
 canvas.freeDrawingBrush.width = 5
 ```
 
-![](https://assets.fedtop.com/picbed/202206122058604.gif)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202206122058604.gif)
 
 ### 三、最后
 

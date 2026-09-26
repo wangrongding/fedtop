@@ -13,7 +13,7 @@ categories:
 
 为避免每次新建分支，在团队项目中推送时需要手动设置 upstream 的麻烦。
 
-![](https://assets.fedtop.com/picbed/202404111054603.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202404111054603.png)
 
 在大陆，由于众所周知的原因，github 经常性的无法访问，需要额外配置代理，当我们只对某个端口进行代理的时候，可以快速通过以下命令设置和取消代理。
 
@@ -32,7 +32,7 @@ git proxyoff # 取消代理
 
 配合 [fig](https://fig.io/) 的提示，我们就可以非常方便的设置和取消代理了。(如下图，支持方向键选择，回车执行)
 
-![](https://assets.fedtop.com/picbed/202401081104810.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202401081104810.png)
 
 我一般为了避免麻烦，会直接给终端设置代理，这样所有的命令行工具都可以直接使用代理，不需要单独为 git 设置代理。
 
@@ -68,7 +68,7 @@ git rank
 
 如图：
 
-![](https://assets.fedtop.com/picbed/202401081227997.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202401081227997.png)
 
 列出当前仓库所有 Contributor，以初次提交时间排名
 
@@ -80,7 +80,7 @@ git rank-time
 
 如图：
 
-![](https://assets.fedtop.com/picbed/202401081224500.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202401081224500.png)
 
 git log 美化 , 其中详细参数可见： https://git-scm.com/docs/pretty-formats
 
@@ -93,7 +93,7 @@ git config --global alias.logs "log --graph --pretty=format:'%Cred%h%Creset -%C(
 
 效果如下，比默认的好看，且实用多了。
 
-![](https://assets.fedtop.com/picbed/202307311028731.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202307311028731.png)
 
 当然用别名做自定义命令后，你仍然可以在后面接上其他参数
 
@@ -106,7 +106,7 @@ git logs --name-only # 或 git logs --stat
 git logs --patch
 ```
 
-![](https://assets.fedtop.com/picbed/202309080234940.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202309080234940.png)
 
 git 命令行文件路径显示中文
 
@@ -121,11 +121,11 @@ git config core.quotepath false
 git config --global core.pager more
 ```
 
-![](https://assets.fedtop.com/picbed/202211241024501.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202211241024501.png)
 
 这样设置后，如果你的终端是 utf-8 编码的那么就可以直接显示中文了。
 
-![](https://assets.fedtop.com/picbed/202211241024385.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202211241024385.png)
 
 Git Status 美化
 
@@ -295,7 +295,7 @@ ssh -T -p 443 git@ssh.github.com
 git config --global gui.encoding utf-8
 ```
 
-![](https://assets.fedtop.com/picbed/20220706183831.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/20220706183831.png)
 
 ### git 设置别名
 
@@ -325,15 +325,15 @@ git config --global credential.helper osxkeychain
 
 当我们在一顿修改并 commit 后，向远端仓库进行 push 时
 
-![](https://assets.fedtop.com/picbed/202308311509236.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202308311509236.png)
 
 这个时候 pull
 
-![](https://assets.fedtop.com/picbed/202308311512874.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202308311512874.png)
 
 所以
 
-![](https://assets.fedtop.com/picbed/202308311514187.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202308311514187.png)
 
 ## 设置默认 push
 

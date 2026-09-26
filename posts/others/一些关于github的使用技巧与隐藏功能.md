@@ -94,13 +94,11 @@ categories:
 - [github search](https://github.com/search)
 - [code search](https://cs.github.com/)
 
-![](https://assets.fedtop.com/picbed/202211210943136.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202211210943136.png)
 
 一些代码不会写，文档又没写清楚，直接来这搜，99%都能搜到，直接抄作业。配合着 copilot，真的是一条龙服务。
 
-![](https://assets.fedtop.com/picbed/202211210956345.png)
-
-<!-- ![](https://assets.fedtop.com/picbed/202211210956724.png) -->
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202211210956345.png)
 
 ## 最后
 

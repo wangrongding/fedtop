@@ -9,7 +9,7 @@ categories:
 
 # WebRTC 从实战到未来
 
-![](https://assets.fedtop.com/picbed/202210071605656.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202210071605656.png)
 
 ## 这篇文章可以学到什么
 
@@ -45,13 +45,13 @@ categories:
 
 要想了解 WebRTC，首先要了解媒体流，媒体流可以是来自本地设备的，也可以是来自远程设备的。媒体流可以是实时的，也可以是非实时的。上述的应用场景中，我们都需要使用到`媒体流`，我们可以通过摄像头，麦克风，屏幕共享等方式获取到媒体流，然后通过 WebRTC 技术将媒体流传输到远端实现实时通讯。
 
-![](https://assets.fedtop.com/picbed/202210071601566.gif)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202210071601566.gif)
 
 ## 摄像头获取媒体流及一些其他操作
 
 要实现 音视频通话，我们肯定要先获取到摄像头的媒体流，然后通过 WebRTC 技术将媒体流传输到远端实现实时通讯。下面我们先通过一个简单的拍照小应用来看一下如何通过摄像头获取媒体流。
 
-![](https://assets.fedtop.com/picbed/202209142147208.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202209142147208.png)
 
 先设置好用于播放媒体流的 video 标签，添加一个 autoplay 属性，这样就可以在摄像头获取到媒体流后自动播放了。
 
@@ -61,7 +61,7 @@ categories:
 
 **需要注意的是，WebRTC 只能在 HTTPS 协议或者 localhost 下使用，如果是 HTTP 协议，会报错。**
 
-![](https://assets.fedtop.com/picbed/202210072035433.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202210072035433.png)
 
 这里我们暂时使用 localhost 做简单的演示，后面通过`信令服务器`实现实时音视频的章节我会讲到如何在本地用 `mkcert` 做自签名证书。
 
@@ -86,7 +86,7 @@ console.log('🚀🚀🚀 / SupportedConstraints', navigator.mediaDevices.getSup
 ```
 
 我们把它打印出来，可以看到它支持的配置项有：  
-![](https://assets.fedtop.com/picbed/202210071816101.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202210071816101.png)
 
 通常我们不设置`constraints`参数，那么默认就是获取摄像头和麦克风的媒体流，如果我们只想要获取摄像头的媒体流，那么我们可以这样设置：
 
@@ -138,7 +138,7 @@ getLocalStream({
 
 附上一个 👉 [体验地址](https://frontend-park.vercel.app/audio-and-video/webRTC/take-photos)
 
-![](https://assets.fedtop.com/picbed/202210071514394.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202210071514394.png)
 
 ```html
 <video id="localVideo" autoplay playsinline muted></video>
@@ -212,22 +212,22 @@ function handleDeviceChange(deviceId: string) {
 
 这里我们把获取到的设备列表信息打印看看，我们可以看到每个设备都有一个 deviceId，我们就是通过这个 id 来切换设备的。
 
-![](https://assets.fedtop.com/picbed/202210071725076.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202210071725076.png)
 
 可以看到，获得了多个摄像头设备，我这里是一个笔记本自带的摄像头和一个 OBS 虚拟摄像头，包括最近 MacOs 更新到 Ventura 13 ,IOS 更新到 16 后的`连续互通摄像头`，都可以获取到。这样我们就可以在视频的时候，就可以通过拍摄更清晰的手机后置来拍摄了。
 
 虚拟摄像头更有意思，在 OBS 中开启虚拟摄像头后，可以播放一个视频，然后进行视频会议，这样你甚至可以提前录制好一个端坐的视频（简直是上网课必备！😅），我之前试过播放特朗普的视频，然后微信视频，对面看到的确实是特朗普在演讲，所以说这方面很有安全隐患，所以大家在网上和别人视频的时候，还是需要注意下，对方可能不是真的。
 
-![](https://assets.fedtop.com/picbed/202209142154040.png)  
-![](https://assets.fedtop.com/picbed/202209142153213.png)  
-![](https://assets.fedtop.com/picbed/202210071650410.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202209142154040.png)  
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202209142153213.png)  
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202210071650410.png)
 
 跑题了，我们继续。🦄🦄🦄
 
 说完了切换摄像头，我们再来看看如何在支持切换前后置摄像头的设备上如何切换前后摄像头。我们可以通过指定 `facingMode` 来实现，facingMode 有 4 个值，分别是 user、environment 和 left、right，分别对应前后摄像头和左右摄像头。
 
 当需要强制使用前置摄像头时，可以使用 exact 关键字，例如 facingMode: { exact: 'user' }，强制切换前后摄像头时，当摄像头不支持时，会报一个 OverconstrainedError［无法满足要求的错误］  
-![](https://assets.fedtop.com/picbed/202209142144928.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202209142144928.png)
 
 ```typescript
 // 切换前后摄像头
@@ -256,7 +256,7 @@ function switchCamera(val: number) {
 switchCamera(1) // 切换前置摄像头
 ```
 
-![](https://assets.fedtop.com/picbed/202210071650707.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202210071650707.png)
 
 通过这个简单的拍照小应用，相信我们已经知道了通过摄像头获取媒体流的大概流程以及一些常用的 API 了。
 
@@ -291,21 +291,21 @@ function playStream(stream: MediaStream) {
 执行 `shareScreen` 函数后，会弹出一个权限询问框，询问是否允许获取屏幕共享的媒体流。
 
 然后你就可以分享你的整个屏幕，如果你又多个屏幕的话，你可以选择其中一个进行分享  
-![](https://assets.fedtop.com/picbed/202210072051572.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202210072051572.png)
 
 然后你也可以选择只分享你屏幕上的某个应用的窗口，不用担心你一边干嘛干嘛一边录制屏幕，它只会捕捉你选择的应用窗口的内容。非常 nice。
 
-![](https://assets.fedtop.com/picbed/202210072052315.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202210072052315.png)
 
 你甚至可以在你浏览器打开的各种页面中，选择一个你想要分享的网页，当你页面各种切换时候，你的屏幕共享也只会显示你选择的网页的内容。
 
 共享前你可以随便选一个进行预览，然后可以选择是否分享的时候包含页面中的音频，这样你获取的媒体流就会包含音频轨道了。
 
-![](https://assets.fedtop.com/picbed/202210072055425.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202210072055425.png)
 
 这里我打开自己 github 的网页，然后点击屏幕共享，可以看到共享的只有自己的 github 页面了。不用担心会有什么奇怪的东西乱入进来，非常适合视频会议或者在线教育等场景。
 
-![](https://assets.fedtop.com/picbed/202210072053639.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202210072053639.png)
 
 说完获取屏幕媒体流，接下来我们来看看如何通过媒体流进行录制。
 
@@ -325,7 +325,7 @@ chrome 中 `MediaRecorder` 支持的 `mimeType` 如下：
 "video/x-matroska;codecs=avc1"
 ```
 
-![](https://assets.fedtop.com/picbed/202210080215606.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202210080215606.png)
 
 为了验证上述的内容，这里我把一些常用的 mimeType 列出来，拼装后通过 `MediaRecorder.isTypeSupported` 来判断是否支持，最后放到下拉框中供用户根据自己的需求选择合适的 mimeType。
 
@@ -358,7 +358,7 @@ console.log(getSupportedMimeTypes())
 
 可以看到这么多排列组合后，筛选出的支持的 mimeType 也就只有`"video/webm"`和 ` "video/x-matroska"` 两种。
 
-![](https://assets.fedtop.com/picbed/202210080136400.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202210080136400.png)
 
 也可以通过这个网址[👉🏻media-mime-support](https://cconcolato.github.io/media-mime-support/) 来查看当前浏览器所支持的 mimeType 的情况。
 
@@ -415,7 +415,7 @@ function downloadBlob(blob: Blob) {
 
 [👉 线上体验地址：](https://frontend-park.vercel.app/audio-and-video/webRTC/audio-and-video/webRTC/record)
 
-![](https://assets.fedtop.com/picbed/202210080230355.gif)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202210080230355.gif)
 
 当然，既然都拿到了媒体流，那么我们也可以将媒体流中的视频轨道录制成 gif 图片，这样在一些场景下分享起来也会更加方便。
 
@@ -423,7 +423,7 @@ function downloadBlob(blob: Blob) {
 
 最后有一个需要注意的地方，也是我在实际项目中遇到的问题。截止到目前为止，在使用 `MediaRecorder` 录制视频的时候，如果你的系统是 Windows 或者 Chrome OS，那么录制的视频没什么问题，但是在 Mac 和 Linux 上，录制摄像头和分享屏幕时，选择网页的分享方式，所拿获得的媒体流是可以拿到视频轨道和音频轨道的，但是录制整个屏幕时，由于系统的限制，只能拿到视频的轨道。好在一般录屏都不会有带音频的需求，期待后面能够支持。
 
-![](https://assets.fedtop.com/picbed/202210072359705.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202210072359705.png)
 
 ## 实现视频的虚拟背景
 
@@ -433,7 +433,7 @@ function downloadBlob(blob: Blob) {
 
 [👉 线上体验地址](https://frontend-park.vercel.app/audio-and-video/webRTC/background-process)
 
-![](https://assets.fedtop.com/picbed/202210080636262.gif)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202210080636262.gif)
 
 主要原理是通过 `canvas` 将视频中的每一帧画到画布上，然后将画布中的像素逐个与设定的背景色（默认是绿色，你可以更换为任意符合你背景的颜色）进行计算，比较后的差值达到设定的阈值时，对其进行处理，将其更换为预先准备好的背景图的图像数据，最后将处理后的图像数据再画到虚拟背景画布上，通过虚拟背景画布拿到媒体流后给到 video 标签播放， 这样就实现了视频的虚拟背景效果。
 
@@ -494,8 +494,8 @@ function playRealVideo(stream: MediaStream) {
 
 然后每一帧都要与设置好的背景色进行比较，比较后的差值达到设定的阈值的像素，就要扣除（替换为之前拿到的背景图的像素。
 
-![](https://assets.fedtop.com/picbed/202210080714355.png)  
-![](https://assets.fedtop.com/picbed/202210080714035.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202210080714355.png)  
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202210080714035.png)
 
 看到这里,如果以前看过我的文章，大家一定很眼熟，这个计算颜色差的逻辑与我之前写的[《我用 10000 张图片合成我们美好的瞬间》](https://juejin.cn/post/6996431901623844894)用来做合成图的逻辑是一样的。
 
@@ -503,7 +503,7 @@ function playRealVideo(stream: MediaStream) {
 
 而这只需要我们中学时期学过的 欧式距离 公式就可以了。
 
-![](https://assets.fedtop.com/picbed/202210080718926.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202210080718926.png)
 
 我们把它转化为颜色差的计算公式如下：
 
@@ -596,7 +596,7 @@ function colorDiff(rgba1: number[], rgba2: number[]) {
 
 可以看到，其中`backgroundColor`（需要扣除的背景色）和`allowance`（容差值）两个变量是由外部控制的，这样我们就可以在页面上通过滑动条或是其他的组件来动态改变容差，通过取色器来动态改变需要扣除的背景色。
 
-![](https://assets.fedtop.com/picbed/202210080726300.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202210080726300.png)
 
 ## 最后
 
@@ -604,7 +604,7 @@ function colorDiff(rgba1: number[], rgba2: number[]) {
 
 目前只是针对纯色的背景进行了替换，如果复杂的背景，我们可以通过图像分割的方式来实现背景替换，比如：TensorFlow.js 中的 身体分割（BodyPix）。
 
-![](https://assets.fedtop.com/picbed/202210080733513.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202210080733513.png)
 
 或者是说，对于视频中的人脸，我们可以通过`face-api.js`来检测人脸，并将人脸替换为其他的图片，从而实现一个简单的换脸功能。对于视频中的人体，我们可以通过`posenet`来检测人体，并将人体替换为其他的图片，从而实现一个简单的换装功能。等等...（后续我都在这个专栏中安排~）
 
@@ -614,7 +614,7 @@ function colorDiff(rgba1: number[], rgba2: number[]) {
 
 本来还想写下 1v1 视频聊天的实现，但是由于时间关系，我把它放到第二篇来写吧，demo 我已经放到了 我的[前端公园合集仓库](https://github.com/wangrongding/frontend-park)中，这两天抽空写完~
 
-![](https://assets.fedtop.com/picbed/202210080747267.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202210080747267.png)
 
 ## 最后的最后 ~
 

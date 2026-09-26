@@ -17,7 +17,7 @@ categories:
 看到前两篇文章都非常受欢迎，非常的开心！🤖 继续加油！冲！  
 我们也在前两篇文章中大概讲解了 音视频媒体流的获取，处理，以及在上一篇文章中为了更直观的演示 WebRTC 建立点对点通信的过程，通过手动交换 sdp 来建 p2p 连接，实现了一个最简单的音视频通话，但在实际的应用场景中，我们几乎不可能会通过手动来交换 sdp ，因为这样会增加很多的工作量，也不方便，所以我们借助一个信令服务器来帮助我们实现自动建立连接的这个过程。
 
-![](https://assets.fedtop.com/picbed/202211132222279.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202211132222279.png)
 
 ## 从这篇文章中你将学到
 
@@ -34,7 +34,7 @@ categories:
 
 你可以开两个浏览器 tab 或者用不同的设备，根据说明即可体验。
 
-![](https://assets.fedtop.com/picbed/202211132359202.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202211132359202.png)
 
 ## 了解信令前，需要了解的几个概念
 
@@ -62,7 +62,7 @@ WebRTC 众多的链接候选者中，可以分为三类：
 
 [协议地址](https://www.rfc-editor.org/rfc/rfc5389)
 
-![](https://assets.fedtop.com/picbed/202211141044113.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202211141044113.png)
 
 ### TURN (Session Traversal Utilities for NAT)
 
@@ -74,7 +74,7 @@ WebRTC 通信双方通过 P2P 的方式无法建立链接的情况下，会使�
 
 [协议地址](https://www.rfc-editor.org/rfc/rfc7065)
 
-![](https://assets.fedtop.com/picbed/202211272053218.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202211272053218.png)
 
 一般我们都会通过 [coturn](https://github.com/coturn/coturn)会[restund](https://creytiv.com/restund.html)来搭建 `STUN` 和 `TURN` 服务。非常的方便，我使用的是开源社区提供的 `coturn`，它是一个比较成熟的项目。我会在第 4,5 篇文章讲到如何搭建它，这篇我们直接用现成的 `STUN` 服务就行。至于 `TURN`服务...🥲 目前我还没有一个比较好的服务器，能顶得住这种，我后面看看搞一台合适的过来搭建一个，供大家在线体验一下。
 
@@ -87,7 +87,7 @@ WebRTC 通信双方通过 P2P 的方式无法建立链接的情况下，会使�
 
 信令服务器按照与聊天室相同的方式对连接的节点进行逻辑分组，并帮助各端相互交换 `SDP` 等信息。
 
-![](https://assets.fedtop.com/picbed/202211271715310.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202211271715310.png)
 
 > 关于 WebRTC 的信令流程最重要的一点是： **「信令在规范中并没有定义」** 所以开发者需要自己决定如何实现这个过程。开发者可以为应用程序引擎选择任意的信息协议（如 SIP 或 XMPP），任意双向通信信道（如 WebSocket 或 XMLHttpRequest) 与持久连接服务器的 API（如 Google Channel API）一起工作。
 
@@ -97,9 +97,9 @@ WebRTC 通信双方通过 P2P 的方式无法建立链接的情况下，会使�
 
 有点像村里相亲的，一开始不认识对方，没法直接联系，需要通过媒介，中间人来传递消息后，你们可能知道对方的位置啊，联系方式啊等等才能很好的直接建立联系。
 
-![](https://assets.fedtop.com/picbed/202211220923424.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202211220923424.png)
 
-![](https://assets.fedtop.com/picbed/202211132222279.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202211132222279.png)
 
 这张图很清楚的描述了这个过程。
 
@@ -117,7 +117,7 @@ WebRTC 通信双方通过 P2P 的方式无法建立链接的情况下，会使�
 
 总结一下就是：
 
-![](https://assets.fedtop.com/picbed/202211272137175.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202211272137175.png)
 
 用它来写非常的简单方便，下面我们就用 express 配合 socket.io 来实现一个简单的信令服务器。
 
@@ -202,7 +202,7 @@ const socket = io('http://localhost:3000')
 
 https，对应的我们信令服务的地址也需要是 https，不然就会报错
 
-![](https://assets.fedtop.com/picbed/202209152158537.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202209152158537.png)
 
 所以下面我们需要自签一张证书。
 
@@ -245,7 +245,7 @@ localhost-key.pem
 
 生成完毕后，不管你是在 nginx 中使用还是在 node 中使用，只需要将在 nginx 或者 node 中指定证书文件和私钥文件的路径即可。
 
-![](https://assets.fedtop.com/picbed/202211231156906.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202211231156906.png)
 
 ### node 中使用
 
@@ -279,7 +279,7 @@ httpsServer.listen(3333, '0.0.0.0', () => {
 
 (需要注意的是，ip 证书非常的贵，一般都是直接用一个域名证书，然后通过 nginx 做转发)
 
-![](https://assets.fedtop.com/picbed/202211230136032.png)  
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202211230136032.png)  
 或者你只是想在线上测试的话，也一样通过 mkcert 工具来生成本地的自签 HTTPS 证书就行了，只不过这个证书浏览器会提示不安全，但是用来测试还是可以的。
 
 ```sh
@@ -549,11 +549,11 @@ async function createOffer() {
 
 当你在后期连接成功的时候，其实可以把 候选人信息(candidate) 打印出来可以看看，当两个设备在同一个内网中连接的时候， candidate 的地址为一个 ipv6 长格式的内网地址和一个 ipv4 的内网地址。
 
-![](https://assets.fedtop.com/picbed/202211272320557.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202211272320557.png)
 
 当两个设备不在同一个内网中连接的时候，可以看到 candidate 的地址最后为一个 ipv4 的外网地址,说明它尝试了两次连接，第一次是内网连接，第二次是外网连接。证明了前面说的三种类型的先后连接方式。
 
-![](https://assets.fedtop.com/picbed/202211272328473.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202211272328473.png)
 
 ### 信令服务端接收提案
 
@@ -684,7 +684,7 @@ pm2 save
 
 你可以开两个浏览器 tab 或者用不同的设备，输入房间号进去体验下。
 
-![](https://assets.fedtop.com/picbed/202211132359202.png)
+![](https://raw.githubusercontent.com/wangrongding/image-house/master/202211132359202.png)
 
 本篇文章主要是通过信令服务队上一篇文章的进阶处理，实现了自动连接的音视频通话。大家如果有什么问题，可以在评论区留言，我会及时回复。
 

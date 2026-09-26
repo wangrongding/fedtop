@@ -28,6 +28,6 @@ FedTop 是 Front End Developer Top 的缩写，意为前端之巅。（为什么
 
 <p align="center">
   <a href="https://fedtop.com" target="_blank" rel="noopener noreferrer">
-    <img width="700" src="https://assets.fedtop.com/picbed/fedtop.png" alt="荣顶 - 个人博客">
+    <img width="700" src="https://raw.githubusercontent.com/wangrongding/image-house/master/fedtop.png" alt="荣顶 - 个人博客">
   </a>
 </p>
